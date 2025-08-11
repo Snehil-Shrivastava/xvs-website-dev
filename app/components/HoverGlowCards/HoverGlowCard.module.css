@@ -1,7 +1,7 @@
-:root {
+/* :root {
   --box-shadow-color: rgba(0, 0, 0, 0.1);
   --card-box-shadow: 0 0 28px 16px var(--box-shadow-color);
-}
+} */
 
 /* CSS Variables (moved from :root for better scoping, but can be global) */
 .bodyContainer {

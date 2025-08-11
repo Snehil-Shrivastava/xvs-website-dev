@@ -4,6 +4,8 @@
   --background: #282828;
   --foreground: #fff;
   --text-outline: #fff;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+  --card-box-shadow: 0 0 28px 16px var(--box-shadow-color);
 }
 
 @theme inline {
