@@ -13,13 +13,6 @@ import Logo2 from "../../../public/assests/logo_paytm.svg";
 import "./ReviewsThumbSlider.css";
 import AutoScrollStrip from "../AutoScrollStrip/AutoScrollStrip";
 
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useRef } from "react";
-
-gsap.registerPlugin(ScrollTrigger);
-
 export default function SwiperGallery() {
   const ClientReviews = [
     {
@@ -53,29 +46,8 @@ export default function SwiperGallery() {
       logo: Logo2,
     },
   ];
-
-  const cardLayerRef = useRef(null);
-
-  useGSAP(() => {
-    const cardLayer = cardLayerRef.current;
-
-    const tl = gsap.timeline();
-
-    tl.to(cardLayer, {
-      scrollTrigger: {
-        trigger: cardLayer,
-        // markers: true,
-        start: 'top 60%',
-        end: 'top 40%',
-        scrub: 1
-      },
-      width: 0
-    });
-  });
-
   return (
     <>
-      <div ref={cardLayerRef} className="absolute inset-0 bg-[#282828] z-[5]"></div>
 
       <div className="gallery">
         <Swiper

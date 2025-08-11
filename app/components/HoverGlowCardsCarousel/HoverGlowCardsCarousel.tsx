@@ -7,6 +7,9 @@ import Image from "next/image";
 import ProjectsImg from '../../../public/assests/layer.png'
 
 import Image3d from '../../../public/assests/UIux_0002 (square) 1.png'
+import AnimatedCardIcon from "../AnimatedCardIcon/AnimatedCardIcon";
+
+import animatedIcon from '../../../public/Sample.gif'
 
 const cardData = [
   { title: "Projects", subtitle: "500+", text1: "meaningful impact on businesses", text2: "with our design projects", img: ProjectsImg },
@@ -57,7 +60,8 @@ const HoverGlowCardsCarousel = () => {
           <div className={`${styles.card}`}>
             <div className={styles["card-content"]}>
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[40%]">
-                    <Image src={Image3d} alt="image" className="absolute -top-[35%]" />
+                    {/* <Image src={Image3d} alt="image" className="absolute -top-[35%]" /> */}
+          <Image src={animatedIcon} alt="icon" />
                   </div>
                   <div className=' text-center w-[60%] mx-auto pb-[56px] mt-auto flex flex-col gap-[12px]'>
                     <h3 className="font-bold text-6xl">UI/UX</h3>

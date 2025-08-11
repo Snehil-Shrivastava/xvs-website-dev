@@ -100,9 +100,11 @@ const HoverGlowCards = () => {
         // markers: true,
         start: 'top 70%',
         end: 'top 40%',
-        scrub: 1
+        scrub: 1,
+              once: true,
       },
-      width: 0
+      width: 0,
+      duration: 0.5,
     })
 
     tl.to(cardLayer1, {
@@ -111,9 +113,11 @@ const HoverGlowCards = () => {
         // markers: true,
         start: 'top 70%',
         end: 'top 40%',
-        scrub: 1
+        scrub: 1,
+              once: true,
       },
       width: 0,
+      duration: 0.5,
       delay: 0.2
     })
 
@@ -123,9 +127,11 @@ const HoverGlowCards = () => {
         // markers: true,
         start: 'top 70%',
         end: 'top center',
-        scrub: 1
+        scrub: 1,
+              once: true,
       },
-      width: 0
+      width: 0,
+      duration: 0.5,
     })
 
       tl.to(cardLayer3, {
@@ -134,9 +140,11 @@ const HoverGlowCards = () => {
         // markers: true,
         start: 'top 70%',
         end: 'top center',
-        scrub: 1
+        scrub: 1,
+              once: true,
       },
-      width: 0
+      width: 0,
+      duration: 0.5,
     })
 
   })

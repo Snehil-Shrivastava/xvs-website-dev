@@ -9,7 +9,7 @@ import { Player } from "@lottiefiles/react-lottie-player";
 
 const AnimatedJSON = () => {
   return (
-    <Lottie animationData={xVS} loop={true} autoplay  className="scale-[1.5] origin-center"/>
+    <Lottie animationData={xVS} loop={true} autoplay  className="2xl:scale-[2.4] xl:scale-[2.5]"/>
     // <Player
     //   autoplay
     //   loop

@@ -7,7 +7,7 @@ import { useLoader } from '@react-three/fiber';
 import { OBJLoader } from 'three-stdlib';
 
 export function Model(props: any) {
-  const { scene } = useGLTF('/assests/models/Element3d.glb'); // Path to your .glb file
+  const { scene } = useGLTF('/UI_UX.glb'); // Path to your .glb file
 
 // const obj = useLoader(OBJLoader, '/assests/models/Elements3d.blend')
 
