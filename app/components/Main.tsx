@@ -46,7 +46,7 @@ function SpinningBox() {
 
 const Main = () => {
   return (
-    <section className="2xl:w-2/3 xl:w-[70%] mx-auto mt-[157px] text-center relaive">
+    <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] mx-auto mt-[157px] text-center relaive">
       <header className="relative">
         <motion.p
           initial={{ y: 30, opacity: 0 }}
@@ -58,14 +58,14 @@ const Main = () => {
         </motion.p>
         <div className="flex justify-center">
           <div className="flex">
-            <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] inline">
+            <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] inline">
               e
             </h1>
             <div className="2xl:w-[180px] xl:w-[150px] overflow-hidden">
               <AnimatedJSON />
             </div>
           </div>
-          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] inline">
+          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] inline">
             perience
           </h1>
         </div>

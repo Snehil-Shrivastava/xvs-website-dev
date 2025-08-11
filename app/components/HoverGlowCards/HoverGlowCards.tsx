@@ -165,9 +165,9 @@ const HoverGlowCards = () => {
               }`}
             >
               <div className={styles["card-content"]}>
-                <div className="text-left pl-[75px] pb-[56px] mt-auto">
+                <div className="text-left 2xl:pl-[75px] 2xl:pb-[56px] xl:pl-[55px] xl:pb-[55px] mt-auto">
                   <h3 className="font-medium text-2xl">{card.title}</h3>
-                  <h1 className="text-[#F79839] font-bold text-9xl">
+                  <h1 className="text-[#F79839] font-bold 2xl:text-9xl xl:text-[5rem]">
                     {card.subtitle}
                   </h1>
                   <p className="font-light text-lg">{card.text1}</p>

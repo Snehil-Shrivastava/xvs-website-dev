@@ -19,10 +19,10 @@ const Footer = () => {
     <div className="mt-[170px] footer-container">
       <div className="footer-content-container">
         <div className="w-[85%] mx-auto pb-[72px]">
-          <div className="w-[90%] mx-auto">
+          <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
             <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px]">
               <div>
-                <h1 className="text-[72px]/[80px] font-bold tracking-wider w-[750px]">
+                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] font-bold tracking-wider w-[750px]">
                   Let's start creating together
                 </h1>
               </div>

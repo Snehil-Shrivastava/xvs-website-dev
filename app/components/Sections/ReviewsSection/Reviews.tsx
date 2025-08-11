@@ -40,7 +40,7 @@ const Reviews = () => {
             <h3 className='font-light tracking-wide text-[#F3EDDE] my-[32px]'>Hear from visionaries and experts</h3>
             <div className='relative'>
       <div ref={cardLayerRef} className="absolute inset-0 bg-[#282828] z-[5]"></div>
-            <div className='bg-[#F3EDDE] w-[80%] mx-auto reviews-box relative'>
+            <div className='bg-[#F3EDDE] 2xl:w-[80%] xl:w-full mx-auto reviews-box relative'>
                 <ReviewsThumbSlider />
             </div>
             </div>
