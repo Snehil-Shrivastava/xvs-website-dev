@@ -1,0 +1,74 @@
+/* .repeatingBg {
+  mask-image: linear-gradient(black, transparent 70%);
+  z-index: 0;
+} */
+
+
+/* RepeatingSVG.module.css */
+
+/* This is the main container that holds both layers and handles mouse events */
+.repeatingBgContainer {
+  /* This fades out the entire component at the bottom, just like before */
+  mask-image: linear-gradient(black 60%, transparent 85%);
+  z-index: 0;
+  overflow: hidden; /* Important for containing the glow filter */
+  
+  /* Initialize CSS variables for mouse position */
+  --mouse-x: 50%;
+  --mouse-y: 50%;
+}
+
+/* Common styles for both SVG layers to ensure they stack perfectly */
+.baseLayer,
+.glowLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* Allows mouse events to pass through to the container */
+}
+
+/* --- Base Layer Styling --- */
+.baseLayer {
+  opacity: 0.3; /* Make the base layer less prominent */
+  transition: opacity 0.3s ease-in-out;
+}
+/* When hovering the container, you can optionally fade the base layer out a bit */
+.repeatingBgContainer:hover .baseLayer {
+  opacity: 0.18;
+}
+/* Target the SVG paths inside the base layer */
+.baseLayer :global(path) {
+  stroke: gray;
+}
+
+
+/* --- Glow Layer Styling --- */
+.glowLayer {
+  /* The magic: A radial mask that follows the mouse cursor */
+  mask-image: radial-gradient(
+    circle 200px at var(--mouse-x) var(--mouse-y),
+    black 20%,
+    transparent 100%
+  );
+  
+  /* Add the "glow" using a drop-shadow filter */
+  /* filter: drop-shadow(0 0 8px hsl(180, 100%, 75%))
+          drop-shadow(0 0 15px hsl(180, 100%, 60%)); */
+
+  filter: drop-shadow(0 0 8px #F79839)
+          drop-shadow(0 0 15px #fa8b1d);
+          
+  /* Animate the glow appearing/disappearing */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+/* When hovering the container, make the glow layer visible */
+.repeatingBgContainer:hover .glowLayer {
+  opacity: 1;
+}
+/* Target the SVG paths inside the glow layer to give them a bright color */
+.glowLayer :global(path) {
+  stroke: #ffaf5f; /* A bright cyan color */
+}

@@ -1,0 +1,30 @@
+.mySwiper2 .swiper-wrapper {
+    margin-top: 96px;
+    margin-bottom: 56px;
+}
+
+.gallery {
+    padding-bottom: 48px;
+}
+
+/* .gallery::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #282828;
+    z-index: 5;
+} */
+
+.mySwiper {
+    width: 80%;
+    padding-left: 48px;
+    padding-right: 48px;
+}
+
+.mySwiper .swiper-button-prev, .mySwiper .swiper-button-next {
+    color: transparent;
+}
+
+.mySwiper2 .swiper-button-prev, .mySwiper2 .swiper-button-next {
+    color: transparent;
+}

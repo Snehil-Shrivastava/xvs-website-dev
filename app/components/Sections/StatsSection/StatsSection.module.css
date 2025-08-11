@@ -1,0 +1,27 @@
+.cardGrid::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 32px;
+    border-style: solid;
+    border-color: #282828 transparent transparent #282828;
+    z-index: 10;
+}
+
+.cardGrid::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-width: 32px;
+    border-style: solid;
+    border-color: transparent #282828 #282828 transparent;
+    z-index: 10;
+}

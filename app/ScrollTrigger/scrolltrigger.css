@@ -1,0 +1,30 @@
+.shadow-mask-ellipse {
+  /* mask-image: radial-gradient(1000px circle at center, black, transparent 95%); */
+  /* mask-image: linear-gradient(0.25turn, transparent, black, transparent); */
+}
+
+.shadow-mask-stars {
+  /* mask-image: radial-gradient(900px circle at center, black, transparent 95%); */
+}
+
+.shadow-mask {
+  /* mask-image: radial-gradient(1000px circle at center, transparent, black 95%); */
+  mask-image: linear-gradient(0.25turn, black, transparent, black);
+}
+
+.box-container {
+  width: 66.66%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  height: 1200px;
+}
+
+.box {
+  /* width: 320px; */
+  height: 250px;
+  background: lightblue;
+  flex: 1;
+}

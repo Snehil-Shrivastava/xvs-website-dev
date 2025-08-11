@@ -1,0 +1,36 @@
+/* .gifBox::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-width: 32px;
+    border-style: solid;
+    border-color: #282828 transparent transparent #282828;
+} */
+
+/* .gifBox::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-width: 32px;
+    border-style: solid;
+    border-color: transparent #282828 #282828 transparent;
+} */
+
+.reelImg {
+    clip-path: polygon(
+        0% 10%,
+        0% 100%,
+        95% 100%,
+        100% 90%,
+        100% 0%,
+        5% 0
+    );
+}

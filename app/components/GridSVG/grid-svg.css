@@ -1,0 +1,11 @@
+.grid-container {
+  mask-image: radial-gradient(ellipse, black, transparent 70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.box-shadow:hover {
+  box-shadow: 0 0 15px 5px rgba(189, 104, 13, 0.7);
+}

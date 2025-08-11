@@ -1,0 +1,27 @@
+.swiper-container {
+    padding: 72px 0 !important;
+    mask-image: radial-gradient(950px circle at center, black, transparent 100%);
+}
+
+.swiper-container .swiper-wrapper {
+    height: 540px !important;
+}
+
+.swiper-container .swiper-slide {
+    margin: 0 !important;
+    width: 480px !important;
+    border: 1px solid rgba(177, 177, 177, 0.4);
+}
+
+.swiper-container .swiper-slide > div {
+    height: 100% !important;
+}
+
+.swiper-container .swiper-slide > div > img {
+    height: 100%;
+    object-fit: cover !important;
+}
+
+.swiper-container .swiper-button-prev, .swiper-container .swiper-button-next {
+    color: white;
+}

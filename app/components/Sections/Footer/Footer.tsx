@@ -1,0 +1,126 @@
+import Link from "next/link";
+
+import * as motion from "motion/react-client";
+
+import "./Footer.css";
+import Image from "next/image";
+
+import logo from "../../../../public/assests/xvs-logo-icon.png";
+
+import icon1 from "../../../../public/assests/Vector (3).png";
+import icon2 from "../../../../public/assests/Vector (4).png";
+import icon3 from "../../../../public/assests/Vector (5).png";
+import icon4 from "../../../../public/assests/Exclude.png";
+import icon5 from "../../../../public/assests/Vector (6).png";
+import icon6 from "../../../../public/assests/Vector (7).png";
+
+const Footer = () => {
+  return (
+    <div className="mt-[170px] footer-container">
+      <div className="footer-content-container">
+        <div className="w-[85%] mx-auto pb-[72px]">
+          <div className="w-[90%] mx-auto">
+            <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px]">
+              <div>
+                <h1 className="text-[72px]/[80px] font-bold tracking-wider w-[750px]">
+                  Let's start creating together
+                </h1>
+              </div>
+              <motion.a
+                href="/"
+                className="text-[26px] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px]"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                Schedule A Meeting
+              </motion.a>
+            </div>
+            <div className="footer-links-block">
+              <div className="footer-link-block first">
+                <div>
+                  <Image src={logo} alt="" />
+                </div>
+                <div className="flex flex-wrap w-[98px] gap-[16px] items-center justify-center">
+                  <Image src={icon1} alt="" />
+                  <Image src={icon2} alt="" />
+                  <Image src={icon3} alt="" />
+                  <Image src={icon4} alt="" />
+                  <Image src={icon5} alt="" />
+                  <Image src={icon6} alt="" />
+                </div>
+              </div>
+              <div className="footer-link-block second">
+                <h1 className="font-semibold text-[16px] mb-[16px]">
+                  Contacts
+                </h1>
+                <p className="text-[16px]">
+                  2nd Floor, 1/23 Rajni Khand, Sharda Nagar, Lucknow, UP
+                  (226002), India.
+                </p>
+                <div className="flex gap-[32px] mt-[72px]">
+                  <h1 className="text-[36px]">Say Hi!</h1>
+                  <div>
+                    <a href="" className="hover:underline text-[15px]">
+                      info@xvscreations.com
+                    </a>
+                    <p className=" text-[15px]">+91-8726899713</p>
+                  </div>
+                </div>
+              </div>
+              <div className="footer-link-block third">
+                <h1 className="font-semibold text-[16px] mb-[16px]">
+                  Services
+                </h1>
+                <div className="flex flex-col gap-[8px]">
+                  <Link href="/" className="hover:underline text-[13px]">
+                    Branding
+                  </Link>
+                  <Link href="/" className="hover:underline text-[13px]">
+                    Graphic Design
+                  </Link>
+                  <Link href="/" className="hover:underline text-[13px]">
+                    UI/UX Design
+                  </Link>
+                  <Link href="/" className="hover:underline text-[13px]">
+                    Website Development
+                  </Link>
+                  <Link href="/" className="hover:underline text-[13px]">
+                    Motion Graphics
+                  </Link>
+                  <Link href="/" className="hover:underline text-[13px]">
+                    2D Animation
+                  </Link>
+                  <Link href="/" className="hover:underline text-[13px]">
+                    Social Media Marketing
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className=" bg-[#282828]">
+        <div className="flex justify-between text-white/[0.5] w-[85%] mx-auto text-[14px] pt-[28px] pb-[12px]">
+          <div>
+            <p className="font-light">
+              @ 2025 xVS Creations All Rights Reserved
+            </p>
+          </div>
+          <div className="flex gap-[15px]">
+            <Link href="/" className="hover:underline">
+              Terms and conditions
+            </Link>
+            <Link href="/" className="hover:underline">
+              Privacy Cookies
+            </Link>
+            <Link href="/" className="hover:underline">
+              policy
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

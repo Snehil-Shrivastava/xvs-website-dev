@@ -1,0 +1,15 @@
+.review-box {
+    background: radial-gradient(750px circle at top center,  rgba(250, 250, 250, 0.8) 0%, rgba(40, 40, 40, 0.8) 100%);
+    border-left: 1px solid rgba(250, 250, 250, 0.1);
+    border-right: 1px solid rgba(250, 250, 250, 0.1);
+    border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+}
+
+.client-banner {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    filter: grayscale(100%);
+    gap: 88px;
+
+    border-bottom: 1px solid rgba(250, 250, 250, 0.1);
+}

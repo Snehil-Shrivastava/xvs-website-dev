@@ -1,0 +1,187 @@
+"use client";
+
+import React, { useRef, useEffect } from "react";
+import styles from "./ProcessGlowCards.module.css";
+import Image from "next/image";
+
+import ProjectsImg from "../../../public/assests/layer.png";
+import TimeImg from "../../../public/assests/time.png";
+import HexaImg from "../../../public/assests/hexa.png";
+import StarImg from "../../../public/assests/star.png";
+
+import * as motion from "motion/react-client";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+// const cardData = [
+//   {
+//     title: "Projects",
+//     subtitle: "500+",
+//     text1: "meaningful impact on businesses",
+//     text2: "with our design projects",
+//     img: ProjectsImg,
+//   },
+// ];
+
+gsap.registerPlugin(ScrollTrigger);
+
+const ProcessGlowCards = ({
+  heading,
+  description,
+  order,
+}: {
+  heading: string;
+  description: string;
+  order: number;
+}) => {
+  const bodyContainerRef = useRef(null);
+  const cardLayerRef = useRef(null);
+  const cardsContainerRef = useRef(null);
+
+  useEffect(() => {
+    const cardsContainer = cardsContainerRef.current;
+
+    if (!cardsContainer) return;
+
+    // @ts-ignore
+    const handleMouseMove = (e) => {
+      // @ts-ignore
+      const cards = cardsContainer.getElementsByClassName(styles.card);
+
+      for (const card of cards) {
+        const rect = card.getBoundingClientRect();
+
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+      }
+    };
+
+    // @ts-ignore
+    cardsContainer.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      // @ts-ignore
+      cardsContainer.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  useGSAP(() => {
+    const bodyContainer = bodyContainerRef.current;
+    const cardLayer = cardLayerRef.current;
+
+    // gsap.set(bodyContainer, {width: 0})
+    
+    const tl = gsap.timeline()
+
+    tl.to(cardLayer, {
+      scrollTrigger: {
+        trigger: cardLayer,
+        // markers: true,
+        start: 'top 75%',
+        end: 'top 40%',
+        scrub: 1
+      },
+      width: 0
+    })
+
+  })
+
+
+  return (
+    <div
+    ref={bodyContainerRef}
+      className={`${styles.bodyContainer} ${
+        order === 1 ? styles.bodyContainerFirst : styles.bodyContainerLast
+      }`}
+    >
+      <div ref={cardLayerRef} className="absolute inset-0 bg-[#282828] z-[1]"></div>
+      <div id="cards" className={styles.cards} ref={cardsContainerRef}>
+        {/* {cardData.map((card, index) => ( */}
+        <div className={`${styles.cardShadowContainer}`}>
+          <div
+            className={`${styles.card} ${
+              order === 1 ? styles.clipCardFirst : styles.clipCardLast
+            }`}
+          >
+            <div className={styles["card-content"]}>
+              <div className="text-left py-[48px] mt-auto flex flex-col gap-[48px]">
+                <div className="flex items-center w-[80%] mx-auto gap-[32px] justify-center">
+                  {order === 1 ? (
+                    <div className="flex items-center relative bg-glow">
+                      <span
+                        className="w-[78px] h-[48px] block rounded-l-[28px] rounded-br-[22px] z-[5]"
+                        style={{
+                          backdropFilter: "blur(2px)",
+                          background: "rgba(221, 221, 221, 0.8)",
+                          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                          border: "1px solid rgba(138, 138, 138, 0.23)",
+                          transform: "rotate(45deg)",
+                        }}
+                      ></span>
+                      <span
+                        className="w-[35px] h-[29px] block absolute left-[67%] top-[12px] z-[3]"
+                        style={{
+                          background: "#F79839",
+                          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                          border: "1px solid rgba(138, 138, 138, 0.23)",
+                          transform: "rotate(-45deg) skew(-40deg)",
+                        }}
+                      ></span>
+                    </div>
+                  ) : (
+                    <div className="flex items-center relative bg-glow">
+                      <span className="w-[45px] h-[50px] bg-[#5F5F5C] block rounded-[5px]"></span>
+                      <span
+                        className="w-[50px] h-[70px] block rounded-[5px] absolute left-1/2 -translate-x-1/2"
+                        style={{
+                          backdropFilter: "blur(2px)",
+                          background: "rgba(221, 221, 221, 0.8)",
+                          borderRadius: "5px",
+                          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                          border: "1px solid rgba(138, 138, 138, 0.23)",
+                        }}
+                      ></span>
+                      <span className="w-[45px] h-[50px] bg-[#F79839] block rounded-[5px]"></span>
+                    </div>
+                  )}
+                  <h1 className="text-[64px] font-semibold tracking-wide text-[#F3EDDE]">
+                    {heading}
+                  </h1>
+                </div>
+                <p className="text-[18px]/[35px] tracking-wider w-[72%] mx-auto font-light text-left">
+                  {description}
+                </p>
+              </div>
+              {/* <div>
+                  {index === 2 ? (
+                    <Image
+                      src={card.img}
+                      alt="image"
+                      width={180}
+                      height={103}
+                      className="absolute top-[15%] right-[10%]"
+                    />
+                  ) : (
+                    <Image
+                      src={card.img}
+                      alt="image"
+                      width={114}
+                      height={103}
+                      className="absolute top-[15%] right-[10%]"
+                    />
+                  )}
+                </div> */}
+            </div>
+          </div>
+        </div>
+        {/* ))} */}
+      </div>
+    </div>
+  );
+};
+
+export default ProcessGlowCards;

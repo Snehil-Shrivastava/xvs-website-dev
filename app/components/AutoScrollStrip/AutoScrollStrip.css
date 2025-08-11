@@ -1,0 +1,34 @@
+@keyframes marquees {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logo-slide {
+    animation: 15s marquees infinite linear;
+    display: inline-block;
+    width: 1220px;
+    margin-right: 40px;
+}
+
+.marquee-container {
+    display: flex;
+    width: max-content;
+    animation: scrollMarquee 15s linear infinite;
+}
+
+.marquee-container:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}

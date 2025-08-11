@@ -1,0 +1,21 @@
+.glow-ring {
+  box-shadow: 0 0 80px 20px rgba(254, 146, 39, 0.702);
+}
+
+.glow-ring-2 {
+  box-shadow: 0 0 120px 70px rgba(254, 146, 39, 0.8);
+  z-index: -1;
+}
+
+.services-loading-container {
+    animation: loading 1.5s ease-out;
+}
+
+@keyframes loading {
+    from {
+       height: 945px; 
+    }
+    to {
+        height: 0;
+    }
+}

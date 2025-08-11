@@ -1,0 +1,30 @@
+.gridContainer {
+  mask-image: radial-gradient(ellipse, black, transparent 70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.boxShadow:hover {
+  box-shadow: 0 0 15px 5px rgba(189, 104, 13, 0.7);
+}
+
+.imgFlip {
+  transform: scale(-0.6, 0.6);
+}
+
+.circleGlow::before {
+  content: '';
+  display: block;
+  width: 320px;
+  height: 320px;
+  background: rgba(254, 146, 39, 0.09);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+
+  box-shadow: 0px 0px 320px 120px rgba(254, 146, 39, 0.1);
+}
