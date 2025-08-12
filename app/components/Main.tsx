@@ -52,7 +52,7 @@ const Main = () => {
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, ease: "easeIn" }}
-          className="absolute 2xl:left-[25%] xl:left-[18%] text-[22px] font-light"
+          className="absolute 4k:left-[35%] base:left-[22%] 2xl:left-[15%] xl:left-[15%] text-[22px] font-light"
         >
           Creating Unforgettable Design
         </motion.p>
@@ -61,7 +61,7 @@ const Main = () => {
             <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] inline">
               e
             </h1>
-            <div className="2xl:w-[180px] xl:w-[150px] overflow-hidden">
+            <div className="2xl:w-[180px] xl:w-[150px] lg:w-[140px] overflow-hidden">
               <AnimatedJSON />
             </div>
           </div>

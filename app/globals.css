@@ -16,6 +16,7 @@
 }
 
 @theme {
+  --breakpoint-base: 1905px;
   --breakpoint-4k: 2560px;
 }
 

@@ -1,19 +1,19 @@
-'use client'
+"use client";
 
-import React, { useRef } from 'react'
-import SectionHeadingText from '../../SectionHeadingText/SectionHeadingText'
+import React, { useRef } from "react";
+import SectionHeadingText from "../../SectionHeadingText/SectionHeadingText";
 
-import './Reviews.css'
+import "./Reviews.css";
 
-import ReviewsThumbSlider from '../../ReviewsThumbSlider/ReviewsThumbSlider'
-import { useGSAP } from '@gsap/react'
+import ReviewsThumbSlider from "../../ReviewsThumbSlider/ReviewsThumbSlider";
+import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Reviews = () => {
-    const cardLayerRef = useRef(null);
+  const cardLayerRef = useRef(null);
 
   useGSAP(() => {
     const cardLayer = cardLayerRef.current;
@@ -24,29 +24,34 @@ const Reviews = () => {
       scrollTrigger: {
         trigger: cardLayer,
         // markers: true,
-        start: 'top 60%',
-        end: 'top 40%',
+        start: "top 60%",
+        end: "top 40%",
         scrub: 1,
-        once: true
+        once: true,
       },
       width: 0,
-      duration: 0.8
+      duration: 0.8,
     });
   });
   return (
-    <div className='mt-[180px]'>
-        <SectionHeadingText SectionTitle='WORDS' buttonTitle='REVIEWS' />
-        <div className='mt-[28px]'>
-            <h3 className='font-light tracking-wide text-[#F3EDDE] my-[32px]'>Hear from visionaries and experts</h3>
-            <div className='relative'>
-      <div ref={cardLayerRef} className="absolute inset-0 bg-[#282828] z-[5]"></div>
-            <div className='bg-[#F3EDDE] 2xl:w-[80%] xl:w-full mx-auto reviews-box relative'>
-                <ReviewsThumbSlider />
-            </div>
-            </div>
+    <div className="mt-[180px]">
+      <SectionHeadingText SectionTitle="WORDS" buttonTitle="REVIEWS" />
+      <div className="mt-[28px]">
+        <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px]">
+          Hear from visionaries and experts
+        </h3>
+        <div className="relative p-[2px]">
+          <div
+            ref={cardLayerRef}
+            className="absolute inset-0 bg-[#282828] z-[5]"
+          ></div>
+          <div className="bg-[#F3EDDE] 2xl:w-[80%] xl:w-full mx-auto reviews-box relative">
+            <ReviewsThumbSlider />
+          </div>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default Reviews
+export default Reviews;
