@@ -150,10 +150,10 @@ const HoverGlowCards = () => {
   })
 
   return (
-    <div className={styles.bodyContainer}>
+    <div className={`${styles.bodyContainer}`}>
       <div id="cards" className={styles.cards} ref={cardsContainerRef}>
         {cardData.map((card, index) => (
-          <div key={index} className={`${styles.cardShadowContainer} relative`}>
+          <div key={index} className={`${styles.cardShadowContainer} relative lg:h-[360px]`}>
             <div ref={index===0? cardLayerRef0 : index === 1? cardLayerRef1 : index=== 2? cardLayerRef2 : cardLayerRef3} className="absolute inset-0 bg-[#282828] z-[5]"></div>
             <div
               className={`${styles.card} ${
@@ -165,9 +165,9 @@ const HoverGlowCards = () => {
               }`}
             >
               <div className={styles["card-content"]}>
-                <div className="text-left 2xl:pl-[75px] 2xl:pb-[56px] xl:pl-[55px] xl:pb-[55px] mt-auto">
+                <div className="text-left 2xl:pl-[75px] 2xl:pb-[56px] xl:pl-[55px] xl:pb-[55px] lg:pl-[35px] lg:pb-[35px] mt-auto">
                   <h3 className="font-medium text-2xl">{card.title}</h3>
-                  <h1 className="text-[#F79839] font-bold 2xl:text-9xl xl:text-[5rem]">
+                  <h1 className="text-[#F79839] font-bold 2xl:text-9xl xl:text-[5rem] lg:text-[4rem]">
                     {card.subtitle}
                   </h1>
                   <p className="font-light text-lg">{card.text1}</p>

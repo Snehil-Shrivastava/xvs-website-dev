@@ -21,19 +21,19 @@ const Footer = () => {
         <div className="w-[85%] mx-auto pb-[72px]">
           <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
             <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px]">
-              <div>
-                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] font-bold tracking-wider w-[750px]">
+              <div className="flex-1">
+                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] font-bold tracking-wider xl:w-[750px]">
                   Let's start creating together
                 </h1>
               </div>
-              <motion.a
-                href="/"
-                className="text-[26px] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px]"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Schedule A Meeting
-              </motion.a>
+              <div className="flex-1 text-center">
+                <a
+                  href="/"
+                  className="xl:text-[26px] lg:text-[1.2rem] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px]"
+                >
+                  Schedule A Meeting
+                </a>
+              </div>
             </div>
             <div className="footer-links-block">
               <div className="footer-link-block first">
@@ -50,6 +50,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-link-block second">
+                <div className="max-[1025px]:w-[60%] max-[1025px]:mx-auto">
                 <h1 className="font-semibold text-[16px] mb-[16px]">
                   Contacts
                 </h1>
@@ -65,6 +66,7 @@ const Footer = () => {
                     </a>
                     <p className=" text-[15px]">+91-8726899713</p>
                   </div>
+                </div>
                 </div>
               </div>
               <div className="footer-link-block third">

@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 
 import ReelSection from "./Sections/ReelsSection/ReelSection";
 import StatsSection from "./Sections/StatsSection/StatsSection";
@@ -6,7 +6,7 @@ import StatsSection from "./Sections/StatsSection/StatsSection";
 import SwiperCarousel from "./Sections/CarouselSection/SwiperCarusel";
 import Reviews from "./Sections/ReviewsSection/Reviews";
 
-import React, { Suspense, useRef } from "react";
+// import React, { Suspense, useRef } from "react";
 import * as motion from "motion/react-client";
 
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
@@ -30,32 +30,29 @@ import Image from "next/image";
 import AnimatedJSON from "./AnimatedJSON/AnimatedJSON";
 import AnimatedCardIcon from "./AnimatedCardIcon/AnimatedCardIcon";
 
-function SpinningBox() {
-  // @ts-ignore
-  const meshRef = useRef();
+// function SpinningBox() {
+//   // @ts-ignore
+//   const meshRef = useRef();
 
-  useFrame(() => {
-    if (meshRef.current) {
-      // @ts-ignore
-      // meshRef.current.rotation.y += 0.003; // Rotate around Y-axis
-    }
-  });
+//   useFrame(() => {
+//     if (meshRef.current) {
+//       // @ts-ignore
+//       // meshRef.current.rotation.y += 0.003; // Rotate around Y-axis
+//     }
+//   });
 
-  return <Model ref={meshRef} position={[0, 0, 0]} scale={[3, 3, 3]} />;
-}
+//   return <Model ref={meshRef} position={[0, 0, 0]} scale={[3, 3, 3]} />;
+// }
 
 const Main = () => {
   return (
     <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] mx-auto mt-[157px] text-center relaive">
       <header className="relative">
-        <motion.p
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: "easeIn" }}
-          className="absolute 4k:left-[35%] base:left-[22%] 2xl:left-[15%] xl:left-[15%] text-[22px] font-light"
+        <p
+          className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] font-light"
         >
           Creating Unforgettable Design
-        </motion.p>
+        </p>
         <div className="flex justify-center">
           <div className="flex">
             <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] inline">

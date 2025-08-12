@@ -10,12 +10,17 @@
 
   /* Body styles applied to this container */
   align-items: center;
-  height: 858px;
   justify-content: center;
   margin-bottom: 220px;
   overflow: hidden;
   padding: 0px;
 }
+
+/* @media screen and (min-width: 1440px) {
+  .bodyContainer {
+    height: 858px;
+  }
+} */
 
 .cards {
   display: grid;
