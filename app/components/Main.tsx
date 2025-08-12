@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 
 import ReelSection from "./Sections/ReelsSection/ReelSection";
 import StatsSection from "./Sections/StatsSection/StatsSection";
@@ -48,9 +48,7 @@ const Main = () => {
   return (
     <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] mx-auto mt-[157px] text-center relaive">
       <header className="relative">
-        <p
-          className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] font-light"
-        >
+        <p className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] font-light">
           Creating Unforgettable Design
         </p>
         <div className="flex justify-center">
@@ -72,7 +70,28 @@ const Main = () => {
       </header>
       <ReelSection />
       <StatsSection />
-
+      {/* <Canvas
+        shadows
+        camera={{ position: [0, 1, 1], fov: 50 }}
+        style={{ height: "320px" }}
+      >
+        <ambientLight intensity={0.8} />
+        <directionalLight
+          position={[5, 5, 0]}
+          castShadow
+          // shadow-mapSize-width={1024}
+          // shadow-mapSize-height={1024}
+          shadow-camera-near={0.1}
+          shadow-camera-far={50}
+          shadow-camera-left={-5}
+          shadow-camera-right={5}
+          shadow-camera-top={5}
+          shadow-camera-bottom={-5}
+          intensity={3}
+        />
+        <Model />
+        <OrbitControls />
+      </Canvas> */}
       <SwiperCarousel />
       <Reviews />
     </section>

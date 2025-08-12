@@ -141,8 +141,8 @@ const AboutPage = () => {
       scrollTrigger: {
         trigger: smallLambdaRef.current,
         // markers: true,
-        start: "top 44%",
-        end: "top 25%",
+        start: "top 23%",
+        end: "top top",
         scrub: 1,
       },
       scale: 0,
@@ -327,7 +327,7 @@ const AboutPage = () => {
       {
         scrollTrigger: {
           trigger: richTxt,
-          markers: true,
+          // markers: true,
           start: 'top bottom',
           end: 'top 80%',
           scrub: 1,
@@ -488,7 +488,8 @@ const AboutPage = () => {
             xmlns="http://www.w3.org/2000/svg"
             width="350"
             height="800"
-            viewBox="0 0 267 800"
+            // viewBox="0 0 267 800"
+            viewBox="-17 0 250 800"
             fill="none"
           >
             <foreignObject x="-30" y="-10" width="296.6" height="297">

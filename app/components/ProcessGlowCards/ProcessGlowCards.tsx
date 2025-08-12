@@ -83,7 +83,8 @@ const ProcessGlowCards = ({
         // markers: true,
         start: 'top 75%',
         end: 'top 40%',
-        scrub: 1
+        scrub: 1,
+        once: true
       },
       width: 0
     })

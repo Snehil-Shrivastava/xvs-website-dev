@@ -1,26 +1,35 @@
-'use client'
+"use client";
 
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 // @ts-ignore
-import { useGLTF } from '@react-three/drei';
-import { useLoader } from '@react-three/fiber';
-import { OBJLoader } from 'three-stdlib';
+import { useAnimations, useGLTF } from "@react-three/drei";
+import { useLoader } from "@react-three/fiber";
+import { OBJLoader } from "three-stdlib";
 
 export function Model(props: any) {
-  const { scene } = useGLTF('/UI_UX.glb'); // Path to your .glb file
+  const group = useRef(null);
+  const { scene, animations } = useGLTF("/mario.glb"); // Path to your .glb file
+  const { actions } = useAnimations(animations, group);
 
-// const obj = useLoader(OBJLoader, '/assests/models/Elements3d.blend')
+  // const obj = useLoader(OBJLoader, '/assests/models/Elements3d.blend')
 
+useEffect(() => {
   scene.traverse((child) => {
-    // @ts-ignore
-    if (child.isMesh) {
-      child.castShadow = true;
-      child.receiveShadow = true;
+    if ((child as any).isMesh) {
+      child.castShadow = true
+      child.receiveShadow = true
     }
-  });
+  })
+}, [scene])
+
+  useEffect(() => {
+    if (actions && animations.length > 0) {
+      actions[animations[0].name]?.reset().fadeIn(0.5).play();
+    }
+  }, [actions, animations]);
 
   // @ts-ignore
-  return <primitive object={scene} {...props} />;
+  return <primitive ref={group} object={scene} {...props} />;
 }
 
 // Optional: Preload the model for faster loading on subsequent renders

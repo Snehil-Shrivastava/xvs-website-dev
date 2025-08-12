@@ -8,7 +8,7 @@ import logo2 from "../../../public/assests/Group.png";
 
 const Clients = () => {
   return (
-    <div className="py-[98px] bg-neutral-200 mt-[64px] review-box">
+    <div className="py-[98px] mt-[64px] review-box">
       <div className="w-[80%] mx-auto">
         <div className="client-banner pb-[88px] select-none">
           <Image src={logo1} alt="" className="mx-auto" />
