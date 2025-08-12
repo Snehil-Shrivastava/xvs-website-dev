@@ -87,7 +87,7 @@ export default function MobileMenu() {
             <Link
               href="/about"
               onClick={handleLinkClick}
-              className="block px-2 py-1 rounded hover:bg-gray-100 text-2xl"
+              className="block px-2 py-1 rounded text-2xl"
             >
               About
             </Link>
@@ -96,7 +96,7 @@ export default function MobileMenu() {
             <Link
               href="/services"
               onClick={handleLinkClick}
-              className="block px-2 py-1 rounded hover:bg-gray-100 text-2xl"
+              className="block px-2 py-1 rounded text-2xl"
             >
               Services
             </Link>
@@ -105,7 +105,7 @@ export default function MobileMenu() {
             <Link
               href="/contact"
               onClick={handleLinkClick}
-              className="block px-2 py-1 rounded hover:bg-gray-100 text-2xl"
+              className="block px-2 py-1 rounded text-2xl"
             >
               Contact
             </Link>
