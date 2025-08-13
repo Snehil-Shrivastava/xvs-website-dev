@@ -14,6 +14,8 @@ import icon4 from "../../../../public/assests/Exclude.png";
 import icon5 from "../../../../public/assests/Vector (6).png";
 import icon6 from "../../../../public/assests/Vector (7).png";
 
+import meetingSchedIcon from "../../../../public/assests/schedule-meeting-logo.png";
+
 const Footer = () => {
   return (
     <div className="mt-[170px] footer-container">
@@ -22,17 +24,18 @@ const Footer = () => {
           <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
             <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px]">
               <div className="flex-1">
-                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] font-bold tracking-wider xl:w-[750px]">
+                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] font-bold tracking-wider 2xl:w-[780px] xl:w-[730px]">
                   Let's start creating together
                 </h1>
               </div>
-              <div className="flex-1 text-center">
-                <a
+              <div className="flex-1 text-center flex justify-center">
+                <Link
                   href="/"
-                  className="xl:text-[26px] lg:text-[1.2rem] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px]"
+                  className="xl:text-[26px] lg:text-[1.2rem] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px] flex gap-[26px]"
                 >
-                  Schedule A Meeting
-                </a>
+                  <Image src={meetingSchedIcon} alt="icon" />
+                  <span>Schedule A Meeting</span>
+                </Link>
               </div>
             </div>
             <div className="footer-links-block">
@@ -51,22 +54,22 @@ const Footer = () => {
               </div>
               <div className="footer-link-block second">
                 <div className="max-[1025px]:w-[60%] max-[1025px]:mx-auto">
-                <h1 className="font-semibold text-[16px] mb-[16px]">
-                  Contacts
-                </h1>
-                <p className="text-[16px]">
-                  2nd Floor, 1/23 Rajni Khand, Sharda Nagar, Lucknow, UP
-                  (226002), India.
-                </p>
-                <div className="flex gap-[32px] mt-[72px]">
-                  <h1 className="text-[36px]">Say Hi!</h1>
-                  <div>
-                    <a href="" className="hover:underline text-[15px]">
-                      info@xvscreations.com
-                    </a>
-                    <p className=" text-[15px]">+91-8726899713</p>
+                  <h1 className="font-semibold text-[16px] mb-[16px]">
+                    Contacts
+                  </h1>
+                  <p className="text-[16px]">
+                    2nd Floor, 1/23 Rajni Khand, Sharda Nagar, Lucknow, UP
+                    (226002), India.
+                  </p>
+                  <div className="flex gap-[32px] mt-[72px]">
+                    <h1 className="text-[36px]">Say Hi!</h1>
+                    <div>
+                      <a href="" className="hover:underline text-[15px]">
+                        info@xvscreations.com
+                      </a>
+                      <p className=" text-[15px]">+91-8726899713</p>
+                    </div>
                   </div>
-                </div>
                 </div>
               </div>
               <div className="footer-link-block third">

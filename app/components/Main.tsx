@@ -47,7 +47,7 @@ import AnimatedCardIcon from "./AnimatedCardIcon/AnimatedCardIcon";
 const Main = () => {
   return (
     <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] mx-auto mt-[157px] text-center relaive">
-      <header className="relative">
+      <header className="relative pointer-events-none">
         <p className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] font-light">
           Creating Unforgettable Design
         </p>
