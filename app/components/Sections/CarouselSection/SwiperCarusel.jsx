@@ -1,6 +1,5 @@
 "use client";
 
-// import Swiper core and required modules
 import {
   Navigation,
   Pagination,
@@ -11,6 +10,10 @@ import {
 } from "swiper/modules";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 // Import Swiper styles
 import "swiper/css";
@@ -23,7 +26,84 @@ import HoverGlowCardsCarousel from "../../HoverGlowCardsCarousel/HoverGlowCardsC
 import SectionHeadingText from "../../SectionHeadingText/SectionHeadingText";
 
 export default () => {
-  const swiperRef = useRef(null);
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+
+  const cardData = [
+    {
+      id: 1, // Using a unique id is better for keys
+      title: "Card 1",
+      // imageUrl: "https://picsum.photos/id/10/500/300",
+    },
+    {
+      id: 2,
+      title: "Card 2",
+      // imageUrl: "https://picsum.photos/id/20/500/300",
+    },
+    {
+      id: 3,
+      title: "Card 3",
+      // imageUrl: "https://picsum.photos/id/30/500/300",
+    },
+    {
+      id: 4,
+      title: "Card 4",
+      // imageUrl: "https://picsum.photos/id/40/500/300",
+    },
+    {
+      id: 5,
+      title: "Card 5",
+      // imageUrl: "https://picsum.photos/id/50/500/300",
+    },
+  ];
+
+  const loopedCardData = [...cardData, ...cardData];
+
+  const swiperParams = {
+    modules: [
+      Navigation,
+      Pagination,
+      Scrollbar,
+      A11y,
+      EffectCoverflow,
+      Autoplay,
+    ],
+    // spaceBetween={50}
+    slidesPerView: "auto",
+    navigation: {
+      prevEl: prevRef.current,
+      nextEl: nextRef.current,
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+    // onSwiper={(swiper) => (swiperRef.current = swiper)}
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    // initialSlide={3}
+    // speed={600}
+    // preventClicks={true}
+    loop: true,
+    // loopedSlides: 5,
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 80,
+      depth: 600,
+      modifier: 1,
+      slideShadows: true,
+    },
+
+    onBeforeInit: (swiper) => {
+      if (typeof swiper.params.navigation !== "boolean") {
+        const navigation = swiper.params.navigation;
+        navigation.prevEl = prevRef.current;
+        navigation.nextEl = nextRef.current;
+      }
+    },
+    className: "swiper-container",
+  };
 
   return (
     <>
@@ -33,48 +113,8 @@ export default () => {
           buttonTitle="VIEW SERVICES"
         />
       </div>
-      <Swiper
-        // install Swiper modules
-        modules={[
-          Navigation,
-          Pagination,
-          Scrollbar,
-          A11y,
-          EffectCoverflow,
-          Autoplay,
-        ]}
-        // spaceBetween={50}
-        slidesPerView="auto"
-        navigation
-        autoplay
-        onSwiper={(swiper) => (swiperRef.current = swiper)}
-        // onSlideChange={() => console.log("slide change")}
-        effect="coverflow"
-        grabCursor={true}
-        centeredSlides={true}
-        initialSlide={2}
-        speed={600}
-        preventClicks={true}
-        loop={true}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 80,
-          depth: 600,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        onClick={() => {
-          if (
-            swiperRef.current &&
-            swiperRef.current.clickedIndex !== undefined
-          ) {
-            swiperRef.current.slideTo(swiperRef.current.clickedIndex);
-          }
-        }}
-        className="swiper-container"
-      >
-        {/* <div className=""></div> */}
-        <SwiperSlide>
+      <Swiper {...swiperParams}>
+        {/* <SwiperSlide>
           <HoverGlowCardsCarousel />
         </SwiperSlide>
         <SwiperSlide>
@@ -88,10 +128,26 @@ export default () => {
         </SwiperSlide>
         <SwiperSlide>
           <HoverGlowCardsCarousel />
-        </SwiperSlide>
-        <SwiperSlide>
-          <HoverGlowCardsCarousel />
-        </SwiperSlide>
+        </SwiperSlide> */}
+        {loopedCardData.map((card, index) => (
+          // Using a more unique key: `card.id` combined with the index
+          <SwiperSlide key={`${card.id}-${index}`}>
+            <HoverGlowCardsCarousel />
+          </SwiperSlide>
+        ))}
+
+        <div
+          ref={prevRef}
+          className="swiper-button-custom swiper-button-prev-custom"
+        >
+          <FontAwesomeIcon icon={faArrowLeft} size="lg" />
+        </div>
+        <div
+          ref={nextRef}
+          className="swiper-button-custom swiper-button-next-custom"
+        >
+          <FontAwesomeIcon icon={faArrowRight} size="lg" />
+        </div>
       </Swiper>
     </>
   );
