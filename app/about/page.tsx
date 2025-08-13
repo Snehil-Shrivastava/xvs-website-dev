@@ -166,8 +166,8 @@ const AboutPage = () => {
         y: 530,
         scale: 0.5,
         transformOrigin: "center center",
-        duration: 1,
-        delay: 0.5,
+        // duration: 1,
+        // delay: 0.5,
         // @ts-ignore
       },
       "<"
@@ -189,8 +189,8 @@ const AboutPage = () => {
         y: 530,
         scale: 0.5,
         transformOrigin: "center center",
-        duration: 1,
-        delay: 0.5,
+        // duration: 1,
+        // delay: 0.5,
         // @ts-ignore
       },
       "<"
@@ -212,8 +212,8 @@ const AboutPage = () => {
         y: 530,
         scale: 0.5,
         transformOrigin: "center center",
-        duration: 1,
-        delay: 0.5,
+        // duration: 1,
+        // delay: 0.5,
         // @ts-ignore
       },
       "<"
@@ -235,8 +235,8 @@ const AboutPage = () => {
         y: 530,
         scale: 0.5,
         transformOrigin: "center center",
-        duration: 1,
-        delay: 0.5,
+        // duration: 1,
+        // delay: 0.5,
         // @ts-ignore
       },
       "<"
@@ -258,8 +258,8 @@ const AboutPage = () => {
         y: 530,
         scale: 0.5,
         transformOrigin: "center center",
-        duration: 1,
-        delay: 0.5,
+        // duration: 1,
+        // delay: 0.5,
         // @ts-ignore
       },
       "<"
@@ -272,8 +272,8 @@ const AboutPage = () => {
           //@ts-ignore
           trigger: bigLambda6Ref.current,
           // markers: true,
-          start: "top 23%",
-          end: "top top",
+          start: "10% 23%",
+          end: "10% top",
           scrub: 1,
           toggleActions: "play none none none",
         },
@@ -281,8 +281,8 @@ const AboutPage = () => {
         y: 530,
         scale: 0.5,
         transformOrigin: "center center",
-        duration: 1,
-        delay: 0.5,
+        // duration: 1,
+        // delay: 0.5,
         // @ts-ignore
       },
       "<"
@@ -294,9 +294,9 @@ const AboutPage = () => {
         scrollTrigger: {
           //@ts-ignore
           trigger: bigLambda7Ref.current,
-          // markers: true,
-          start: "top 23%",
-          end: "top top",
+          markers: true,
+          start: "10% 23%",
+          end: "10% top",
           scrub: 1,
           toggleActions: "play none none none",
         },
@@ -304,8 +304,8 @@ const AboutPage = () => {
         y: 530,
         scale: 0.5,
         transformOrigin: "center center",
-        duration: 1,
-        delay: 0.5,
+        // duration: 1,
+        // delay: 0.5,
         // @ts-ignore
       },
       "<"
@@ -349,7 +349,7 @@ const AboutPage = () => {
         <h1
           // @ts-ignore
           ref={AboutMainText}
-          className="absolute text-center top-[150px] left-1/2 -translate-x-1/2 w-[720px] mx-auto text-[#F3EDDE] text-[72px]/[85px] font-semibold aboutText"
+          className="absolute text-center top-[150px] left-1/2 -translate-x-1/2 w-[720px] mx-auto text-[#F3EDDE] text-[72px]/[85px] max-[769px]:text-[3rem]/[3.5rem] max-[769px]:w-[60%] font-semibold aboutText"
         >
           Inspiration to interpreting reality
         </h1>
@@ -786,7 +786,7 @@ const AboutPage = () => {
         </div>
         <p
           // @ts-ignore
-          className="text-[20px]/[40px] font-light text-center w-[39%] mx-auto mt-[50px] text-[#F3EDDE]"
+          className="text-[20px]/[40px] font-light text-center w-[39%] max-[769px]:w-[90%] mx-auto mt-[50px] text-[#F3EDDE]"
         >
           With the inspiration of designing we started back in 2014 and bringing
           them to reality since then. From cosmetic startups to big automotive
@@ -797,7 +797,7 @@ const AboutPage = () => {
         {/* <DivLogoIcon /> */}
       </div>
       {/* </div> */}
-      <div className="text-center my-[200px] w-[80%] mx-auto">
+      <div className="text-center my-[200px] w-[80%] mx-auto max-[769px]:w-[90%]">
         <SectionHeadingText SectionTitle="PROCESS" buttonTitle="PROCESS" />
         <p className="text-[#F3EDDE] font-light tracking-wider">
           We keep it simple and listen...
@@ -808,13 +808,13 @@ const AboutPage = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-[20px] font-light mt-[66px] w-[57%] mx-auto"
+          className="text-[20px] font-light mt-[66px] w-[57%] mx-auto max-[769px]:w-[90%]"
         >
           At xVS we design using tools but it's more than that, it's the
           aspiration of all who come together to make inspiration a reality.
         </motion.p>
       </div>
-      <div className="w-[80%] mx-auto text-center">
+      <div className="w-[80%] mx-auto text-center max-[769px]:w-[90%]">
         <SectionHeadingText SectionTitle="CLIENTS" buttonTitle="REVIEWS" />
         <p className="text-[#F3EDDE] font-light tracking-wider">
           Hear from visionaries and experts

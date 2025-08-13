@@ -97,24 +97,24 @@ const ProcessGlowCards = ({
     ref={bodyContainerRef}
       className={`${styles.bodyContainer} ${
         order === 1 ? styles.bodyContainerFirst : styles.bodyContainerLast
-      }`}
+      } max-[769px]:flex-1`}
     >
       <div ref={cardLayerRef} className="absolute inset-0 bg-[#282828] z-[1]"></div>
-      <div id="cards" className={styles.cards} ref={cardsContainerRef}>
+      <div id="cards" className={`${styles.cards} h-full`} ref={cardsContainerRef}>
         {/* {cardData.map((card, index) => ( */}
-        <div className={`${styles.cardShadowContainer}`}>
+        <div className={`${styles.cardShadowContainer} h-full`}>
           <div
             className={`${styles.card} ${
               order === 1 ? styles.clipCardFirst : styles.clipCardLast
             }`}
           >
             <div className={styles["card-content"]}>
-              <div className="text-left py-[48px] mt-auto flex flex-col gap-[48px]">
+              <div className="text-left py-[48px] mt-auto flex flex-col gap-[48px] max-[769px]:mt-[0]">
                 <div className="flex items-center w-[80%] mx-auto gap-[32px] justify-center">
                   {order === 1 ? (
                     <div className="flex items-center relative bg-glow">
                       <span
-                        className="w-[78px] h-[48px] block rounded-l-[28px] rounded-br-[22px] z-[5]"
+                        className="w-[78px] h-[48px] block rounded-l-[28px] rounded-br-[22px] z-[5] max-[769px]:w-[68px] max-[769px]:h-[38px]"
                         style={{
                           backdropFilter: "blur(2px)",
                           background: "rgba(221, 221, 221, 0.8)",
@@ -124,7 +124,7 @@ const ProcessGlowCards = ({
                         }}
                       ></span>
                       <span
-                        className="w-[35px] h-[29px] block absolute left-[67%] top-[12px] z-[3]"
+                        className="w-[35px] h-[29px] block absolute left-[67%] top-[12px] z-[3] max-[769px]:w-[29px] max-[769px]:h-[22px] max-[769px]:top-[13px]"
                         style={{
                           background: "#F79839",
                           boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
@@ -135,9 +135,9 @@ const ProcessGlowCards = ({
                     </div>
                   ) : (
                     <div className="flex items-center relative bg-glow">
-                      <span className="w-[45px] h-[50px] bg-[#5F5F5C] block rounded-[5px]"></span>
+                      <span className="w-[45px] h-[50px] bg-[#5F5F5C] block rounded-[5px] max-[769px]:h-[45px] max-[769px]:w-[30px]"></span>
                       <span
-                        className="w-[50px] h-[70px] block rounded-[5px] absolute left-1/2 -translate-x-1/2"
+                        className="w-[50px] h-[70px] block rounded-[5px] absolute left-1/2 -translate-x-1/2 max-[769px]:h-[60px] max-[769px]:w-[40px]"
                         style={{
                           backdropFilter: "blur(2px)",
                           background: "rgba(221, 221, 221, 0.8)",
@@ -146,10 +146,10 @@ const ProcessGlowCards = ({
                           border: "1px solid rgba(138, 138, 138, 0.23)",
                         }}
                       ></span>
-                      <span className="w-[45px] h-[50px] bg-[#F79839] block rounded-[5px]"></span>
+                      <span className="w-[45px] h-[50px] bg-[#F79839] block rounded-[5px] max-[769px]:h-[45px] max-[769px]:w-[30px]"></span>
                     </div>
                   )}
-                  <h1 className="text-[64px] font-semibold tracking-wide text-[#F3EDDE]">
+                  <h1 className="text-[64px] font-semibold tracking-wide text-[#F3EDDE] max-[769px]:text-[2rem]">
                     {heading}
                   </h1>
                 </div>
