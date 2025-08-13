@@ -24,16 +24,16 @@ const Footer = () => {
           <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
             <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px]">
               <div className="flex-1">
-                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] font-bold tracking-wider 2xl:w-[780px] xl:w-[730px]">
+                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] font-bold tracking-wider 2xl:w-[780px] xl:w-[730px]">
                   Let's start creating together
                 </h1>
               </div>
               <div className="flex-1 text-center flex justify-center">
                 <Link
                   href="/"
-                  className="xl:text-[26px] lg:text-[1.2rem] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px] flex gap-[26px]"
+                  className="xl:text-[26px] lg:text-[1.2rem] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px] flex gap-[26px] items-center max-[1024px]:px-[20px]"
                 >
-                  <Image src={meetingSchedIcon} alt="icon" />
+                  <Image src={meetingSchedIcon} alt="icon" className="max-[1024px]:w-[24px]" />
                   <span>Schedule A Meeting</span>
                 </Link>
               </div>

@@ -34,7 +34,7 @@ const Reviews = () => {
     });
   });
   return (
-    <div className="mt-[180px]">
+    <div className="mt-[180px] max-[1024px]:mt-[140px]">
       <SectionHeadingText SectionTitle="WORDS" buttonTitle="REVIEWS" />
       <div className="mt-[28px]">
         <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px]">

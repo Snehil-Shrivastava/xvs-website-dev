@@ -46,21 +46,21 @@ import AnimatedCardIcon from "./AnimatedCardIcon/AnimatedCardIcon";
 
 const Main = () => {
   return (
-    <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] mx-auto mt-[157px] text-center relaive">
+    <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] max-[1024px]:w-[90%] mx-auto mt-[157px] text-center relaive">
       <header className="relative pointer-events-none">
-        <p className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] font-light">
+        <p className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] max-[1024px]:text-[0.75rem] max-[1024px]:top-[30px] max-[1024px]:left-[23%] font-light">
           Creating Unforgettable Design
         </p>
         <div className="flex justify-center">
           <div className="flex">
-            <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] inline">
+            <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] inline">
               e
             </h1>
-            <div className="2xl:w-[180px] xl:w-[150px] lg:w-[140px] overflow-hidden">
+            <div className="2xl:w-[180px] xl:w-[150px] lg:w-[140px] max-[1024px]:w-[80px] overflow-hidden">
               <AnimatedJSON />
             </div>
           </div>
-          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] inline">
+          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] inline">
             perience
           </h1>
         </div>

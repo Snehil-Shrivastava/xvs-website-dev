@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import placeholder from "../../../../public/assests/videos&gifs/placeholder4.gif";
+import placeholder from "../../../../public/assests/videos&gifs/placeholder3.gif";
 
 import styles from "./ReelSection.module.css";
 
@@ -31,7 +31,7 @@ const ReelSection = () => {
   })
 
   return (
-      <div ref={containerRef} className="2xl:h-[720px] xl:h-[520px] mb-[143px] mt-[143px] relative ">
+      <div ref={containerRef} className="2xl:h-[720px] xl:h-[520px] mb-[143px] mt-[143px] max-[1024px]:mt-[50px] relative ">
         <div className={`h-full ${styles.gifBox}`}>
           <Image
             src={placeholder}

@@ -96,7 +96,7 @@ const SectionHeadingText = ({
     <div className="relative">
       <h1
         ref={headingRef}
-        className="tracking-[36px] 2xl:text-[11rem]/[11rem] xl:text-[9rem]/[9rem] lg:text-[8rem]/[8rem] font-bold text-white/[0.4]"
+        className="tracking-[36px] 2xl:text-[11rem]/[11rem] xl:text-[9rem]/[9rem] lg:text-[8rem]/[8rem] max-[1024px]:text-[5rem] font-bold text-white/[0.4]"
         style={myStyles}
       >
         {SectionTitle}
@@ -104,13 +104,13 @@ const SectionHeadingText = ({
 
       <div
         ref={btnRef}
-        className={`absolute bottom-[42px] left-1/2 -translate-x-1/2 text-[#F79839] ${styles.btnContainerNew}`}
+        className={`absolute bottom-[42px] left-1/2 -translate-x-1/2 text-[#F79839] h-[42px] max-[769px]:h-[32px] ${styles.btnContainerNew}`}
       >
         <Link
           className={`h-full flex items-center w-full justify-center ${styles.btnLinkNew}`}
           href="/"
         >
-          <span className="mx-[16px]">{buttonTitle}</span>
+          <span className="mx-[16px] max-[769px]:text-[0.75rem]">{buttonTitle}</span>
         </Link>
       </div>
 
