@@ -22,9 +22,9 @@ const Footer = () => {
       <div className="footer-content-container">
         <div className="w-[85%] mx-auto pb-[72px]">
           <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
-            <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px]">
+            <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] max-[769px]:pt-[80px] max-[769px]:pb-[80px]">
               <div className="flex-1">
-                <h1 className="2xl:text-[72px]/[80px] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] font-bold tracking-wider 2xl:w-[780px] xl:w-[730px]">
+                <h1 className="2xl:text-[3.7rem]/[4rem] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] font-bold tracking-wider 2xl:w-[780px] xl:w-[730px]">
                   Let's start creating together
                 </h1>
               </div>
@@ -39,7 +39,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-links-block">
-              <div className="footer-link-block first">
+              <div className="footer-link-block first justify-between">
                 <div>
                   <Image src={logo} alt="" />
                 </div>
@@ -53,7 +53,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-link-block second">
-                <div className="max-[1025px]:w-[60%] max-[1025px]:mx-auto">
+                <div className="max-[1025px]:w-[60%] max-[1025px]:mx-auto max-[769px]:flex max-[769px]:flex-col max-[769px]:h-full">
                   <h1 className="font-semibold text-[16px] mb-[16px]">
                     Contacts
                   </h1>
@@ -61,8 +61,8 @@ const Footer = () => {
                     2nd Floor, 1/23 Rajni Khand, Sharda Nagar, Lucknow, UP
                     (226002), India.
                   </p>
-                  <div className="flex gap-[32px] mt-[72px]">
-                    <h1 className="text-[36px]">Say Hi!</h1>
+                  <div className="flex gap-[32px] mt-[72px] max-[769px]:flex-col max-[769px]:mt-auto max-[769px]:gap-[0px]">
+                    <h1 className="text-[36px] max-[769px]:text-[20px]">Say Hi!</h1>
                     <div>
                       <a href="" className="hover:underline text-[15px]">
                         info@xvscreations.com
