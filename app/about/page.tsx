@@ -294,7 +294,7 @@ const AboutPage = () => {
         scrollTrigger: {
           //@ts-ignore
           trigger: bigLambda7Ref.current,
-          markers: true,
+          // markers: true,
           start: "10% 23%",
           end: "10% top",
           scrub: 1,

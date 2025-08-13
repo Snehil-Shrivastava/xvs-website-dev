@@ -70,24 +70,24 @@ export default function MobileMenu() {
       </button>
 
       {/* Expanding menu */}
-      <div className={`bg-black/[0.5] fixed inset-0 transition-all duration-500 ease-in-out ${
+      <div className={`bg-black/[0.5] fixed inset-0 transition-all duration-300 ease-in-out ${
         isOpen
         ? 'opacity-100 scale-100'
         : 'opacity-0 scale-110 pointer-events-none'
       }`}>
       <div
-        className={`fixed inset-0 z-40 bg-[#F79839] flex flex-col items-center justify-center transition-all duration-500 ease-in-out nav-modal ${
+        className={`fixed inset-0 z-40 bg-[#F79839] flex flex-col items-center justify-center transition-all duration-300 ease-in-out nav-modal ${
           isOpen
             ? "opacity-100 scale-100"
             : "opacity-0 scale-110 pointer-events-none"
         }`}
       >
-        <ul className="flex p-4 space-y-2 mx-auto gap-[64px] absolute top-[2%]">
+        <ul className="flex p-4 space-y-2 mx-auto gap-[64px] absolute top-[2%] text-2xl max-[769px]:text-[1.2rem]">
           <li>
             <Link
               href="/about"
               onClick={handleLinkClick}
-              className="block px-2 py-1 rounded text-2xl"
+              className="block px-2 py-1 rounded"
             >
               About
             </Link>
@@ -96,7 +96,7 @@ export default function MobileMenu() {
             <Link
               href="/services"
               onClick={handleLinkClick}
-              className="block px-2 py-1 rounded text-2xl"
+              className="block px-2 py-1 rounded"
             >
               Services
             </Link>
@@ -105,7 +105,7 @@ export default function MobileMenu() {
             <Link
               href="/contact"
               onClick={handleLinkClick}
-              className="block px-2 py-1 rounded text-2xl"
+              className="block px-2 py-1 rounded"
             >
               Contact
             </Link>
