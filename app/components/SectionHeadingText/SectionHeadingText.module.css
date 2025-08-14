@@ -1,10 +1,22 @@
 .btnContainer {
-  clip-path: polygon(0 15%, 0 100%, 85% 100%, 100% 85%, 100% 0, 15% 0);
+  /* clip-path: polygon(0 15%, 0 100%, 85% 100%, 100% 85%, 100% 0, 15% 0);
   background: rgba(255, 255, 255, 0.247);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
 
-  overflow: visible;
+  overflow: visible; */
+  /* position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 72px; */
+}
+
+.btnContainer::before {
+  /* content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #ffffff; */
 }
 
 .btnLink {

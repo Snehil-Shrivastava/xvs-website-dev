@@ -13,6 +13,16 @@
     margin: 0 !important;
     width: 480px !important;
     /* border: 1px solid rgba(177, 177, 177, 0.4); */
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 769px) {
+    .swiper-container .swiper-wrapper {
+    height: 420px !important;
+}
+.swiper-container .swiper-slide {
+    width: 380px !important;
+}
 }
 
 .swiper-container .swiper-slide > div {

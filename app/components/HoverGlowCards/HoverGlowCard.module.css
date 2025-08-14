@@ -44,7 +44,7 @@
 .card {
   background-color: rgba(255, 255, 255, 0.1);
 
-  cursor: pointer;
+  /* cursor: pointer; */
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -99,7 +99,7 @@
   /* Uses the dynamically set CSS variables --mouse-x and --mouse-y */
   background: radial-gradient(
     800px circle at var(--mouse-x) var(--mouse-y),
-    #da7e2341,
+    rgba(218, 126, 35, 0.255),
     transparent 60%
   );
   z-index: 3;

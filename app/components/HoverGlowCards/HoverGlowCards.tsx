@@ -9,11 +9,11 @@ import TimeImg from "../../../public/assests/time.png";
 import HexaImg from "../../../public/assests/hexa.png";
 import StarImg from "../../../public/assests/star.png";
 
-import {gsap} from 'gsap'
+import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const cardData = [
   {
@@ -50,10 +50,10 @@ const HoverGlowCards = () => {
   const cardsContainerRef = useRef(null);
 
   // const cardLayerRef = useRef(null)
-  const cardLayerRef0 = useRef(null)
-  const cardLayerRef1 = useRef(null)
-  const cardLayerRef2 = useRef(null)
-  const cardLayerRef3 = useRef(null)
+  const cardLayerRef0 = useRef(null);
+  const cardLayerRef1 = useRef(null);
+  const cardLayerRef2 = useRef(null);
+  const cardLayerRef3 = useRef(null);
 
   useEffect(() => {
     const cardsContainer = cardsContainerRef.current;
@@ -92,69 +92,84 @@ const HoverGlowCards = () => {
     const cardLayer2 = cardLayerRef2.current;
     const cardLayer3 = cardLayerRef3.current;
 
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
 
     tl.to(cardLayer0, {
       scrollTrigger: {
         trigger: cardLayer0,
         // markers: true,
-        start: 'top 70%',
-        end: 'top 40%',
+        start: "top 70%",
+        end: "top 60%",
         scrub: 1,
-              once: true,
+        once: true,
       },
       width: 0,
-      duration: 0.5,
-    })
+      // duration: 0.5,
+    });
 
     tl.to(cardLayer1, {
       scrollTrigger: {
         trigger: cardLayer1,
         // markers: true,
-        start: 'top 70%',
-        end: 'top 40%',
+        start: "top 70%",
+        end: "top 60%",
         scrub: 1,
-              once: true,
+        once: true,
       },
       width: 0,
-      duration: 0.5,
-      delay: 0.2
-    })
+      // duration: 0.5,
+      // delay: 0.2,
+    }, "<");
 
-        tl.to(cardLayer2, {
+    tl.to(cardLayer2, {
       scrollTrigger: {
         trigger: cardLayer2,
         // markers: true,
-        start: 'top 70%',
-        end: 'top center',
+        start: "top 70%",
+        end: "top 60%",
         scrub: 1,
-              once: true,
+        once: true,
       },
       width: 0,
-      duration: 0.5,
-    })
+      // duration: 0.5,
+    });
 
-      tl.to(cardLayer3, {
+    tl.to(cardLayer3, {
       scrollTrigger: {
         trigger: cardLayer3,
         // markers: true,
-        start: 'top 70%',
-        end: 'top center',
+        start: "top 70%",
+        end: "top 60%",
         scrub: 1,
-              once: true,
+        once: true,
       },
       width: 0,
-      duration: 0.5,
-    })
-
-  })
+      // duration: 0.5,
+    }, "<");
+  });
 
   return (
-    <div className={`${styles.bodyContainer} lg:mb-[220px] max-[1024px]:mb-[143px]`}>
+    <div
+      className={`${styles.bodyContainer} lg:mb-[220px] max-[1024px]:mb-[143px]`}
+    >
       <div id="cards" className={styles.cards} ref={cardsContainerRef}>
         {cardData.map((card, index) => (
-          <div key={index} className={`${styles.cardShadowContainer} relative lg:h-[360px] max-[1024px]:h-[280px]`}>
-            <div ref={index===0? cardLayerRef0 : index === 1? cardLayerRef1 : index=== 2? cardLayerRef2 : cardLayerRef3} className="absolute inset-0 bg-[#282828] z-[5]"></div>
+          <div
+            key={index}
+            className={`${styles.cardShadowContainer} relative lg:h-[360px] max-[1024px]:h-[280px]`}
+          >
+            <div
+              ref={
+                index === 0
+                  ? cardLayerRef0
+                  : index === 1
+                  ? cardLayerRef1
+                  : index === 2
+                  ? cardLayerRef2
+                  : cardLayerRef3
+              }
+              className="absolute inset-0 bg-[#282828] z-[5]"
+            ></div>
             <div
               className={`${styles.card} ${
                 index === 0
@@ -170,8 +185,12 @@ const HoverGlowCards = () => {
                   <h1 className="text-[#F79839] font-bold 2xl:text-9xl xl:text-[5rem] lg:text-[4rem] max-[1024px]:text-[2.5rem]">
                     {card.subtitle}
                   </h1>
-                  <p className="font-light text-lg max-[1024px]:text-sm">{card.text1}</p>
-                  <p className="font-light text-lg max-[1024px]:text-sm">{card.text2}</p>
+                  <p className="font-light text-lg max-[1024px]:text-sm">
+                    {card.text1}
+                  </p>
+                  <p className="font-light text-lg max-[1024px]:text-sm">
+                    {card.text2}
+                  </p>
                 </div>
                 <div>
                   {index === 2 ? (

@@ -42,6 +42,8 @@ const ScrollTriggerComponent = () => {
 
   const testContainerRef = useRef(null);
 
+  const maskRef = useRef(null);
+
   // useGSAP(
   //   () => {
   //     // @ts-ignore
@@ -154,6 +156,8 @@ const ScrollTriggerComponent = () => {
     const richTxt = richTxtRef.current;
 
     const loading = loadingRef.current;
+
+    const mask = maskRef.current;
 
     // @ts-ignore
     const ellipsePath = MorphSVGPlugin.convertToPath(ellipse);
@@ -326,6 +330,22 @@ const ScrollTriggerComponent = () => {
     );
 
     tl.to(
+      mask,
+      {
+        scrollTrigger: {
+          trigger: mask,
+          // markers: true,
+          start: "top top",
+          end: "bottom 60%",
+          scrub: 1,
+        },
+        display: "none",
+        opacity: 0,
+      },
+      "<"
+    );
+
+    tl.to(
       loading,
       {
         scrollTrigger: {
@@ -373,8 +393,8 @@ const ScrollTriggerComponent = () => {
       scrollTrigger: {
         trigger: richTxt,
         // markers: true,
-        start: 'top bottom',
-        end: 'top 40%',
+        start: "top bottom",
+        end: "top 40%",
         scrub: 1,
       },
       opacity: 1,
@@ -384,7 +404,10 @@ const ScrollTriggerComponent = () => {
   return (
     <div className="w-full h-[2500px]">
       <div ref={loadingRef} className="w-full h-[945px] fixed z-[5]">
-        <div className="absolute inset-0 select-none shadow-mask z-[1000] bg-[#282828]"></div>
+        <div
+          ref={maskRef}
+          className="absolute inset-0 select-none shadow-mask z-[1000] bg-[#282828]"
+        ></div>
         <div
           ref={starsRef}
           className="overflow-hidden h-[845px] shadow-mask-stars relative z-[-1]"
@@ -408,7 +431,7 @@ const ScrollTriggerComponent = () => {
             <div ref={animationWrapperRef} className="h-full relative">
               <div
                 ref={headingRef}
-                className="text-center sticky top-[22%] font-semibold text-8xl tracking-[52px] z-[9999]"
+                className="text-center sticky top-[22%] font-semibold text-8xl tracking-[52px] z-[9999] max-[769px]:w-[80%] max-[769px]:mx-auto max-[769px]:w-[80%] max-[769px]:text-[3rem] max-[769px]:tracking-[2rem] max-[769px]:font-bold"
               >
                 <h1>SHOWCASE</h1>
               </div>
@@ -507,9 +530,13 @@ const ScrollTriggerComponent = () => {
       </div>
       <div ref={richTxtRef} className="absolute top-[100%]">
         <div className="">
-          <Image src={logo} alt="xVS" className="mx-auto" />
+          <Image
+            src={logo}
+            alt="xVS"
+            className="mx-auto max-[769px]:w-[150px]"
+          />
 
-          <p className="text-[20px]/[40px] font-light text-center w-[39%] mx-auto mt-[70px] text-[#F3EDDE]">
+          <p className="text-[20px]/[40px] max-[769px]:text-[16px]/[32px] max-[769px]:mt-[50px] font-light text-center w-[39%] mx-auto mt-[70px] text-[#F3EDDE] max-[769px]:w-[80%]">
             With the inspiration of designing we started back in 2014 and
             bringing them to reality since then. From cosmetic startups to big
             automotive companies we had fun working at different scales and

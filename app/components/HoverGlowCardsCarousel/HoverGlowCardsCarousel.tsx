@@ -139,7 +139,7 @@ const HoverGlowCards = () => {
           >
             <div className={`${styles.card}`}>
               <div className={styles["card-content"]}>
-                <div className=" text-center w-[60%] mx-auto pb-[56px] mt-auto flex flex-col gap-[12px]">
+                <div className="text-center w-[60%] max-[769px]:w-[90%] mx-auto pb-[56px] max-[769px]:pb-[42px] mt-auto flex flex-col gap-[12px]">
                   <h3 className="font-bold text-6xl">UI/UX</h3>
                   <p className="font-light text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -150,11 +150,11 @@ const HoverGlowCards = () => {
             </div>
           </div>
         ))}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[40%] pointer-events-none">
-              <div className="scale-[2.3] absolute -top-[1rem]">
-                <Image src={animatedIcon} alt="icon" />
-              </div>
-            </div>
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[40%] pointer-events-none">
+          <div className="scale-[2.3] absolute -top-[1rem] max-[769px]:top-[-2rem]">
+            <Image src={animatedIcon} alt="icon" />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -349,13 +349,13 @@ const AboutPage = () => {
         <h1
           // @ts-ignore
           ref={AboutMainText}
-          className="absolute text-center top-[150px] left-1/2 -translate-x-1/2 w-[720px] mx-auto text-[#F3EDDE] text-[72px]/[85px] max-[769px]:text-[3rem]/[3.5rem] max-[769px]:w-[60%] font-semibold aboutText"
+          className="absolute text-center top-[150px] left-1/2 -translate-x-1/2 w-[720px] mx-auto text-[#F3EDDE] text-[72px]/[85px] max-[769px]:text-[3rem]/[3.5rem] max-[769px]:w-[60%] font-semibold aboutText pointer-events-none"
         >
           Inspiration to interpreting reality
         </h1>
         <div
           // id="smooth-wrapper"
-          className={`absolute left-1/2 -translate-x-1/2 top-[380px] ${styles.circleGlow}`}
+          className={`absolute left-1/2 -translate-x-1/2 top-[380px] pointer-events-none ${styles.circleGlow}`}
         >
           {/* <Image src={logo2} alt="xvs logo" /> */}
           {/* <svg

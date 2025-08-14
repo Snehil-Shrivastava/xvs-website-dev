@@ -26,7 +26,14 @@
 }
 
 .contact-form-content {
-  clip-path: polygon(0.1% 9.9%, 0.1% 99.9%, 100% 99.9%, 100% 100%, 100% 0%, 9.9% 0%);
+  clip-path: polygon(
+    0.1% 9.9%,
+    0.1% 99.9%,
+    100% 99.9%,
+    100% 100%,
+    100% 0%,
+    9.9% 0%
+  );
   background-color: rgba(40, 40, 40, 0.856);
   backdrop-filter: blur(5px);
   /* border: 1px solid #ffffff4f; */
@@ -36,7 +43,7 @@
   clip-path: polygon(0 0, 0 100%, 95% 100%, 100% 85%, 100% 0, 0 0);
   background-color: rgba(255, 255, 255, 0.377);
 
-    transition: background 0.1s ease-in-out;
+  transition: background 0.1s ease-in-out;
 }
 
 .clip-path-style2 {
@@ -66,25 +73,29 @@
 
 /* radial-gradient(120px circle, rgba(243, 150, 56, 1), rgba(40, 40, 40, 1)); */
 
-.clip-path-style:hover, .clip-path-style2:hover {
-  background: radial-gradient(520px circle, rgba(231, 137, 43, 0.5), rgba(40, 40, 40, 0.8));
+.clip-path-style:hover,
+.clip-path-style2:hover {
+  background: radial-gradient(
+    520px circle,
+    rgba(231, 137, 43, 0.5),
+    rgba(40, 40, 40, 0.8)
+  );
 }
 
 @keyframes float {
-0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
+  0% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-20px);
+  }
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
 }
-
 
 .lights {
   position: absolute;
@@ -103,4 +114,36 @@
   transform-origin: 16vw -2vh;
 
   box-shadow: 0 0 28px 20px rgba(231, 137, 43, 0.5);
+}
+
+.main-container {
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.contact-form-container {
+  background-color: rgba(0, 0, 0, 0.631);
+  clip-path: polygon(
+    0.05% 5%,
+    0.05% 100%,
+    99.95% 100%,
+    99.95% 5%,
+    95% 0.08%,
+    5% 0.08%
+  );
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.contact-form-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.451);
+  /* z-index: -1; */
+
+  clip-path: polygon(0% 5%, 0% 100%, 100% 100%, 100% 5%, 95% 0%, 5% 0%);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }

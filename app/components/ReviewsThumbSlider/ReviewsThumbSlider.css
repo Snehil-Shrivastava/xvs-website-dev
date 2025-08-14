@@ -8,7 +8,7 @@
   padding-bottom: 48px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .mySwiper2 .swiper-wrapper {
     margin-top: 66px;
     margin-bottom: 26px;

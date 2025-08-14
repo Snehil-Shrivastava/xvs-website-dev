@@ -4,20 +4,24 @@ import Form from "next/form";
 import "./contactStyle.css";
 import Image from "next/image";
 
-import bgImg from '../../public/assests/contact-bg.png'
+import bgImg from "../../public/assests/contact-bg.png";
 
 const Contact = () => {
   return (
-    <div className="pt-[8%] relative">
+    <div className="pt-[15%] relative h-[100vh]">
       <div className="absolute inset-0 radial-light z-0">
-        <Image src={bgImg} alt="background" className="object-cover w-full h-full" />
-        <div className="absolute inset-0">
+        <Image
+          src={bgImg}
+          alt="background"
+          className="object-cover w-full h-full"
+        />
+        {/* <div className="absolute inset-0">
           <span className="lights"></span>
           <span className="lights"></span>
           <span className="lights"></span>
-        </div>
+        </div> */}
       </div>
-      <div className="relative w-2/3 mx-auto border border-[#333] contact-form-box bg-[#333]">
+      {/* <div className="relative w-2/3 mx-auto border border-[#333] contact-form-box bg-[#333]">
         <div className="w-full h-full py-[48px] bg-[#282828] contact-form-content">
           <div className=" text-center w-[80%] mx-auto">
             <SectionHeadingText
@@ -70,6 +74,17 @@ const Contact = () => {
                   </button>
                 </div>
               </Form>
+            </div>
+          </div>
+        </div>
+      </div> */}
+
+      {/* contact form */}
+      <div className="w-[90%] mx-auto h-[520px] main-container">
+        <div className="w-full h-full relative contact-form-wrapper">
+          <div className="w-full h-full relative contact-form-container">
+            <div>
+              <SectionHeadingText SectionTitle="CONNECT" buttonTitle="TOUCH" />
             </div>
           </div>
         </div>

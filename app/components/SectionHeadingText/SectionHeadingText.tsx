@@ -102,7 +102,7 @@ const SectionHeadingText = ({
         {SectionTitle}
       </h1>
 
-      <div
+      {/* <div
         ref={btnRef}
         className={`absolute bottom-[42px] left-1/2 -translate-x-1/2 text-[#F79839] h-[42px] max-[769px]:h-[32px] ${styles.btnContainerNew}`}
       >
@@ -112,6 +112,12 @@ const SectionHeadingText = ({
         >
           <span className="mx-[16px] max-[769px]:text-[0.75rem]">{buttonTitle}</span>
         </Link>
+      </div> */}
+
+      <div className={`${styles.btnContainer}`}>
+        <button className="max-[769px]:text-[0.75rem] absolute top-1/2 left-1/2 -translate-x-1/2 right-0 py-2 bg-neutral-600/30 backdrop-blur-xs w-42" style={{
+        clipPath: 'polygon(0 10%, 0 100%, 90% 100%, 100% 90%, 100% 0, 10% 0);'
+      }}>{buttonTitle}</button>
       </div>
 
       {/* <div className="w-[180px] h-[56px] absolute left-1/2 -translate-x-1/2 bottom-[48px] opacity-[0.4] backdrop-blur-md" style={

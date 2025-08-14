@@ -74,10 +74,10 @@ export default () => {
       prevEl: prevRef.current,
       nextEl: nextRef.current,
     },
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     // onSwiper={(swiper) => (swiperRef.current = swiper)}
     effect: "coverflow",
     grabCursor: true,
