@@ -54,19 +54,19 @@
 }
 
 .clipCardFirst {
-    clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 0, 10% 0);
+    clip-path: polygon(0 38px, 0 100%, 100% 100%, 100% 0, 38px 0);
 }
 
 .clipCardLast {
-    clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 90%, 100% 0);
+    clip-path: polygon(0 0, 0 100%, calc(100% - 38px) 100%, 100% calc(100% - 38px), 100% 0);
 }
 
 .clipCardFirst .card-content {
-  clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 0, 10% 0);
+  clip-path: polygon(0 38px, 0 100%, 100% 100%, 100% 0, 38px 0);
 }
 
 .clipCardLast .card-content {
-  clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 90%, 100% 0);
+  clip-path: polygon(0 0, 0 100%, calc(100% - 38px) 100%, 100% calc(100% - 38px), 100% 0);
 }
 
 .card:first-child {

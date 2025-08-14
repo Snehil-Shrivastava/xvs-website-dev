@@ -7,6 +7,10 @@ import Image from "next/image";
 import bgImg from "../../public/assests/contact-bg.png";
 
 const Contact = () => {
+  const handleFormSubmit = (e: any) => {
+    console.log("form submitted!", e);
+  };
+
   return (
     <div className="pt-[15%] relative h-[100vh]">
       <div className="absolute inset-0 radial-light z-0">
@@ -80,11 +84,92 @@ const Contact = () => {
       </div> */}
 
       {/* contact form */}
-      <div className="w-[90%] mx-auto h-[520px] main-container">
-        <div className="w-full h-full relative contact-form-wrapper">
-          <div className="w-full h-full relative contact-form-container">
-            <div>
+      <div className="w-[90%] 2xl:w-1/2 mx-auto relative">
+        {/* <div
+          className="absolute inset-0 bg-neutral-950"
+          style={{
+            maskImage:
+              "linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent)",
+          }}
+        ></div> */}
+        <div
+          className="w-full h-full relative bg-neutral-50/20"
+          style={{
+            // clipPath:
+            //   "polygon(0% 15%, 0% 100%, 100% 100%, 100% 15%, 95% 0%, 5% 0%)",
+            clipPath:
+              "polygon(0 38px, 0 100%, 100% 100%, 100% 38px, calc(100% - 38px) 0%, 38px 0%)",
+          }}
+        >
+          <div
+            className="w-full h-full relative bg-neutral-950/45 backdrop-blur-xs"
+            style={{
+              clipPath:
+                "polygon(0.1% 38px, 0.1% 100%, 99.9% 100%, 99.9% 38px, calc(100% - 38px) 0.1%, 38px 0.1%)",
+            }}
+          >
+            <div className="py-12">
               <SectionHeadingText SectionTitle="CONNECT" buttonTitle="TOUCH" />
+              <div className="w-17/20 mx-auto mt-16">
+                <div>
+                  <Form action="">
+                    <div className="text-sm flex flex-col gap-8">
+                      <div className="flex flex-col gap-3">
+                        <label htmlFor="name">Name*</label>
+                        <input
+                          id="name"
+                          className="outline-none border-b border-[#525151] py-[8px] px-[6px]"
+                          type="text"
+                          placeholder="John Doe"
+                          autoComplete="off"
+                          required
+                        />
+                      </div>
+                      <div className="flex gap-6">
+                        <div className="flex flex-col gap-3 flex-1">
+                          <label htmlFor="email">Email*</label>
+                          <input
+                            id="email"
+                            className="outline-none border-b border-[#525151] py-[8px] px-[6px]"
+                            type="email"
+                            placeholder="johndoe@xyz.com"
+                            autoComplete="off"
+                            required
+                          />
+                        </div>
+                        <div className="flex flex-col gap-3 flex-1">
+                          <label htmlFor="phone">Contact*</label>
+                          <input
+                            id="phone"
+                            className="outline-none border-b border-[#525151] py-[8px] px-[6px]"
+                            type="text"
+                            placeholder="+91-88788-78878"
+                            autoComplete="off"
+                            required
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-3 flex-1">
+                        <label htmlFor="message">Message*</label>
+                        <textarea
+                          id="message"
+                          className="outline-none resize-none field-sizing-content border-b border-[#525151] py-[8px] px-[6px]"
+                          placeholder="Drop your message"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="text-2xl text-[#F39638] mt-12 border border-[#ffffff4d]">
+                      <button
+                        className="font-semibold w-full h-full p-2 text-end"
+                        type="submit"
+                      >
+                        Send
+                      </button>
+                    </div>
+                  </Form>
+                </div>
+              </div>
             </div>
           </div>
         </div>

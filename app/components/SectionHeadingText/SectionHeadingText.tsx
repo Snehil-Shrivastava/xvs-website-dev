@@ -24,7 +24,7 @@ const SectionHeadingText = ({
   size?: string;
 }) => {
   const myStyles = {
-    maskImage: "linear-gradient(to bottom, #00000080, transparent 82%)",
+    maskImage: "linear-gradient(to top, #000000, transparent)",
     fontSize: size,
   };
 
@@ -94,11 +94,19 @@ const SectionHeadingText = ({
     // </motion.div>
 
     <div className="relative">
-      <h1
+      {/* <h1
         ref={headingRef}
         className="tracking-[36px] 2xl:text-[11rem]/[11rem] xl:text-[9rem]/[9rem] lg:text-[8rem]/[8rem] max-[1024px]:text-[5rem] font-bold text-white/[0.4]"
         style={myStyles}
       >
+        {SectionTitle}
+      </h1> */}
+
+      {/* <div className="absolute inset-0 bg-[#282828]" style={myStyles}></div> */}
+
+      <h1 className="text-8xl font-bold tracking-[20px] text-center" style={{
+        maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 80%)'
+      }}>
         {SectionTitle}
       </h1>
 
@@ -115,8 +123,8 @@ const SectionHeadingText = ({
       </div> */}
 
       <div className={`${styles.btnContainer}`}>
-        <button className="max-[769px]:text-[0.75rem] absolute top-1/2 left-1/2 -translate-x-1/2 right-0 py-2 bg-neutral-600/30 backdrop-blur-xs w-42" style={{
-        clipPath: 'polygon(0 10%, 0 100%, 90% 100%, 100% 90%, 100% 0, 10% 0);'
+        <button className="max-[769px]:text-[0.75rem] absolute top-1/2 left-1/2 -translate-x-1/2 px-6 py-2 bg-neutral-500/30 backdrop-blur-xs text-[#F79839]" style={{
+        clipPath: 'polygon(0% 12px, 0% 100%, calc(100% - 12px) 100%, 100% calc(100% - 12px), 100% 0%, 12px 0)'
       }}>{buttonTitle}</button>
       </div>
 

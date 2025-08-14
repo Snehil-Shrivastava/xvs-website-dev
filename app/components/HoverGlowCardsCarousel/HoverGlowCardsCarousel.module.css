@@ -124,7 +124,7 @@
 
 .cardShadowContainer {
   background: rgba(0, 0, 0, 0);
-      clip-path: polygon(0 8%, 0 100%, 92% 100%, 100% 92%, 100% 0, 8% 0);
+      clip-path: polygon(0% 38px, 0% 100%, calc(100% - 38px) 100%, 100% calc(100% - 38px), 100% 0%, 38px 0);
 }
 
 .cardShadowContainer:hover {
@@ -141,11 +141,11 @@
   position: relative;
   width: 100%;
 
-  clip-path: polygon(0 10%, 0 100%, 90% 100%, 100% 90%, 100% 0, 10% 0);
+  clip-path: polygon(0% 38px, 0% 100%, calc(100% - 38px) 100%, 100% calc(100% - 38px), 100% 0%, 38px 0);
 }
 
 .card-content {
-  clip-path: polygon(0 10%, 0 100%, 90% 100%, 100% 90%, 100% 0, 10% 0);
+  clip-path: polygon(0% 38px, 0% 100%, calc(100% - 38px) 100%, 100% calc(100% - 38px), 100% 0%, 38px 0);
 }
 
 /* This rule targets the ::before pseudo-element of a single card when that card is hovered */
