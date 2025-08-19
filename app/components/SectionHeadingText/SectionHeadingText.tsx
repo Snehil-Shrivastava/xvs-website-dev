@@ -134,9 +134,9 @@ const SectionHeadingText = ({
         </Link>
       </div> */}
 
-      <div className={`${styles.btnContainer}`}>
+      <div className={`${styles.btnContainer} flex items-center justify-center`}>
         <div
-          className={`max-[769px]:text-[0.75rem] absolute top-1/2 left-1/2 -translate-x-1/2 bottom-1/2 -translate-y-1/2 h-[32%] backdrop-blur-xs text-[#F79839] ${styles.sectionHeadingBtnContainer}`}
+          className={`max-[769px]:text-[0.75rem] inline min-h-[32%] h-[32%] backdrop-blur-xs text-[#F79839] cursor-pointer ${styles.sectionHeadingBtnContainer}`}
         >
           {/* <button
             className={`max-[769px]:text-[0.75rem] absolute inset-0 h-full w-full px-6`}
@@ -148,7 +148,7 @@ const SectionHeadingText = ({
           >
             {buttonTitle}
           </button> */}
-          <button className={`h-full px-6 ${styles.sectionHeadingBtn}`}>
+          <button className={`h-full px-6 cursor-pointer py-1 ${styles.sectionHeadingBtn}`}>
             {buttonTitle}
           </button>
         </div>

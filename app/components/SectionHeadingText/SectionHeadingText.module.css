@@ -10,6 +10,10 @@
   /* width: 18%; */
 }
 
+.sectionHeadingBtnContainer {
+  clip-path: polygon(0% 11px, 0% 100%, calc(100% - 11px) 100%, 100% calc(100% - 11px), 100% 0%, 11px 0);
+}
+
 .sectionHeadingBtnContainer::after {
   content: '';
   position: absolute;
