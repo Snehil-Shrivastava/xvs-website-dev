@@ -12,11 +12,7 @@ const BrandingPage = () => {
       amplitude={1.0}
       speed={0.6}
       /> */}
-      <div className="absolute h-[520px] w-full left-0 right-0">
-        <div className="absolute inset-0 pulse-glow">
 
-        </div>
-      </div>
       {/* <div className="w-[520px] h-[520px] mx-auto blur-[2px]">
         <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
           <path
@@ -41,6 +37,8 @@ const BrandingPage = () => {
           />
         </svg>
       </div> */}
+
+      <div className="pulse-div"></div>
     </div>
   );
 };

@@ -58,3 +58,18 @@
   animation: rotate 15s linear infinite;
   transform-origin: 84px 93px;
 }
+
+
+.pulse-div {
+  background-color: rgba(243, 150, 56, 0.69);
+  width: 820px;
+  height: 180px;
+  position: absolute;
+  top: -40%;
+  right: -40%;
+  transform: translate(-75%, 110%);
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 250px 250px rgba(243, 150, 56, 0.7);
+}
