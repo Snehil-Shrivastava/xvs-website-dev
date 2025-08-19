@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 
@@ -18,10 +18,12 @@ const SectionHeadingText = ({
   SectionTitle,
   buttonTitle,
   size,
+  tracking,
 }: {
   SectionTitle: string;
   buttonTitle: string;
   size?: string;
+  tracking?: string;
 }) => {
   const myStyles = {
     maskImage: "linear-gradient(to top, #000000, transparent)",
@@ -38,7 +40,7 @@ const SectionHeadingText = ({
     gsap.set(btn, { opacity: 0 });
     gsap.set(heading, { opacity: 0 });
 
-    const tl = gsap.timeline()
+    const tl = gsap.timeline();
 
     tl.to(heading, {
       scrollTrigger: {
@@ -52,16 +54,20 @@ const SectionHeadingText = ({
       opacity: 1,
     });
 
-    tl.to(btn, {
-      scrollTrigger: {
-        trigger: btn,
-        // markers: true,
-        scrub: 1,
-        start: "top bottom",
-        end: "top 40%",
+    tl.to(
+      btn,
+      {
+        scrollTrigger: {
+          trigger: btn,
+          // markers: true,
+          scrub: 1,
+          start: "top bottom",
+          end: "top 40%",
+        },
+        opacity: 1,
       },
-      opacity: 1,
-    }, "<");
+      "<"
+    );
   });
 
   return (
@@ -104,9 +110,15 @@ const SectionHeadingText = ({
 
       {/* <div className="absolute inset-0 bg-[#282828]" style={myStyles}></div> */}
 
-      <h1 className="text-8xl font-bold tracking-[20px] text-center" style={{
-        maskImage: 'linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 80%)'
-      }}>
+      <h1
+        className={`text-8xl font-bold text-center`}
+        style={{
+          maskImage:
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 80%)",
+          letterSpacing: tracking ? tracking : "20px",
+          fontSize: size,
+        }}
+      >
         {SectionTitle}
       </h1>
 
@@ -123,9 +135,23 @@ const SectionHeadingText = ({
       </div> */}
 
       <div className={`${styles.btnContainer}`}>
-        <button className="max-[769px]:text-[0.75rem] absolute top-1/2 left-1/2 -translate-x-1/2 px-6 py-2 bg-neutral-500/30 backdrop-blur-xs text-[#F79839]" style={{
-        clipPath: 'polygon(0% 12px, 0% 100%, calc(100% - 12px) 100%, 100% calc(100% - 12px), 100% 0%, 12px 0)'
-      }}>{buttonTitle}</button>
+        <div
+          className={`max-[769px]:text-[0.75rem] absolute top-1/2 left-1/2 -translate-x-1/2 bottom-1/2 -translate-y-1/2 h-[32%] backdrop-blur-xs text-[#F79839] ${styles.sectionHeadingBtnContainer}`}
+        >
+          {/* <button
+            className={`max-[769px]:text-[0.75rem] absolute inset-0 h-full w-full px-6`}
+            style={{
+              clipPath:
+                "polygon(0% 12px, 0% 100%, calc(100% - 12px) 100%, 100% calc(100% - 12px), 100% 0%, 12px 0)",
+              background: "rgba(0, 0, 0, 0.5)",
+            }}
+          >
+            {buttonTitle}
+          </button> */}
+          <button className={`h-full px-6 ${styles.sectionHeadingBtn}`}>
+            {buttonTitle}
+          </button>
+        </div>
       </div>
 
       {/* <div className="w-[180px] h-[56px] absolute left-1/2 -translate-x-1/2 bottom-[48px] opacity-[0.4] backdrop-blur-md" style={
@@ -137,7 +163,6 @@ const SectionHeadingText = ({
       }>
 
       </div> */}
-
     </div>
   );
 };

@@ -17,6 +17,8 @@ import xvsAnimatedGif2 from "../../public/assests/videos&gifs/Loader-V1-unscreen
 
 import xvsAnimatedGif3 from "../../public/LoaderV1Unscreen.gif";
 
+import "./main.css";
+
 import {
   OrbitControls,
   Environment,
@@ -29,6 +31,8 @@ import { Model } from "../components/Model/Model"; // Import your Model componen
 import Image from "next/image";
 import AnimatedJSON from "./AnimatedJSON/AnimatedJSON";
 import AnimatedCardIcon from "./AnimatedCardIcon/AnimatedCardIcon";
+import MagicBento from "./ReactBits/MagicBento/MagicBento";
+import CardGlow from "./ReactBits/CardGlow/CardGlow";
 
 // function SpinningBox() {
 //   // @ts-ignore
@@ -70,6 +74,37 @@ const Main = () => {
       </header>
       <ReelSection />
       <StatsSection />
+      {/* <MagicBento
+        textAutoHide={true}
+        enableStars={false}
+        enableSpotlight={true}
+        enableBorderGlow={true}
+        enableTilt={false}
+        enableMagnetism={true}
+        clickEffect={true}
+        spotlightRadius={300}
+        particleCount={12}
+        glowColor="132, 0, 255"
+      /> */}
+
+      {/* <div className="main">
+        <h1>Interactive Card Glow Effect</h1>
+        <p>Built with Next.js and React. Move your mouse over the cards.</p>
+        <div className="cards">
+          <CardGlow>
+            <h2>Card One</h2>
+            <p>
+              The glow follows your mouse, illuminating the card and its
+              borders.
+            </p>
+          </CardGlow>
+          <CardGlow>
+            <h2>Card Two</h2>
+            <p>Notice how the gaps between cards also appear to light up.</p>
+          </CardGlow>
+        </div>
+      </div> */}
+      
       {/* <Canvas
         shadows
         camera={{ position: [0, 1, 1], fov: 50 }}

@@ -12,7 +12,10 @@ const Contact = () => {
   };
 
   return (
-    <div className="pt-[15%] relative h-[100vh]">
+    <div className="pt-[15%] xl:pt-[10%] relative h-[100vh]">
+      <div className="absolute inset-0 z-[10]" style={{
+        background: 'radial-gradient(900px circle at center, transparent, #282828)'
+      }}></div>
       <div className="absolute inset-0 radial-light z-0">
         <Image
           src={bgImg}
@@ -86,14 +89,11 @@ const Contact = () => {
       {/* contact form */}
       <div className="w-[90%] 2xl:w-1/2 mx-auto relative">
         {/* <div
-          className="absolute inset-0 bg-neutral-950"
-          style={{
-            maskImage:
-              "linear-gradient(to top, rgba(0, 0, 0, 1) 10%, transparent)",
-          }}
+          className="absolute left-[20px] right-[20px] top-[30px] bottom-[30px] z-[1] bg-neutral-900/10 backdrop-blur-sm"
         ></div> */}
+                  <div className="absolute inset-0 radial-light-container"></div>
         <div
-          className="w-full h-full relative bg-neutral-50/20"
+          className="w-full h-full relative bg-neutral-50/20 backdrop-blur-xs"
           style={{
             // clipPath:
             //   "polygon(0% 15%, 0% 100%, 100% 100%, 100% 15%, 95% 0%, 5% 0%)",
@@ -102,14 +102,14 @@ const Contact = () => {
           }}
         >
           <div
-            className="w-full h-full relative bg-neutral-950/45 backdrop-blur-xs"
+            className="w-full h-full relative bg-neutral-950/70 backdrop-blur-sm"
             style={{
               clipPath:
-                "polygon(0.1% 38px, 0.1% 100%, 99.9% 100%, 99.9% 38px, calc(100% - 38px) 0.1%, 38px 0.1%)",
+                "polygon(calc(100% - 99.9%) 38px, calc(100% - 99.9%) 100%, 99.9% 100%, 99.9% 38px, calc(100% - 38px) calc(100% - 99.8%), 38px calc(100% - 99.8%))",
             }}
           >
             <div className="py-12">
-              <SectionHeadingText SectionTitle="CONNECT" buttonTitle="TOUCH" />
+              <SectionHeadingText SectionTitle="CONNECT" buttonTitle="TOUCH" tracking="32px" />
               <div className="w-17/20 mx-auto mt-16">
                 <div>
                   <Form action="">

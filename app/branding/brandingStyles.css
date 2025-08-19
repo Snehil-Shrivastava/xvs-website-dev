@@ -1,0 +1,60 @@
+.pulse-glow {
+  /* transform: scale(1);
+  animation: pulseGlow 5s infinite;
+  background-color: #f39638;
+  background-color: lightblue; */
+
+  /* background: linear-gradient(-120deg, rgba(254, 146, 39, 1) 0%, rgba(254, 146, 39, 0.8) 10%, rgba(254, 146, 39, 0.6) 20%, rgba(254, 146, 39, 0.4) 30%, rgba(254, 146, 39, 0.2) 40%, rgba(254, 146, 39, 0.09) 50%, rgba(254, 146, 39, 0.07) 60%,rgba(254, 146, 39, 0.05) 70%, rgba(254, 146, 39, 0.03) 80%, rgba(254, 146, 39, 0.01) 90%, #282828 100%); */
+
+  position: absolute;
+  top: -30%;
+  left: auto;
+  right: -30%;
+  /* transform: translate(50%, 50%); */
+  transform: translateX(50%);
+  width: 1420px;
+  height: 520px;
+  /* border-radius: 50%; */
+  filter: blur(5px);
+  /* background-color: #f79a3dd2; */
+  background: radial-gradient(700px circle at center, rgba(254, 146, 39, 0.8), transparent);
+  transform: scale(1);
+  animation: pulseGlow 5s infinite ease-in-out;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.out-top {
+  animation: rotate 20s linear infinite;
+  transform-origin: 13px 25px;
+}
+.in-top {
+  animation: rotate 10s linear infinite;
+  transform-origin: 13px 25px;
+}
+.out-bottom {
+  animation: rotate 25s linear infinite;
+  transform-origin: 84px 93px;
+}
+.in-bottom {
+  animation: rotate 15s linear infinite;
+  transform-origin: 84px 93px;
+}

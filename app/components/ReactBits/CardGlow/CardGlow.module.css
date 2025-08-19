@@ -1,0 +1,59 @@
+/* Individual Card Styling */
+.card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    position: relative; /* Crucial for positioning the pseudo-element */
+    /* overflow: hidden; */ /* <<< CHANGED: We remove this to let the glow escape */
+    transition: background-color 0.3s ease;
+}
+
+/* The Glow Effect Layer */
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; 
+    
+    /* ADDED: This is the key to making the spillover look good */
+    border-radius: inherit; /* This makes the glow layer match the card's rounded corners */
+    
+    /* The radial gradient is the core of the effect */
+    background: radial-gradient(
+        /* You can make the circle larger for a more dramatic spillover effect */
+        400px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(148, 0, 211, 0.3),
+        transparent 80%
+    );
+    
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Make the glow visible on hover */
+.card:hover::before {
+    opacity: 1;
+}
+
+/* Card Content Styling */
+.cardContent {
+    position: relative; 
+    z-index: 2; /* Sits on top of the glow effect */
+    text-align: left;
+}
+
+.cardContent h2 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.cardContent p {
+    color: #ccc;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 100%;
+}

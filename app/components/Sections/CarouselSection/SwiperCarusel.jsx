@@ -111,6 +111,8 @@ export default () => {
         <SectionHeadingText
           SectionTitle="SERVICES"
           buttonTitle="VIEW SERVICES"
+          size="8rem"
+          tracking="52px"
         />
       </div>
       <Swiper {...swiperParams}>

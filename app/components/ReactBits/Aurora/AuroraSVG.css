@@ -1,0 +1,24 @@
+
+.aurora-svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.aurora-gradient-layer {
+  width: 100%;
+  height: 320px;
+  animation: moveTurbulence 10s linear infinite;
+}
+
+@keyframes moveTurbulence {
+  from {
+    transform: scale(1.2) translateY(-20%);
+  }
+  to {
+    transform: scale(1.2) translateY(-20%);
+  }
+}

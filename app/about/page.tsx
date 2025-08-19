@@ -798,7 +798,7 @@ const AboutPage = () => {
       </div>
       {/* </div> */}
       <div className="text-center my-[200px] w-[80%] mx-auto max-[769px]:w-[90%]">
-        <SectionHeadingText SectionTitle="PROCESS" buttonTitle="PROCESS" />
+        <SectionHeadingText SectionTitle="PROCESS" buttonTitle="PROCESS" size="8rem" tracking="52px" />
         <p className="text-[#F3EDDE] font-light tracking-wider">
           We keep it simple and listen...
         </p>
@@ -815,7 +815,7 @@ const AboutPage = () => {
         </motion.p>
       </div>
       <div className="w-[80%] mx-auto text-center max-[769px]:w-[90%]">
-        <SectionHeadingText SectionTitle="CLIENTS" buttonTitle="REVIEWS" />
+        <SectionHeadingText SectionTitle="CLIENTS" buttonTitle="REVIEWS" size="8rem" tracking="52px" />
         <p className="text-[#F3EDDE] font-light tracking-wider">
           Hear from visionaries and experts
         </p>
