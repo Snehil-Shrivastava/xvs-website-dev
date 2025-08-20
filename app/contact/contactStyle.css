@@ -235,22 +235,22 @@
 }
 
 .send-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
 
   /* --- ANIMATION SETUP --- */
   /* 1. Use a linear gradient as the background. It's half transparent, half colored. */
   background: linear-gradient(
-    90deg, 
-    transparent 50%, 
-    #ffffffa6 50%, 
+    90deg,
+    transparent 50%,
+    #ffffffa6 50%,
     #ffffffa6 100%
   );
 
   /* 2. Make the background twice as wide as the button. */
   background-size: 200% 100%;
-  
+
   /* 3. Start with the colored part of the gradient hidden to the left. */
   background-position: -100% 0;
 
@@ -313,6 +313,147 @@
   /* background: #282828; */
 }
 
-input:focus, textarea:focus {
-  border-color: #F39638;
+input:focus,
+textarea:focus {
+  border-color: #f39638;
+}
+
+.glow-dot-1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #f39638;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.glow-dot-2 {
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fe9227;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.glow-dot-3 {
+  position: absolute;
+  top: 60.1%;
+  left: 9.9%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fe9227;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.glow-dot-4 {
+  position: absolute;
+  top: 31%;
+  left: 85%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fe9227;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.glow-dot-5 {
+  position: absolute;
+  top: 35%;
+  left: 65%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fe9227;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.glow-dot-6 {
+  position: absolute;
+  top: 40%;
+  left: 42%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fe9227;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.glow-dot-7 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fe9227;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.glow-dot-8 {
+  position: absolute;
+  top: 90%;
+  left: 55%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: #fe9227;
+  box-shadow: 0 0 20px 10px #f39638;
+
+  border-radius: 50%;
+
+  opacity: 0;
+  animation: blink 3s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }

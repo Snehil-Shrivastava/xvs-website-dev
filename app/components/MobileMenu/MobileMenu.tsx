@@ -71,12 +71,12 @@ export default function MobileMenu() {
 
       {/* Expanding menu */}
       <div
-        className={`bg-black/[0.01] fixed inset-0 transition-transform duration-500 ease-in-out ${
+        className={`bg-black/[0.01] fixed inset-0 transition-transform duration-400 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div
-          className={`fixed inset-0 z-40 bg-[#F79839] flex flex-col items-center justify-center transition-transform duration-500 ease-in-out nav-modal ${
+          className={`fixed inset-0 z-40 bg-[#F79839] flex flex-col items-center justify-center transition-transform duration-400 ease-in-out nav-modal ${
             isOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >

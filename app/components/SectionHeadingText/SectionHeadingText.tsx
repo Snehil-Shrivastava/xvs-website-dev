@@ -25,10 +25,10 @@ const SectionHeadingText = ({
   size?: string;
   tracking?: string;
 }) => {
-  const myStyles = {
-    maskImage: "linear-gradient(to top, #000000, transparent)",
+  const xlStyles = {
     fontSize: size,
-  };
+    lineHeight: tracking
+  }
 
   const btnRef = useRef(null);
   const headingRef = useRef(null);
@@ -71,33 +71,6 @@ const SectionHeadingText = ({
   });
 
   return (
-    // <motion.div
-    //   initial={{ opacity: 0 }}
-    //   whileInView={{ opacity: 1 }}
-    //   transition={{ duration: 1 }}
-    //   className="relative"
-    // >
-    //   <h1
-    //     className="tracking-[36px] text-[11rem]/[11rem] font-bold text-white/[0.4]"
-    //     style={myStyles}
-    //   >
-    //     {SectionTitle}
-    //   </h1>
-    //   {/* <div
-    //     className={`${styles.btnContainer} absolute bottom-[32px] text-sm left-1/2 -translate-x-1/2 text-[#F79839] text-base bg-zinc-800/[0.4] backdrop-blur-2xl font-medium`}
-    //   >
-    //     <div className={`py-[12px] px-[28px] ${styles.btnLink}`}>
-    //       <Link href="/" className={`${styles.btnStyle}`}>
-    //         {buttonTitle}
-    //       </Link>
-    //     </div>
-    //   </div> */}
-    //   <div ref={btnRef} className={`absolute bottom-[42px] left-1/2 -translate-x-1/2 text-[#F79839] ${styles.btnContainerNew}`}>
-    //     <Link className={`h-full flex items-center w-full justify-center ${styles.btnLinkNew}`} href='/'>
-    //       <span className="mx-[16px]">{buttonTitle}</span>
-    //     </Link>
-    //   </div>
-    // </motion.div>
 
     <div className="relative">
       {/* <h1
@@ -114,9 +87,10 @@ const SectionHeadingText = ({
         className={`text-8xl font-bold text-center`}
         style={{
           maskImage:
-            "linear-gradient(to bottom, rgba(0, 0, 0, 0.4), transparent 80%)",
+            "linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.001) 90%)",
           letterSpacing: tracking ? tracking : "20px",
           fontSize: size,
+          lineHeight: '12vh'
         }}
       >
         {SectionTitle}

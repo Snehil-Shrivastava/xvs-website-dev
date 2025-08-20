@@ -29,13 +29,21 @@ const Footer = () => {
                 </h1>
               </div>
               <div className="flex-1 text-center flex justify-center">
-                <Link
-                  href="/"
-                  className="xl:text-[26px] lg:text-[1.2rem] text-[#F79839] tracking-wide border border-[#6e6a69] px-[52px] py-[18px] flex gap-[26px] items-center max-[1024px]:px-[20px]"
-                >
-                  <Image src={meetingSchedIcon} alt="icon" className="max-[1024px]:w-[24px]" />
-                  <span>Schedule A Meeting</span>
-                </Link>
+                <div className=" box-shadow-glow">
+                <div className="footer-btn-container">
+                  <Link
+                    href="/"
+                    className="xl:text-[26px] lg:text-[1.2rem] text-[#F79839] tracking-wide px-[52px] py-[18px] flex gap-[26px] items-center max-[1024px]:px-[20px] footer-btn"
+                  >
+                    <Image
+                      src={meetingSchedIcon}
+                      alt="icon"
+                      className="max-[1024px]:w-[24px]"
+                    />
+                    <span>Schedule A Meeting</span>
+                  </Link>
+                </div>
+                                </div>
               </div>
             </div>
             <div className="footer-links-block">
@@ -62,7 +70,9 @@ const Footer = () => {
                     (226002), India.
                   </p>
                   <div className="flex gap-[32px] mt-[72px] max-[769px]:flex-col max-[769px]:mt-auto max-[769px]:gap-[0px]">
-                    <h1 className="text-[36px] max-[769px]:text-[20px]">Say Hi!</h1>
+                    <h1 className="text-[36px] max-[769px]:text-[20px]">
+                      Say Hi!
+                    </h1>
                     <div>
                       <a href="" className="hover:underline text-[15px]">
                         info@xvscreations.com

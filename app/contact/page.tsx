@@ -4,7 +4,7 @@ import Form from "next/form";
 import "./contactStyle.css";
 import Image from "next/image";
 
-import bgImg from "../../public/assests/contact-bg-2.png";
+import bgImg from "../../public/assests/contact-bg.png";
 
 import sendIcon from "../../public/assests/send-icon.png";
 
@@ -28,6 +28,16 @@ const Contact = () => {
             "radial-gradient(920px circle at center, #000000, transparent)",
         }}
       >
+        <div className="glow-dot-1"></div>
+        <div className="glow-dot-2"></div>
+        <div className="glow-dot-3"></div>
+        <div className="glow-dot-4"></div>
+        <div className="glow-dot-5"></div>
+        <div className="glow-dot-6"></div>
+        <div className="glow-dot-7"></div>
+        <div className="glow-dot-8"></div>
+        <div className="glow-dot-9"></div>
+        <div className="glow-dot-10"></div>
         <Image
           src={bgImg}
           alt="background"
@@ -109,14 +119,14 @@ const Contact = () => {
             // clipPath:
             //   "polygon(0% 15%, 0% 100%, 100% 100%, 100% 15%, 95% 0%, 5% 0%)",
             clipPath:
-              "polygon(0 38px, 0 100%, 100% 100%, 100% 38px, calc(100% - 38px) 0%, 38px 0%)",
+              "polygon(0 38px, 1px 100%, calc(100% - 1px) 100%, 100% 38px, calc(100% - 38px) 0%, 38px 0%)",
           }}
         >
           <div
             className="w-full h-full relative bg-neutral-950/70 backdrop-blur-sm"
             style={{
               clipPath:
-                "polygon(calc(100% - 99.9%) 38px, calc(100% - 99.9%) 100%, 99.9% 100%, 99.9% 38px, calc(100% - 38px) calc(100% - 99.8%), 38px calc(100% - 99.8%))",
+                "polygon(calc(100% - 99.8%) 38px, 0 100%, 100% 100%, 99.8% 38px, calc(100% - 38px) calc(100% - 99.8%), 38px calc(100% - 99.8%))",
             }}
           >
             <div className="py-12 relative">

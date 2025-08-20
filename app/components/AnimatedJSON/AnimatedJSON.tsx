@@ -11,7 +11,7 @@ import './animatedJSON.css'
 
 const AnimatedJSON = () => {
   return (
-    <Lottie animationData={xVS} loop={true} autoplay  className="2xl:scale-[2.4] xl:scale-[2.5] lg:scale-[2.5] max-[1024px]:inline svg-container"/>
+    <Lottie animationData={xVS} loop={true} autoplay  className="2xl:scale-[2.4] xl:scale-[2.5] max-[1024px]:inline svg-container"/>
     // <Player
     //   autoplay
     //   loop
