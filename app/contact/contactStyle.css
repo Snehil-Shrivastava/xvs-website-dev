@@ -162,23 +162,24 @@
 }
 
 .send-btn-cnt {
-  --offset: 1px;
-  overflow: hidden;
+  /* --offset: 1px; */
+  /* overflow: hidden; */
   /* background-color: #ffffff2a; */
+  /* background-color: #282828; */
 
-  background: conic-gradient(transparent 250deg, white, transparent);
+  /* background: conic-gradient(transparent 250deg, white, transparent); */
 
-  clip-path: polygon(
+  /* clip-path: polygon(
     0% 12px,
     0% 100%,
     calc(100% - 12px) 100%,
     100% calc(100% - 12px),
     100% 0%,
     12px 0
-  );
+  ); */
 }
 
-.send-btn-cnt::before {
+/* .send-btn-cnt::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -189,14 +190,95 @@
   width: 100%;
   aspect-ratio: 1;
 
-  /* animation: rotate 5s linear infinite; */
   opacity: 0;
+} */
+
+/* .send-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #282828;
+
+  clip-path: polygon(
+    0% 12px,
+    0% 99.6%,
+    calc(100% - 12px) 97%,
+    99.7% calc(100% - 12px),
+    100% 0,
+    0 0
+  );
+  z-index: -1;
+} */
+
+/* .send-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  background-color: #ffffffa6;
+
+  clip-path: polygon(
+    35% 100%,
+    calc(100% - 12px) 100%,
+    100% calc(100% - 12px),
+    100% 0,
+    calc(100% - 2px) calc(100% - 12px),
+    calc(100% - 12px) calc(100% - 2px),
+    35% calc(100% - 1px)
+  );
+} */
+
+.send-btn {
+  /* Ensure the button is a positioning context for the pseudo-element */
+  position: relative;
+  overflow: hidden; /* Hide the gradient when it's outside the button */
 }
 
-.send-btn-cnt::after {
+.send-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+
+  /* --- ANIMATION SETUP --- */
+  /* 1. Use a linear gradient as the background. It's half transparent, half colored. */
+  background: linear-gradient(
+    90deg, 
+    transparent 50%, 
+    #ffffffa6 50%, 
+    #ffffffa6 100%
+  );
+
+  /* 2. Make the background twice as wide as the button. */
+  background-size: 200% 100%;
+  
+  /* 3. Start with the colored part of the gradient hidden to the left. */
+  background-position: -100% 0;
+
+  /* 4. Add a transition for the background-position property. */
+  transition: background-position 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  /* --- END ANIMATION SETUP --- */
+
+  /* Your original clip-path remains the same */
+  clip-path: polygon(
+    35% 100%,
+    calc(100% - 12px) 100%,
+    100% calc(100% - 12px),
+    100% 0,
+    calc(100% - 2px) calc(100% - 12px),
+    calc(100% - 12px) calc(100% - 2px),
+    35% calc(100% - 1px)
+  );
+}
+
+/* --- HOVER STATE --- */
+/* On hover, slide the background into view from left to right */
+.send-btn:hover::before {
+  background-position: 0 0;
+}
+
+/* .send-btn-cnt::after {
   content: "";
   background: #282828;
-  /* border-radius: inherit; */
   position: absolute;
   inset: var(--offset);
   height: calc(100% - 2 * var(--offset));
@@ -210,7 +292,7 @@
     100% 0%,
     12px 0
   );
-}
+} */
 
 @keyframes rotate {
   from {
@@ -223,10 +305,14 @@
 }
 
 .send-btn-cnt:hover::before {
-  animation: rotate 2s linear infinite;
-  opacity: 1;
+  /* animation: rotate 2s linear infinite; */
+  /* opacity: 1; */
 }
 
 .send-btn-cnt:hover {
-  background: #282828;
+  /* background: #282828; */
+}
+
+input:focus, textarea:focus {
+  border-color: #F39638;
 }

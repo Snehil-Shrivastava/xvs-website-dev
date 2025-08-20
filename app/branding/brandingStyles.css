@@ -71,7 +71,7 @@
   /* transform: scale(1.8); */
   transform-origin: center;
   /* box-shadow: 0 0 250px 150px rgba(243, 150, 56, 0.7); */
-  animation: pulsingDiv 5s ease infinite;
+  animation: pulsingDiv 5s ease-in-out infinite;
 }
 
 @keyframes pulsingDiv {

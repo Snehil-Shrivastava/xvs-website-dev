@@ -21,7 +21,7 @@ export default function MobileMenu() {
           // Close Icon
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6"
+            className="w-6 h-6 scale-[1.5] origin-center"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -70,48 +70,80 @@ export default function MobileMenu() {
       </button>
 
       {/* Expanding menu */}
-      <div className={`bg-black/[0.5] fixed inset-0 transition-all duration-300 ease-in-out ${
-        isOpen
-        ? 'opacity-100 scale-100'
-        : 'opacity-0 scale-110 pointer-events-none'
-      }`}>
       <div
-        className={`fixed inset-0 z-40 bg-[#F79839] flex flex-col items-center justify-center transition-all duration-300 ease-in-out nav-modal ${
-          isOpen
-            ? "opacity-100 scale-100"
-            : "opacity-0 scale-110 pointer-events-none"
+        className={`bg-black/[0.01] fixed inset-0 transition-transform duration-500 ease-in-out ${
+          isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="flex p-4 space-y-2 mx-auto gap-[64px] absolute top-[2%] text-2xl max-[769px]:text-[1.2rem]">
-          <li>
-            <Link
-              href="/about"
-              onClick={handleLinkClick}
-              className="block px-2 py-1 rounded"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/services"
-              onClick={handleLinkClick}
-              className="block px-2 py-1 rounded"
-            >
-              Services
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/contact"
-              onClick={handleLinkClick}
-              className="block px-2 py-1 rounded"
-            >
-              Contact
-            </Link>
-          </li>
-        </ul>
-      </div>
+        <div
+          className={`fixed inset-0 z-40 bg-[#F79839] flex flex-col items-center justify-center transition-transform duration-500 ease-in-out nav-modal ${
+            isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div className="w-9/10 h-full flex flex-col gap-[120px]">
+            <div className="w-full h-[120px] flex justify-center">
+              <div className="w-4/5 ml-auto">
+                <ul className="flex justify-between w-3/10 py-4 space-y-2 mx-auto gap-[64px] absolute top-[2%] text-2xl max-[769px]:text-[1.2rem] font-extralight">
+                  <li>
+                    <Link
+                      href="/about"
+                      onClick={handleLinkClick}
+                      className="block px-2 py-1 rounded"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/services"
+                      onClick={handleLinkClick}
+                      className="block px-2 py-1 rounded"
+                    >
+                      Services
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/contact"
+                      onClick={handleLinkClick}
+                      className="block px-2 py-1 rounded"
+                    >
+                      Contact
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className="w-full h-full">
+              <div className="w-4/5 ml-auto grid grid-cols-2 gap-x-8">
+                <div className="flex flex-col gap-6">
+                  <h3 className="font-medium">Identity and Design</h3>
+                  <div>
+                    <Link
+                      className="text-6xl font-thin"
+                      href="/branding"
+                      onClick={handleLinkClick}
+                    >
+                      Branding
+                    </Link>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-6">
+                  <h3 className="font-medium">Interface and Experience</h3>
+                  <div>
+                    <Link
+                      className="text-6xl font-thin"
+                      href="/branding"
+                      onClick={handleLinkClick}
+                    >
+                      UI/UX
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -98,6 +98,11 @@ const Contact = () => {
           className="absolute left-[20px] right-[20px] top-[30px] bottom-[30px] z-[1] bg-neutral-900/10 backdrop-blur-sm"
         ></div> */}
         {/* <div className="absolute inset-0 radial-light-container"></div> */}
+        {/* <div className="absolute -left-1/2 -bottom-1/10 w-[100vw] h-[290px]" style={{
+          background: 'linear-gradient(to bottom, transparent, #282828)',
+          backgroundColor: 'rgba(40, 40, 40, 0.4)',
+          filter: 'blur(2px)'
+        }}></div> */}
         <div
           className="w-full h-full relative bg-neutral-50/20 backdrop-blur-xs"
           style={{
@@ -183,19 +188,10 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    {/* <div className="text-3xl text-[#F39638] bg-[#282828] my-16 relative send-btn-cnt">
-                      <button
-                        className="relative font-semibold w-full h-full p-2 text-end flex justify-end align-center send-btn bg-[#282828]"
-                        type="submit"
-                      >
-                        <span className="mr-4">Send</span>
-                        <Image src={sendIcon} alt="Send" className="inline" />
-                      </button>
-                    </div> */}
 
                     <div className="text-3xl text-[#F39638] my-16 relative send-btn-cnt">
                       <button
-                        className="relative z-5 w-full p-2 flex justify-end align-center"
+                        className="relative z-5 w-full p-3 flex justify-end align-center cursor-pointer send-btn"
                         type="submit"
                       >
                         <span className="">Send</span>
