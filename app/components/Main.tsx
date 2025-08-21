@@ -51,21 +51,27 @@ import CardGlow from "./ReactBits/CardGlow/CardGlow";
 const Main = () => {
   return (
     <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] max-[1024px]:w-[90%] mx-auto mt-[157px] text-center relaive">
-      <header className="relative pointer-events-none">
-        <p className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] max-[1024px]:text-[0.75rem] max-[1024px]:top-[30px] max-[1024px]:left-[23%] font-light">
+      <header className="relative pointer-events-none max-[426px]:w-4/5 max-[426px]:mx-auto">
+        <p className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] max-[1024px]:text-[0.75rem] max-[1024px]:top-[30px] max-[1024px]:left-[23%] font-light max-[426px]:right-0 max-[426px]:left-auto  max-[426px]:w-[150px] max-[426px]:text-start  max-[426px]:top-[20px] max-[426px]:text-[0.85rem]">
           Creating Unforgettable Design
         </p>
-        <div className="flex justify-center">
+        <div className="flex justify-center max-[426px]:flex-col">
           <div className="flex">
-            <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] inline">
+            <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[426px]:leading-[78px] inline">
               e
             </h1>
             <div className="2xl:w-[180px] xl:w-[150px] lg:w-[140px] max-[1024px]:w-[80px] overflow-hidden">
               <AnimatedJSON />
             </div>
           </div>
-          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] inline">
+          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] inline max-[426px]:hidden">
             perience
+          </h1>
+          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[426px]:leading-[78px] max-[426px]:text-start hidden max-[426px]:inline">
+            perie
+          </h1>{" "}
+          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[426px]:leading-[78px] max-[426px]:text-start hidden max-[426px]:inline">
+            nce
           </h1>
         </div>
         {/* <div className="w-[320px] absolute top-[-80px] left-[16.3rem]">
@@ -104,7 +110,7 @@ const Main = () => {
           </CardGlow>
         </div>
       </div> */}
-      
+
       {/* <Canvas
         shadows
         camera={{ position: [0, 1, 1], fov: 50 }}

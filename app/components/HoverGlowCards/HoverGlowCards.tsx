@@ -181,14 +181,14 @@ const HoverGlowCards = () => {
             >
               <div className={styles["card-content"]}>
                 <div className="text-left 2xl:pl-[75px] 2xl:pb-[56px] xl:pl-[55px] xl:pb-[55px] lg:pl-[35px] lg:pb-[35px] max-[1024px]:pl-[12px] max-[1024px]:pb-[12px] mt-auto">
-                  <h3 className="font-medium text-2xl">{card.title}</h3>
-                  <h1 className="text-[#F79839] font-bold 2xl:text-9xl xl:text-[5rem] lg:text-[4rem] max-[1024px]:text-[2.5rem]">
+                  <h3 className="font-medium text-2xl max-[1024px]:text-[1rem]">{card.title}</h3>
+                  <h1 className="text-[#F79839] font-bold 2xl:text-9xl xl:text-[5rem] lg:text-[4rem] max-[1024px]:text-[3.6rem]">
                     {card.subtitle}
                   </h1>
-                  <p className="font-light text-lg max-[1024px]:text-sm">
+                  <p className="font-light text-lg max-[1024px]:text-[0.75rem]">
                     {card.text1}
                   </p>
-                  <p className="font-light text-lg max-[1024px]:text-sm">
+                  <p className="font-light text-lg max-[1024px]:text-[0.75rem]">
                     {card.text2}
                   </p>
                 </div>

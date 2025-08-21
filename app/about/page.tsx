@@ -786,7 +786,7 @@ const AboutPage = () => {
         </div>
         <p
           // @ts-ignore
-          className="text-[20px]/[40px] font-light text-center lg:w-[80%] max-[769px]:w-[90%] mx-auto mt-[50px] text-[#F3EDDE]"
+          className="text-[20px]/[40px] font-light text-center xl:w-[37%] lg:w-[80%] max-[769px]:w-[90%] mx-auto mt-[50px] text-[#F3EDDE]"
         >
           With the inspiration of designing we started back in 2014 and bringing
           them to reality since then. From cosmetic startups to big automotive
@@ -808,7 +808,7 @@ const AboutPage = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-[20px] font-light mt-[66px] lg:w-[80%] mx-auto max-[769px]:w-[90%]"
+          className="text-[20px] font-light mt-[66px] xl:w-[67%] lg:w-[80%] mx-auto max-[769px]:w-[90%]"
         >
           At xVS we design using tools but it's more than that, it's the
           aspiration of all who come together to make inspiration a reality.

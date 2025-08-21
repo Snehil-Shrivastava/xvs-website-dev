@@ -47,7 +47,7 @@ const Reviews = () => {
             ref={cardLayerRef}
             className="absolute inset-0 bg-[#282828] z-[5]"
           ></div>
-          <div className="bg-[#F3EDDE] max-w-[1280px] 2xl:w-full xl:w-full lg:w-full mx-auto reviews-box relative">
+          <div className="bg-[#F3EDDE] max-w-[1280px] 2xl:w-full xl:w-full lg:w-full max-[769px]:w-full mx-auto reviews-box relative">
             <ReviewsThumbSlider />
           </div>
         </div>

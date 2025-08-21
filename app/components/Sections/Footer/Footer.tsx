@@ -20,7 +20,7 @@ const Footer = () => {
   return (
     <div className="mt-[170px] footer-container">
       <div className="footer-content-container">
-        <div className="w-[85%] mx-auto pb-[72px]">
+        <div className="w-[85%] max-[769px]:w-[90%] mx-auto pb-[72px]">
           <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
             <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] max-[769px]:pt-[80px] max-[769px]:pb-[80px]">
               <div className="flex-1">
@@ -61,23 +61,23 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-link-block second">
-                <div className="max-[1025px]:w-[60%] max-[1025px]:mx-auto max-[769px]:flex max-[769px]:flex-col max-[769px]:h-full">
+                <div className="max-[1025px]:w-[80%] max-[1025px]:mx-auto max-[769px]:flex max-[769px]:flex-col max-[769px]:h-full">
                   <h1 className="font-semibold text-[16px] mb-[16px]">
                     Contacts
                   </h1>
-                  <p className="text-[16px]">
+                  <p className="text-[16px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[1024px]:font-extralight">
                     2nd Floor, 1/23 Rajni Khand, Sharda Nagar, Lucknow, UP
                     (226002), India.
                   </p>
-                  <div className="flex gap-[32px] mt-[72px] max-[769px]:flex-col max-[769px]:mt-auto max-[769px]:gap-[0px]">
-                    <h1 className="text-[36px] max-[769px]:text-[20px]">
+                  <div className="flex gap-[32px] mt-[72px] max-[769px]:gap-[44px] max-[769px]:mt-auto">
+                    <h1 className="text-[36px] max-[769px]:text-[2.2rem] max-[769px]:font-semibold">
                       Say Hi!
                     </h1>
                     <div>
-                      <a href="" className="hover:underline text-[15px]">
+                      <a href="" className="hover:underline text-[15px] max-[1024px]:text-[0.75rem] max-[1024px]:font-extralight">
                         info@xvscreations.com
                       </a>
-                      <p className=" text-[15px]">+91-8726899713</p>
+                      <p className=" text-[15px] max-[1024px]:text-[0.75rem] max-[1024px]:font-extralight">+91-8726899713</p>
                     </div>
                   </div>
                 </div>
@@ -86,26 +86,26 @@ const Footer = () => {
                 <h1 className="font-semibold text-[16px] mb-[16px]">
                   Services
                 </h1>
-                <div className="flex flex-col gap-[8px]">
-                  <Link href="/" className="hover:underline text-[13px]">
+                <div className="flex flex-col gap-[8px] text-[13px] max-[769px]:text-[0.75rem] max-[769px]:font-extralight">
+                  <Link href="/" className="hover:underline">
                     Branding
                   </Link>
-                  <Link href="/" className="hover:underline text-[13px]">
+                  <Link href="/" className="hover:underline">
                     Graphic Design
                   </Link>
-                  <Link href="/" className="hover:underline text-[13px]">
+                  <Link href="/" className="hover:underline">
                     UI/UX Design
                   </Link>
-                  <Link href="/" className="hover:underline text-[13px]">
+                  <Link href="/" className="hover:underline">
                     Website Development
                   </Link>
-                  <Link href="/" className="hover:underline text-[13px]">
+                  <Link href="/" className="hover:underline">
                     Motion Graphics
                   </Link>
-                  <Link href="/" className="hover:underline text-[13px]">
+                  <Link href="/" className="hover:underline">
                     2D Animation
                   </Link>
-                  <Link href="/" className="hover:underline text-[13px]">
+                  <Link href="/" className="hover:underline">
                     Social Media Marketing
                   </Link>
                 </div>
@@ -115,7 +115,7 @@ const Footer = () => {
         </div>
       </div>
       <div className=" bg-[#282828]">
-        <div className="flex justify-between text-white/[0.5] w-[85%] mx-auto text-[14px] pt-[28px] pb-[12px]">
+        <div className="flex justify-between text-white/[0.5] w-[85%] mx-auto text-[14px] max-[769px]:text-[0.75rem] pt-[28px] pb-[12px]">
           <div>
             <p className="font-light">
               @ 2025 xVS Creations All Rights Reserved

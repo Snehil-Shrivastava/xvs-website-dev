@@ -69,10 +69,10 @@ export default function SwiperGallery() {
           {ClientReviews.map((review, index) => (
             <SwiperSlide key={index}>
               <div className="text-black flex flex-col gap-[32px] mb-[52px] w-[75%] mx-auto">
-                <h4 className="font-semibold w-full text-[20px]">
+                <h4 className="font-semibold w-full text-[20px] max-[1024px]:text-[1rem]">
                   {`"${review.quote}"`}
                 </h4>
-                <p className="text-sm w-[147px] mx-auto">
+                <p className="text-sm max-[1024px]:text-[0.75rem] w-[147px] mx-auto">
                   Lorem Ipsum is simply dummy text
                 </p>
               </div>
