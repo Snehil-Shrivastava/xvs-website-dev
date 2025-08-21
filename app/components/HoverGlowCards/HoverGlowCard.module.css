@@ -23,9 +23,15 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 8px;
   height: 100%;
+}
+
+@media screen and (max-width: 426px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* This rule targets the ::after pseudo-element of cards when the #cards container is hovered */
