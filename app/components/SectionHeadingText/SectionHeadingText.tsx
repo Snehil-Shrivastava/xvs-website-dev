@@ -84,13 +84,13 @@ const SectionHeadingText = ({
       {/* <div className="absolute inset-0 bg-[#282828]" style={myStyles}></div> */}
 
       <h1
-        className={`text-8xl font-bold text-center`}
+        className={`min-[2560px]:text-[12rem]/[12vh] min-[2560px]:tracking-[4rem] min-[1905px]:text-[9.5rem]/[13vh] min-[1905px]:tracking-[4rem] min-[1440px]:text-[7.5rem]/[12vh] min-[1440px]:tracking-[3.2rem] min-[1024px]:text-[6.5rem]/[12vh] min-[1024px]:tracking-[2.8rem] font-bold text-center`}
         style={{
           maskImage:
             "linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.001) 90%)",
-          letterSpacing: tracking ? tracking : "20px",
-          fontSize: size,
-          lineHeight: '12vh'
+          // letterSpacing: tracking ? tracking : "20px",
+          // fontSize: size,
+          // lineHeight: '12vh'
         }}
       >
         {SectionTitle}

@@ -18,6 +18,8 @@ const Reviews = () => {
   useGSAP(() => {
     const cardLayer = cardLayerRef.current;
 
+    gsap.set(cardLayer, {width: '100%'})
+
     const tl = gsap.timeline();
 
     tl.to(cardLayer, {
@@ -40,12 +42,12 @@ const Reviews = () => {
         <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px]">
           Hear from visionaries and experts
         </h3>
-        <div className="relative p-[2px]">
+        <div className="relative p-[2px] flex">
           <div
             ref={cardLayerRef}
             className="absolute inset-0 bg-[#282828] z-[5]"
           ></div>
-          <div className="bg-[#F3EDDE] 2xl:w-[80%] xl:w-full mx-auto reviews-box relative">
+          <div className="bg-[#F3EDDE] max-w-[1280px] 2xl:w-full xl:w-full lg:w-full mx-auto reviews-box relative">
             <ReviewsThumbSlider />
           </div>
         </div>
