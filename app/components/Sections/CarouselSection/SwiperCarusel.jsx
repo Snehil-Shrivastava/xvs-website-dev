@@ -74,10 +74,10 @@ export default () => {
       prevEl: prevRef.current,
       nextEl: nextRef.current,
     },
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     // onSwiper={(swiper) => (swiperRef.current = swiper)}
     effect: "coverflow",
     grabCursor: true,
@@ -145,9 +145,9 @@ export default () => {
           className="swiper-button-custom swiper-button-prev-custom"
         >
           <FontAwesomeIcon
-            className="w-[1rem] h-[1rem]"
+            className="max-[769px]:w-[1rem] max-[769px]:h-[1rem] min-[1024px]:w-[1.5rem] min-[1024px]:h-[1.5rem]"
             icon={faArrowLeft}
-            size="sm"
+            // size="sm"
           />
         </div>
         <div
@@ -155,9 +155,9 @@ export default () => {
           className="swiper-button-custom swiper-button-next-custom"
         >
           <FontAwesomeIcon
-            className="w-[1rem] h-[1rem]"
+            className="max-[769px]:w-[1rem] max-[769px]:h-[1rem] min-[1024px]:w-[1.5rem] min-[1024px]:h-[1.5rem]"
             icon={faArrowRight}
-            size="sm"
+            // size="sm"
           />
         </div>
       </Swiper>

@@ -24,7 +24,7 @@ const Footer = () => {
           <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
             <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] max-[769px]:pt-[80px] max-[769px]:pb-[80px] max-[426px]:gap-[0.875rem] max-[426px]:flex-col max-[426px]:py-[2.5rem]">
               <div className="flex-1">
-                <h1 className="2xl:text-[3.7rem]/[4rem] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[426px]:text-[1.2rem] font-bold tracking-wider 2xl:w-[780px] xl:w-[730px]">
+                <h1 className="2xl:text-[3.7rem]/[4rem] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[280px] max-[426px]:text-[1.2rem] font-bold tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-[95%] max-[426px]:w-full">
                   Let's start creating together
                 </h1>
               </div>
@@ -49,9 +49,13 @@ const Footer = () => {
             <div className="footer-links-block">
               <div className="footer-link-block first justify-between">
                 <div>
-                  <Image className="max-[426px]:w-[4rem]" src={logo} alt="" />
+                  <Image
+                    className="max-[769px]:w-[4.7rem] max-[426px]:w-[4rem]"
+                    src={logo}
+                    alt=""
+                  />
                 </div>
-                <div className="flex flex-wrap w-[98px] gap-[16px] items-center justify-center max-[426px]:grid max-[426px]:grid-cols-3 max-[426px]:gap-[0.625rem]">
+                <div className="flex flex-wrap w-[98px] gap-[16px] items-center justify-center max-[769px]:grid max-[769px]:grid-cols-3 max-[426px]:grid max-[426px]:grid-cols-3 max-[426px]:gap-[0.625rem]">
                   <Image className="max-[426px]:w-[1rem]" src={icon1} alt="" />
                   <Image className="max-[426px]:w-[1rem]" src={icon2} alt="" />
                   <Image className="max-[426px]:w-[1rem]" src={icon3} alt="" />
@@ -61,23 +65,30 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-link-block second">
-                <div className="max-[1025px]:w-[80%] max-[1025px]:mx-auto max-[769px]:flex max-[769px]:flex-col max-[769px]:h-full">
+                <div className="max-[1025px]:w-full max-[1025px]:mx-auto max-[1441px]:flex max-[1441px]:flex-col max-[1441px]:h-full">
                   <h1 className="font-semibold text-[16px] mb-[16px] max-[426px]:text-[1rem]">
                     Contacts
                   </h1>
-                  <p className="text-[16px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1024px]:font-extralight">
-                    2nd Floor, 1/23 Rajni Khand, Sharda Nagar, Lucknow, UP
-                    (226002), India.
+                  <p className="text-[16px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
+                    2nd Floor, 1/23 Rajni Khand, Sharda Nagar,
                   </p>
-                  <div className="flex gap-[32px] mt-[72px] max-[769px]:gap-[44px] max-[769px]:mt-auto max-[426px]:flex-col max-[426px]:mt-auto max-[426px]:gap-0">
-                    <h1 className="text-[36px] max-[769px]:text-[2.2rem] max-[769px]:font-semibold max-[426px]:text-[1.6rem]">
+                  <p className="text-[16px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
+                    Lucknow, UP (226002), India.
+                  </p>
+                  <div className="flex gap-[32px] mt-[72px] max-[1441px]:mt-auto max-[769px]:gap-[44px] max-[769px]:mt-auto max-[426px]:flex-col max-[426px]:mt-auto max-[426px]:gap-0">
+                    <h1 className="text-[36px] max-[769px]:text-[2.2rem] max-[1441px]:font-semibold max-[426px]:text-[1.6rem]">
                       Say Hi!
                     </h1>
                     <div>
-                      <a href="" className="hover:underline text-[15px] max-[1024px]:text-[0.75rem] max-[1024px]:font-extralight max-[426px]:text-[0.5rem]">
+                      <a
+                        href=""
+                        className="hover:underline text-[15px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem]"
+                      >
                         info@xvscreations.com
                       </a>
-                      <p className=" text-[15px] max-[1024px]:text-[0.75rem] max-[1024px]:font-extralight max-[426px]:text-[0.5rem] max-[426px]:leading-[6px]">+91-8726899713</p>
+                      <p className=" text-[15px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem] max-[426px]:leading-[6px]">
+                        +91-8726899713
+                      </p>
                     </div>
                   </div>
                 </div>

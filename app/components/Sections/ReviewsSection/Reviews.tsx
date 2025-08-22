@@ -36,17 +36,17 @@ const Reviews = () => {
     });
   });
   return (
-    <div className="mt-[180px] max-[1024px]:mt-[140px] max-[426px]:mt-[60px]">
+    <div className="max-[1441px]:mt-[100px] max-[1024px]:mt-[140px] max-[769px]:mt-[60px] max-[426px]:mt-[60px]">
       <SectionHeadingText SectionTitle="WORDS" buttonTitle="REVIEWS" tracking="2.8vw" size="8vw" />
       <div className="mt-[28px] max-[426px]:mt-0">
         <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px] max-[426px]:text-[0.5rem] max-[426px]:mt-2">
           Hear from visionaries and experts
         </h3>
         <div className="relative p-[2px] flex">
-          <div
+          {/* <div
             ref={cardLayerRef}
             className="absolute inset-0 bg-[#282828] z-[5]"
-          ></div>
+          ></div> */}
           <div className="bg-[#F3EDDE] max-w-[1280px] 2xl:w-full xl:w-full lg:w-full max-[769px]:w-full mx-auto reviews-box relative">
             <ReviewsThumbSlider />
           </div>

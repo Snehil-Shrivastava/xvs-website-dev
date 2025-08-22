@@ -8,6 +8,8 @@
   /* margin-bottom: 220px; */
   /* overflow: hidden; */
   padding: 0px;
+
+  backdrop-filter: blur(5px);
 }
 
 /* @media screen and (min-width: 1440px) {

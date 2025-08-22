@@ -1,3 +1,36 @@
 .reviews-box {
-        clip-path: polygon(0% 16px, 0% 100%, calc(100% - 16px) 100%, 100% calc(100% - 16px), 100% 0%, 16px 0);
+  clip-path: polygon(
+    0% 38px,
+    0% 100%,
+    calc(100% - 38px) 100%,
+    100% calc(100% - 38px),
+    100% 0%,
+    38px 0
+  );
+}
+
+@media screen and (max-width: 769px) {
+  .reviews-box {
+    clip-path: polygon(
+      0% 26px,
+      0% 100%,
+      calc(100% - 26px) 100%,
+      100% calc(100% - 26px),
+      100% 0%,
+      26px 0
+    );
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .reviews-box {
+    clip-path: polygon(
+      0% 16px,
+      0% 100%,
+      calc(100% - 16px) 100%,
+      100% calc(100% - 16px),
+      100% 0%,
+      16px 0
+    );
+  }
 }
