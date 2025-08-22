@@ -107,7 +107,7 @@ export default () => {
 
   return (
     <>
-      <div className="mb-[28px]">
+      <div className="mb-[28px] max-[426px]:mb-0">
         <SectionHeadingText
           SectionTitle="SERVICES"
           buttonTitle="VIEW SERVICES"
@@ -131,24 +131,34 @@ export default () => {
         <SwiperSlide>
           <HoverGlowCardsCarousel />
         </SwiperSlide> */}
-        {loopedCardData.map((card, index) => (
-          // Using a more unique key: `card.id` combined with the index
-          <SwiperSlide key={`${card.id}-${index}`}>
-            <HoverGlowCardsCarousel />
-          </SwiperSlide>
-        ))}
+        <div className="max-[426px]:py-80px">
+          {loopedCardData.map((card, index) => (
+            // Using a more unique key: `card.id` combined with the index
+            <SwiperSlide key={`${card.id}-${index}`}>
+              <HoverGlowCardsCarousel />
+            </SwiperSlide>
+          ))}
+        </div>
 
         <div
           ref={prevRef}
           className="swiper-button-custom swiper-button-prev-custom"
         >
-          <FontAwesomeIcon icon={faArrowLeft} size="lg" />
+          <FontAwesomeIcon
+            className="w-[1rem] h-[1rem]"
+            icon={faArrowLeft}
+            size="sm"
+          />
         </div>
         <div
           ref={nextRef}
           className="swiper-button-custom swiper-button-next-custom"
         >
-          <FontAwesomeIcon icon={faArrowRight} size="lg" />
+          <FontAwesomeIcon
+            className="w-[1rem] h-[1rem]"
+            icon={faArrowRight}
+            size="sm"
+          />
         </div>
       </Swiper>
     </>

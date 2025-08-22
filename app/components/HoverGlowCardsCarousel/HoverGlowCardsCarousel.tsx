@@ -135,15 +135,17 @@ const HoverGlowCards = () => {
         {cardData.map((card, index) => (
           <div
             key={index}
-            className={`${styles.cardShadowContainer} relative h-full`}
+            className={`${styles.cardShadowContainer} relative h-full backdrop-blur-sm`}
           >
-            <div className={`${styles.card}`}>
+            <div className={`${styles.card} backdrop-blur-sm`}>
               <div className={styles["card-content"]}>
-                <div className="text-center w-[60%] max-[769px]:w-[90%] mx-auto pb-[56px] max-[769px]:pb-[42px] mt-auto flex flex-col gap-[12px]">
-                  <h3 className="font-bold text-6xl">UI/UX</h3>
-                  <p className="font-light text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Reiciendis, alias molestias!
+                <div className="text-center w-[60%] max-[769px]:w-[90%] mx-auto pb-[56px] max-[769px]:pb-[42px] max-[426px]:pb-[1.25rem] mt-auto flex flex-col gap-[12px]">
+                  <h3 className="font-bold text-6xl max-[426px]:text-[2rem]">
+                    UI/UX
+                  </h3>
+                  <p className="font-light text-sm max-[426px]:text-[0.5rem] max-[426px]:w-4/5 max-[426px]:mx-auto">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry.
                   </p>
                 </div>
               </div>

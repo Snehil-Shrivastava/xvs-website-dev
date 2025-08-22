@@ -84,7 +84,7 @@ const SectionHeadingText = ({
       {/* <div className="absolute inset-0 bg-[#282828]" style={myStyles}></div> */}
 
       <h1
-        className={`min-[2560px]:text-[12rem]/[12vh] min-[2560px]:tracking-[4rem] min-[1905px]:text-[9.5rem]/[13vh] min-[1905px]:tracking-[4rem] min-[1440px]:text-[7.5rem]/[12vh] min-[1440px]:tracking-[3.2rem] min-[1024px]:text-[6.5rem]/[12vh] min-[1024px]:tracking-[2.8rem] max-[1024px]:text-[5.6rem]/[12vh] max-[1024px]:tracking-[1.8rem] max-[426px]:text-[2.625rem]/[12vh] max-[426px]:tracking-[1rem] font-bold text-center`}
+        className={`min-[2560px]:text-[12rem]/[12vh] min-[2560px]:tracking-[4rem] min-[1905px]:text-[9.5rem]/[13vh] min-[1905px]:tracking-[4rem] min-[1440px]:text-[7.5rem]/[12vh] min-[1440px]:tracking-[3.2rem] min-[1024px]:text-[6.5rem]/[12vh] min-[1024px]:tracking-[2.8rem] max-[1024px]:text-[5.6rem]/[12vh] max-[1024px]:tracking-[1.8rem] max-[426px]:text-[3.375rem] max-[426px]:leading-none max-[426px]:tracking-[0.8rem] font-bold text-center`}
         style={{
           maskImage:
             "linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.001) 90%)",
@@ -110,7 +110,7 @@ const SectionHeadingText = ({
 
       <div className={`${styles.btnContainer} flex items-center justify-center`}>
         <div
-          className={`max-[769px]:text-[0.75rem] inline min-h-[32%] h-[32%] backdrop-blur-xs text-[#F79839] cursor-pointer ${styles.sectionHeadingBtnContainer}`}
+          className={`max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] inline min-h-[32%] h-[32%] max-[426px]:h-auto max-[426px]:min-h-auto backdrop-blur-xs text-[#F79839] cursor-pointer ${styles.sectionHeadingBtnContainer}`}
         >
           {/* <button
             className={`max-[769px]:text-[0.75rem] absolute inset-0 h-full w-full px-6`}
@@ -122,7 +122,7 @@ const SectionHeadingText = ({
           >
             {buttonTitle}
           </button> */}
-          <button className={`h-full px-6 cursor-pointer py-1 ${styles.sectionHeadingBtn}`}>
+          <button className={`h-full px-6 max-[426px]:px-4 cursor-pointer py-1 ${styles.sectionHeadingBtn}`}>
             {buttonTitle}
           </button>
         </div>

@@ -114,7 +114,7 @@ const Main = () => {
       {/* <Canvas
         shadows
         camera={{ position: [0, 1, 1], fov: 50 }}
-        style={{ height: "320px" }}
+        style={{ height: "520px" }}
       >
         <ambientLight intensity={0.8} />
         <directionalLight
@@ -128,7 +128,7 @@ const Main = () => {
           shadow-camera-right={5}
           shadow-camera-top={5}
           shadow-camera-bottom={-5}
-          intensity={3}
+          intensity={2}
         />
         <Model />
         <OrbitControls />

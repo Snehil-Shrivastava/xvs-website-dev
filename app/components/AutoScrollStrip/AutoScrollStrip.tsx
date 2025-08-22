@@ -42,10 +42,10 @@ const AutoScrollStrip = () => {
 
   const allLogos = [...ClientReviews, ...ClientReviews]
   return (
-    <div className="pb-[30px] whitespace-nowrap overflow-hidden">
+    <div className="pb-[30px] whitespace-nowrap overflow-hidden max-[426px]:pb-0">
         <div className='marquee-container'>
           {allLogos.map((item, index) => (
-            <Image key={index} src={item.logo} alt="image1" className="inline-block mx-[40px] max-[1024px]:w-[90px]" />
+            <Image key={index} src={item.logo} alt="image1" className="inline-block mx-[40px] max-[1024px]:w-[90px] max-[426px]:w-[40px]" />
           ))}
         </div>
     </div>

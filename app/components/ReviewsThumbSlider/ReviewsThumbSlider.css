@@ -3,7 +3,6 @@
   margin-bottom: 56px;
 }
 
-
 .gallery {
   padding-bottom: 48px;
 }
@@ -17,7 +16,6 @@
     padding-bottom: 28px;
   }
 }
-
 
 /* .gallery::before {
     content: '';
@@ -41,4 +39,11 @@
 .mySwiper2 .swiper-button-prev,
 .mySwiper2 .swiper-button-next {
   color: transparent;
+}
+
+@media screen and (max-width: 426px) {
+  .mySwiper2 .swiper-wrapper {
+    margin-top: 26px;
+    margin-bottom: 35px;
+  }
 }

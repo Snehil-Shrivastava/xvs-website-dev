@@ -8,7 +8,7 @@ import { OBJLoader } from "three-stdlib";
 
 export function Model(props: any) {
   const group = useRef(null);
-  const { scene, animations } = useGLTF("/mario.glb"); // Path to your .glb file
+  const { scene, animations } = useGLTF("/assests/models/animated_butterfly.glb"); // Path to your .glb file
   const { actions } = useAnimations(animations, group);
 
   // const obj = useLoader(OBJLoader, '/assests/models/Elements3d.blend')

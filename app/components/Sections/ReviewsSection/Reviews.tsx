@@ -36,10 +36,10 @@ const Reviews = () => {
     });
   });
   return (
-    <div className="mt-[180px] max-[1024px]:mt-[140px]">
+    <div className="mt-[180px] max-[1024px]:mt-[140px] max-[426px]:mt-[60px]">
       <SectionHeadingText SectionTitle="WORDS" buttonTitle="REVIEWS" tracking="2.8vw" size="8vw" />
-      <div className="mt-[28px]">
-        <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px]">
+      <div className="mt-[28px] max-[426px]:mt-0">
+        <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px] max-[426px]:text-[0.5rem] max-[426px]:mt-2">
           Hear from visionaries and experts
         </h3>
         <div className="relative p-[2px] flex">

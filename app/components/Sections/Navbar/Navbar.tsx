@@ -25,7 +25,7 @@ const Navbar = () => {
         className=" w-4/5 h-[0] mx-auto mt-[32px] z-[9999] flex items-center justify-between fixed top-0 left-0 right-0"
       >
         <Link href="./" className="mt-[38px]">
-          <Image src={logo} alt="logo" width={60} height={60} />
+          <Image className="max-[426px]:w-[50px]" src={logo} alt="logo" width={60} height={60} />
         </Link>
         <div
           className="hamburger mt-[38px] relative select-none"
