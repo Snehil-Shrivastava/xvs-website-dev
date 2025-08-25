@@ -1,0 +1,154 @@
+import React from "react";
+
+const Branding = () => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="50"
+      height="30"
+      viewBox="0 0 84 71"
+      fill="none"
+      className="scale-[2] origin-center"
+    >
+      <g filter="url(#filter0_f_3608_3313)">
+        <path
+          d="M55.0022 27.0942H46.2095C45.192 27.0942 44.3672 27.919 44.3672 28.9365V41.8884C44.3672 42.9058 45.192 43.7307 46.2095 43.7307H55.0022C56.0197 43.7307 56.8446 42.9058 56.8446 41.8884V28.9365C56.8446 27.919 56.0197 27.0942 55.0022 27.0942Z"
+          fill="url(#paint0_linear_3608_3313)"
+        />
+        <path
+          d="M38.2171 27.0942H29.4243C28.4069 27.0942 27.582 27.919 27.582 28.9365V41.8884C27.582 42.9058 28.4069 43.7307 29.4243 43.7307H38.2171C39.2346 43.7307 40.0594 42.9058 40.0594 41.8884V28.9365C40.0594 27.919 39.2346 27.0942 38.2171 27.0942Z"
+          fill="url(#paint1_linear_3608_3313)"
+        />
+      </g>
+      <g filter="url(#filter1_f_3608_3313)">
+        <path
+          d="M44.7243 34.7421L40.8499 32.5057C40.3341 32.2086 39.6904 32.58 39.6904 33.1762V37.6489C39.6904 38.2451 40.3341 38.6165 40.8499 38.3194L44.7243 36.0831C45.2401 35.786 45.2401 35.0412 44.7243 34.7441V34.7421Z"
+          fill="#F3EDDE"
+        />
+      </g>
+      <path
+        d="M55.0022 27.0941H46.2095C45.192 27.0941 44.3672 27.9189 44.3672 28.9364V41.8882C44.3672 42.9057 45.192 43.7305 46.2095 43.7305H55.0022C56.0197 43.7305 56.8446 42.9057 56.8446 41.8882V28.9364C56.8446 27.9189 56.0197 27.0941 55.0022 27.0941Z"
+        fill="#F79839"
+      />
+      <path
+        d="M38.2171 27.0941H29.4243C28.4069 27.0941 27.582 27.9189 27.582 28.9364V41.8882C27.582 42.9057 28.4069 43.7305 29.4243 43.7305H38.2171C39.2346 43.7305 40.0594 42.9057 40.0594 41.8882V28.9364C40.0594 27.9189 39.2346 27.0941 38.2171 27.0941Z"
+        fill="#5F5F5C"
+      />
+      <foreignObject x="28.2973" y="18.5983" width="27.9836" height="33.626">
+        <div
+          style={{backdropFilter:"blur(2.76px)", clipPath:"url(#bgblur_0_3608_3313_clip_path)", height:"100%", width:"100%"}}
+        ></div>
+      </foreignObject>
+      <path
+        data-figma-bg-blur-radius="5.52499"
+        d="M35.665 24.2766H48.9131C49.8458 24.2766 50.6025 25.0333 50.6025 25.9661V44.8567C50.6025 45.7894 49.8458 46.5461 48.9131 46.5461H35.665C34.7323 46.5461 33.9756 45.7894 33.9756 44.8567V25.9661C33.9756 25.0333 34.7323 24.2766 35.665 24.2766Z"
+        fill="url(#paint2_linear_3608_3313)"
+        stroke="url(#paint3_linear_3608_3313)"
+        strokeWidth="0.306944"
+      />
+      <path
+        d="M39.1952 31.4902L41.1661 35.4622L39.0537 39.3379L41.09 39.3822L42.1585 37.4386L43.1581 39.4265L45.1926 39.4708L41.2315 31.5345L39.1952 31.4902Z"
+        fill="white"
+        style={{mixBlendMode:"color-dodge"}}
+      />
+      <defs>
+        <filter
+          id="filter0_f_3608_3313"
+          x="0.570972"
+          y="0.0831184"
+          width="83.2848"
+          height="70.6586"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="13.5055"
+            result="effect1_foregroundBlur_3608_3313"
+          />
+        </filter>
+        <filter
+          id="filter1_f_3608_3313"
+          x="12.6794"
+          y="5.39013"
+          width="59.443"
+          height="60.0449"
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
+          <feBlend
+            mode="normal"
+            in="SourceGraphic"
+            in2="BackgroundImageFix"
+            result="shape"
+          />
+          <feGaussianBlur
+            stdDeviation="13.5055"
+            result="effect1_foregroundBlur_3608_3313"
+          />
+        </filter>
+        <clipPath
+          id="bgblur_0_3608_3313_clip_path"
+          transform="translate(-28.2973 -18.5983)"
+        >
+          <path d="M35.665 24.2766H48.9131C49.8458 24.2766 50.6025 25.0333 50.6025 25.9661V44.8567C50.6025 45.7894 49.8458 46.5461 48.9131 46.5461H35.665C34.7323 46.5461 33.9756 45.7894 33.9756 44.8567V25.9661C33.9756 25.0333 34.7323 24.2766 35.665 24.2766Z" />
+        </clipPath>
+        <linearGradient
+          id="paint0_linear_3608_3313"
+          x1="29.9485"
+          y1="47.5246"
+          x2="58.5074"
+          y2="30.7788"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#7C00FF" />
+          <stop offset="0.52" stopColor="#FF6700" />
+          <stop offset="1" stopColor="#FFD400" />
+        </linearGradient>
+        <linearGradient
+          id="paint1_linear_3608_3313"
+          x1="25.6551"
+          y1="40.2008"
+          x2="54.212"
+          y2="23.4529"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#7C00FF" />
+          <stop offset="0.52" stopColor="#FF6700" />
+          <stop offset="1" stopColor="#FFD400" />
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_3608_3313"
+          x1="34.7783"
+          y1="45.4248"
+          x2="54.0046"
+          y2="31.0037"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" stopOpacity="0.2" />
+          <stop offset="1" stopColor="white" stopOpacity="0.49" />
+        </linearGradient>
+        <linearGradient
+          id="paint3_linear_3608_3313"
+          x1="35.0176"
+          y1="25.8989"
+          x2="53.48"
+          y2="40.7057"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+};
+
+export default Branding;

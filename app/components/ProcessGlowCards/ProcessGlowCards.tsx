@@ -13,6 +13,8 @@ import * as motion from "motion/react-client";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Heart from "../SVGs/Heart";
+import Branding from "../SVGs/Branding";
 
 // const cardData = [
 //   {
@@ -109,51 +111,53 @@ const ProcessGlowCards = ({
             }`}
           >
             <div className={styles["card-content"]}>
-              <div className="text-left py-[48px] mt-auto flex flex-col gap-[48px] max-[769px]:mt-[0]">
-                <div className="flex items-center w-[80%] mx-auto gap-[32px] justify-center">
+              <div className="text-left py-[48px] mt-auto flex flex-col gap-[48px] max-[769px]:mt-[0] max-[426px]:py-[12px] max-[426px]:gap-[8px]">
+                <div className="flex items-center w-[80%] mx-auto gap-[32px] justify-center max-[426px]:gap-0">
                   {order === 1 ? (
-                    <div className="flex items-center relative bg-glow">
-                      <span
-                        className="w-[78px] h-[48px] block rounded-l-[28px] rounded-br-[22px] z-[5] max-[769px]:w-[68px] max-[769px]:h-[38px]"
-                        style={{
-                          backdropFilter: "blur(2px)",
-                          background: "rgba(221, 221, 221, 0.8)",
-                          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                          border: "1px solid rgba(138, 138, 138, 0.23)",
-                          transform: "rotate(45deg)",
-                        }}
-                      ></span>
-                      <span
-                        className="w-[35px] h-[29px] block absolute left-[67%] top-[12px] z-[3] max-[769px]:w-[29px] max-[769px]:h-[22px] max-[769px]:top-[13px]"
-                        style={{
-                          background: "#F79839",
-                          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                          border: "1px solid rgba(138, 138, 138, 0.23)",
-                          transform: "rotate(-45deg) skew(-40deg)",
-                        }}
-                      ></span>
-                    </div>
+                    // <div className="flex items-center relative bg-glow">
+                    //   <span
+                    //     className="w-[78px] h-[48px] block rounded-l-[28px] rounded-br-[22px] z-[5] max-[769px]:w-[68px] max-[769px]:h-[38px]"
+                    //     style={{
+                    //       backdropFilter: "blur(2px)",
+                    //       background: "rgba(221, 221, 221, 0.8)",
+                    //       boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    //       border: "1px solid rgba(138, 138, 138, 0.23)",
+                    //       transform: "rotate(45deg)",
+                    //     }}
+                    //   ></span>
+                    //   <span
+                    //     className="w-[35px] h-[29px] block absolute left-[67%] top-[12px] z-[3] max-[769px]:w-[29px] max-[769px]:h-[22px] max-[769px]:top-[13px]"
+                    //     style={{
+                    //       background: "#F79839",
+                    //       boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    //       border: "1px solid rgba(138, 138, 138, 0.23)",
+                    //       transform: "rotate(-45deg) skew(-40deg)",
+                    //     }}
+                    //   ></span>
+                    // </div>
+                    <Heart />
                   ) : (
-                    <div className="flex items-center relative bg-glow">
-                      <span className="w-[45px] h-[50px] bg-[#5F5F5C] block rounded-[5px] max-[769px]:h-[45px] max-[769px]:w-[30px]"></span>
-                      <span
-                        className="w-[50px] h-[70px] block rounded-[5px] absolute left-1/2 -translate-x-1/2 max-[769px]:h-[60px] max-[769px]:w-[40px]"
-                        style={{
-                          backdropFilter: "blur(2px)",
-                          background: "rgba(221, 221, 221, 0.8)",
-                          borderRadius: "5px",
-                          boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-                          border: "1px solid rgba(138, 138, 138, 0.23)",
-                        }}
-                      ></span>
-                      <span className="w-[45px] h-[50px] bg-[#F79839] block rounded-[5px] max-[769px]:h-[45px] max-[769px]:w-[30px]"></span>
-                    </div>
+                    // <div className="flex items-center relative bg-glow">
+                    //   <span className="w-[45px] h-[50px] bg-[#5F5F5C] block rounded-[5px] max-[769px]:h-[45px] max-[769px]:w-[30px]"></span>
+                    //   <span
+                    //     className="w-[50px] h-[70px] block rounded-[5px] absolute left-1/2 -translate-x-1/2 max-[769px]:h-[60px] max-[769px]:w-[40px]"
+                    //     style={{
+                    //       backdropFilter: "blur(2px)",
+                    //       background: "rgba(221, 221, 221, 0.8)",
+                    //       borderRadius: "5px",
+                    //       boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+                    //       border: "1px solid rgba(138, 138, 138, 0.23)",
+                    //     }}
+                    //   ></span>
+                    //   <span className="w-[45px] h-[50px] bg-[#F79839] block rounded-[5px] max-[769px]:h-[45px] max-[769px]:w-[30px]"></span>
+                    // </div>
+                    <Branding />
                   )}
-                  <h1 className="text-[64px] font-semibold tracking-wide text-[#F3EDDE] max-[769px]:text-[2rem]">
+                  <h1 className="text-[64px] font-semibold tracking-wide text-[#F3EDDE] max-[769px]:text-[2rem] max-[426px]:text-[1rem]/[2rem]">
                     {heading}
                   </h1>
                 </div>
-                <p className="text-[18px]/[35px] tracking-wider w-[72%] mx-auto font-light text-left">
+                <p className="text-[18px]/[35px] tracking-wider w-[72%] mx-auto font-light text-left max-[426px]:text-[0.5rem]/[1rem] max-[426px]:w-[85%]">
                   {description}
                 </p>
               </div>

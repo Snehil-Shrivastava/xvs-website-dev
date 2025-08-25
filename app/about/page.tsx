@@ -1021,7 +1021,7 @@ const AboutPage = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-[20px] font-light mt-[66px] xl:w-[67%] lg:w-[80%] mx-auto max-[769px]:w-[90%] max-[426px]:text-[0.5rem]"
+          className="text-[20px] font-light mt-[66px] xl:w-[67%] lg:w-[80%] mx-auto max-[769px]:w-[90%] max-[426px]:text-[0.5rem] max-[426px]:mt-[40px]"
         >
           At xVS we design using tools but it's more than that, it's the
           aspiration of all who come together to make inspiration a reality.
@@ -1034,7 +1034,7 @@ const AboutPage = () => {
           size="8rem"
           tracking="52px"
         />
-        <p className="text-[#F3EDDE] font-light tracking-wider">
+        <p className="text-[#F3EDDE] font-light tracking-wider max-[426px]:text-[0.5rem]">
           Hear from visionaries and experts
         </p>
         <Clients />
