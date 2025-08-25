@@ -15,13 +15,13 @@ export default function MobileMenu() {
       {/* Button with hamburger/close toggle */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="relative p-2 rounded-md focus:outline-none z-50 cursor-pointer"
+        className="relative p-2 rounded-md focus:outline-none z-50 cursor-pointer max-[426px]:p-0"
       >
         {isOpen ? (
           // Close Icon
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="w-6 h-6 scale-[1.5] origin-center"
+            className="w-6 h-6 scale-[1.5] origin-center max-[426px]:scale-[0.75]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -83,7 +83,7 @@ export default function MobileMenu() {
           <div className="w-9/10 h-full flex flex-col gap-[120px]">
             <div className="w-full h-[120px] flex justify-center">
               <div className="w-4/5 ml-auto">
-                <ul className="flex justify-between w-3/10 py-4 space-y-2 mx-auto gap-[64px] absolute top-[2%] text-2xl max-[769px]:text-[1.2rem] font-extralight">
+                <ul className="flex justify-between w-3/10 py-4 space-y-2 mx-auto gap-[64px] absolute top-[2%] text-2xl max-[769px]:text-[1.2rem] font-extralight max-[426px]:text-[1rem] max-[426px]:gap-[10px]">
                   <li>
                     <Link
                       href="/about"
@@ -115,12 +115,12 @@ export default function MobileMenu() {
               </div>
             </div>
             <div className="w-full h-full">
-              <div className="w-4/5 ml-auto grid grid-cols-2 gap-x-8">
+              <div className="w-4/5 ml-auto grid grid-cols-2 gap-x-8 max-[426px]:gap-[62px]">
                 <div className="flex flex-col gap-6">
-                  <h3 className="font-medium">Identity and Design</h3>
+                  <h3 className="font-medium max-[426px]:text-[0.8rem]">Identity and Design</h3>
                   <div>
                     <Link
-                      className="text-6xl font-thin"
+                      className="text-6xl font-thin max-[769px]:text-[2.8rem] max-[426px]:text-[2rem]"
                       href="/branding"
                       onClick={handleLinkClick}
                     >
@@ -129,10 +129,10 @@ export default function MobileMenu() {
                   </div>
                 </div>
                 <div className="flex flex-col gap-6">
-                  <h3 className="font-medium">Interface and Experience</h3>
+                  <h3 className="font-medium max-[426px]:text-[0.8rem]">Interface and Experience</h3>
                   <div>
                     <Link
-                      className="text-6xl font-thin"
+                      className="text-6xl font-thin max-[769px]:text-[2.8rem] max-[426px]:text-[2rem]"
                       href="/branding"
                       onClick={handleLinkClick}
                     >

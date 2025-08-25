@@ -76,7 +76,7 @@ const Footer = () => {
                     Lucknow, UP (226002), India.
                   </p>
                   <div className="flex gap-[32px] mt-[72px] max-[1441px]:mt-auto max-[769px]:gap-[44px] max-[769px]:mt-auto max-[426px]:flex-col max-[426px]:mt-auto max-[426px]:gap-0">
-                    <h1 className="text-[36px] max-[769px]:text-[2.2rem] max-[1441px]:font-semibold max-[426px]:text-[1.6rem]">
+                    <h1 className="text-[36px] max-[769px]:text-[2.2rem] font-semibold max-[426px]:text-[1.6rem]">
                       Say Hi!
                     </h1>
                     <div>

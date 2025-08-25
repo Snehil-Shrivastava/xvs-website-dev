@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 :root {
   --background: #282828;
   --foreground: #fff;
@@ -122,4 +121,10 @@ body {
 
 .nav-modal {
   clip-path: polygon(0 100%, 100% 100%, 100% 0, 20% 0);
+}
+
+@media screen and (max-width: 426px) {
+  .nav-modal {
+    clip-path: polygon(0 50%, 0 100%, 100% 100%, 100% 0, 20% 0);
+  }
 }

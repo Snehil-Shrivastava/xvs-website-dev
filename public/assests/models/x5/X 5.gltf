@@ -1,0 +1,215 @@
+{
+  "asset": {
+    "generator": "Khronos glTF Blender I/O v4.5.47",
+    "version": "2.0"
+  },
+  "extensionsUsed": [
+    "KHR_materials_transmission",
+    "KHR_materials_volume",
+    "KHR_materials_ior"
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Scene",
+      "nodes": [0]
+    }
+  ],
+  "nodes": [
+    {
+      "mesh": 0,
+      "name": "Curve",
+      "rotation": [0.5, 0.5, -0.5, 0.5000000596046448],
+      "scale": [7.67465877532959, 7.67465877532959, 7.67465877532959],
+      "translation": [
+        -0.20003534853458405, 0.8621768355369568, 0.22324950993061066
+      ]
+    }
+  ],
+  "animations": [
+    {
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 0,
+            "path": "rotation"
+          }
+        }
+      ],
+      "name": "CurveAction",
+      "samplers": [
+        {
+          "input": 4,
+          "interpolation": "LINEAR",
+          "output": 5
+        }
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "alphaMode": "BLEND",
+      "extensions": {
+        "KHR_materials_transmission": {
+          "transmissionFactor": 1
+        },
+        "KHR_materials_volume": { "thicknessFactor": 0.02 },
+        "KHR_materials_ior": { "ior": 1.5 }
+      },
+      "name": "Material.001",
+      "pbrMetallicRoughness": {
+        "baseColorFactor": [
+          0.9301056861877441, 0.3139891028404236, 0.04091528803110123, 0.85
+        ],
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0.0
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Curve",
+      "primitives": [
+        {
+          "attributes": {
+            "POSITION": 0,
+            "NORMAL": 1,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0
+        }
+      ]
+    }
+  ],
+  "images": [
+    {
+      "mimeType": "image/png",
+      "name": "blenderkit_logo",
+      "uri": "X%20texture/blenderkit_logo.png"
+    },
+    {
+      "mimeType": "image/png",
+      "name": "vs_rejected",
+      "uri": "X%20texture/vs_rejected.png"
+    },
+    {
+      "mimeType": "image/png",
+      "name": "Clouds_Light_03_Tiled",
+      "uri": "X%20texture/Clouds_Light_03_Tiled.png"
+    },
+    {
+      "mimeType": "image/png",
+      "name": "Clouds_Light_03_Tiled",
+      "uri": "X%20texture/Clouds_Light_03_Tiled-1.png"
+    },
+    {
+      "mimeType": "image/png",
+      "name": "Super Fine bump details_Tiled",
+      "uri": "X%20texture/Super%20Fine%20bump%20details_Tiled.png"
+    },
+    {
+      "mimeType": "image/png",
+      "name": "Super Fine bump details_Tiled",
+      "uri": "X%20texture/Super%20Fine%20bump%20details_Tiled-1.png"
+    },
+    {
+      "mimeType": "image/jpeg",
+      "name": "Image",
+      "uri": "X%20texture/Image.jpg"
+    },
+    {
+      "mimeType": "image/jpeg",
+      "name": "Image",
+      "uri": "X%20texture/Image-1.jpg"
+    }
+  ],
+  "accessors": [
+    {
+      "bufferView": 0,
+      "componentType": 5126,
+      "count": 48,
+      "max": [0.1682502031326294, 0.026034027338027954, 0.11234074831008911],
+      "min": [
+        -0.11008867621421814, -0.026034023612737656, -0.21445538103580475
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 48,
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 48,
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5123,
+      "count": 84,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 4,
+      "componentType": 5126,
+      "count": 120,
+      "max": [5],
+      "min": [0.041666666666666664],
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 5,
+      "componentType": 5126,
+      "count": 120,
+      "type": "VEC4"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 576,
+      "byteOffset": 0,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 576,
+      "byteOffset": 576,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 384,
+      "byteOffset": 1152,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 168,
+      "byteOffset": 1536,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 480,
+      "byteOffset": 1704
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1920,
+      "byteOffset": 2184
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 4104,
+      "uri": "X%205.bin"
+    }
+  ]
+}

@@ -97,7 +97,7 @@ const ProcessGlowCards = ({
     ref={bodyContainerRef}
       className={`${styles.bodyContainer} ${
         order === 1 ? styles.bodyContainerFirst : styles.bodyContainerLast
-      } max-[769px]:flex-1 w-[580px]`}
+      } max-[769px]:flex-1 w-[580px] max-[426px]:w-full`}
     >
       <div ref={cardLayerRef} className="absolute inset-0 bg-[#282828] z-[1]"></div>
       <div id="cards" className={`${styles.cards} h-full`} ref={cardsContainerRef}>
