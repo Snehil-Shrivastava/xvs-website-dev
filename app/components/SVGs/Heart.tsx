@@ -5,10 +5,9 @@ const Heart = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="40"
-      height="30"
       viewBox="0 0 78 75"
       fill="none"
-            className="scale-[2] origin-center"
+      className="max-[426px]:scale-[2] origin-center h-[30px] max-[769px]:scale-[4]"
     >
       <g filter="url(#filter0_f_3608_3305)">
         <path
@@ -43,7 +42,7 @@ const Heart = () => {
           filterUnits="userSpaceOnUse"
           colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -70,7 +69,7 @@ const Heart = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stopColor="white" stopOpacity="0.2" />
-          <stop offset="1" stopColor="white" stop-opacity="0.49" />
+          <stop offset="1" stopColor="white" stopOpacity="0.49" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_3608_3305"
@@ -80,7 +79,7 @@ const Heart = () => {
           y2="30.5563"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
+          <stop stopColor="white" />
           <stop offset="1" stopColor="white" stopOpacity="0" />
         </linearGradient>
       </defs>

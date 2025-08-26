@@ -65,6 +65,14 @@ const AboutPage = () => {
 
     gsap.set(imgRef, { opacity: 0, yPercent: 100 });
 
+    gsap.set(bigLambda1Ref, { scale: 1, x: 0, y: 0 });
+    gsap.set(bigLambda2Ref, { scale: 1, x: 0, y: 0 });
+    gsap.set(bigLambda3Ref, { scale: 1, x: 0, y: 0 });
+    gsap.set(bigLambda4Ref, { scale: 1, x: 0, y: 0 });
+    gsap.set(bigLambda5Ref, { scale: 1, x: 0, y: 0 });
+    gsap.set(bigLambda6Ref, { scale: 1, x: 0, y: 0 });
+    gsap.set(bigLambda7Ref, { scale: 1, x: 0, y: 0 });
+
     const tl = gsap.timeline();
     const mm = gsap.matchMedia();
 
@@ -151,209 +159,20 @@ const AboutPage = () => {
       transformOrigin: "center center",
     });
 
-    tl.to(
-      bigLambda1Ref.current,
-      {
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: bigLambda1Ref.current,
-          // markers: true,
-          start: "top 23%",
-          end: "top top",
-          scrub: 1,
-          toggleActions: "play none none none",
-        },
-        x: -50,
-        y: 530,
-        scale: 0.5,
-        transformOrigin: "center center",
-        // duration: 1,
-        // delay: 0.5,
-        // @ts-ignore
+    tl.to(richTxt, {
+      scrollTrigger: {
+        trigger: richTxt,
+        // markers: true,
+        start: "top bottom",
+        end: "top 80%",
+        scrub: 1,
+        toggleActions: "play none play reset",
       },
-      "<"
-    );
+      opacity: 1,
+      yPercent: 0,
+    });
 
-    tl.to(
-      bigLambda2Ref.current,
-      {
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: bigLambda2Ref.current,
-          // markers: true,
-          start: "top 23%",
-          end: "top top",
-          scrub: 1,
-          toggleActions: "play none none none",
-        },
-        x: -50,
-        y: 530,
-        scale: 0.5,
-        transformOrigin: "center center",
-        // duration: 1,
-        // delay: 0.5,
-        // @ts-ignore
-      },
-      "<"
-    );
-
-    tl.to(
-      bigLambda3Ref.current,
-      {
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: bigLambda3Ref.current,
-          // markers: true,
-          start: "top 23%",
-          end: "top top",
-          scrub: 1,
-          toggleActions: "play none none none",
-        },
-        x: -50,
-        y: 530,
-        scale: 0.5,
-        transformOrigin: "center center",
-        // duration: 1,
-        // delay: 0.5,
-        // @ts-ignore
-      },
-      "<"
-    );
-
-    tl.to(
-      bigLambda4Ref.current,
-      {
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: bigLambda4Ref.current,
-          // markers: true,
-          start: "top 23%",
-          end: "top top",
-          scrub: 1,
-          toggleActions: "play none none none",
-        },
-        x: -50,
-        y: 530,
-        scale: 0.5,
-        transformOrigin: "center center",
-        // duration: 1,
-        // delay: 0.5,
-        // @ts-ignore
-      },
-      "<"
-    );
-
-    tl.to(
-      bigLambda5Ref.current,
-      {
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: bigLambda5Ref.current,
-          // markers: true,
-          start: "top 23%",
-          end: "top top",
-          scrub: 1,
-          toggleActions: "play none none none",
-        },
-        x: -50,
-        y: 530,
-        scale: 0.5,
-        transformOrigin: "center center",
-        // duration: 1,
-        // delay: 0.5,
-        // @ts-ignore
-      },
-      "<"
-    );
-
-    tl.to(
-      bigLambda6Ref.current,
-      {
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: bigLambda6Ref.current,
-          // markers: true,
-          start: "10% 23%",
-          end: "10% top",
-          scrub: 1,
-          toggleActions: "play none none none",
-        },
-        x: -50,
-        y: 530,
-        scale: 0.5,
-        transformOrigin: "center center",
-        // duration: 1,
-        // delay: 0.5,
-        // @ts-ignore
-      },
-      "<"
-    );
-
-    tl.to(
-      bigLambda7Ref.current,
-      {
-        scrollTrigger: {
-          // @ts-ignore
-          trigger: bigLambda7Ref.current,
-          // markers: true,
-          start: "10% 23%",
-          end: "10% top",
-          scrub: 1,
-          toggleActions: "play none none none",
-        },
-        x: -50,
-        y: 530,
-        scale: 0.5,
-        transformOrigin: "center center",
-        // duration: 1,
-        // delay: 0.5,
-        // @ts-ignore
-      },
-      "<"
-    );
-
-    // tl.to(imgRef.current, {
-    //   scrollTrigger: {
-    //     trigger: imgRef.current,
-    //     // markers: true,
-    //     start: "bottom 70%",
-    //     end: "top 30%",
-    //   },
-    //   opacity: 1,
-    //   yPercent: 0,
-    // });
-
-    tl.to(
-      richTxt,
-      {
-        scrollTrigger: {
-          trigger: richTxt,
-          // markers: true,
-          start: "top bottom",
-          end: "top 80%",
-          scrub: 1,
-          toggleActions: "play none play reset",
-        },
-        opacity: 1,
-        yPercent: 0,
-      },
-      "<"
-    );
-
-    mm.add("(max-width: 426px)", () => {
-      // tl.to(smallLambdaRef.current, {
-      //   scrollTrigger: {
-      //     trigger: smallLambdaRef.current,
-      //     // markers: true,
-      //     start: "top 40%",
-      //     end: "top top",
-      //     scrub: 1,
-      //   },
-      //   scale: 0,
-      //   duration: 1,
-      //   transformOrigin: "center center",
-      // });
-
+    mm.add("(min-width: 426px)", () => {
       tl.to(
         bigLambda1Ref.current,
         {
@@ -362,17 +181,14 @@ const AboutPage = () => {
             trigger: bigLambda1Ref.current,
             // markers: true,
             start: "top 25%",
-            end: "top top",
+            end: "top 10%",
             scrub: 1,
             toggleActions: "play none none none",
           },
-          x: -20,
-          y: 620,
-          scale: 0.2,
+          x: -50,
+          y: 530,
+          scale: 0.5,
           transformOrigin: "center center",
-          // duration: 1,
-          // delay: 0.5,
-          // @ts-ignore
         },
         "<"
       );
@@ -382,20 +198,17 @@ const AboutPage = () => {
         {
           scrollTrigger: {
             // @ts-ignore
-            trigger: bigLambda2Ref.current,
+            trigger: bigLambda1Ref.current,
             // markers: true,
             start: "top 25%",
-            end: "top top",
+            end: "top 10%",
             scrub: 1,
             toggleActions: "play none none none",
           },
-          x: -20,
-          y: 620,
-          scale: 0.2,
+          x: -50,
+          y: 530,
+          scale: 0.5,
           transformOrigin: "center center",
-          // duration: 1,
-          // delay: 0.5,
-          // @ts-ignore
         },
         "<"
       );
@@ -405,20 +218,17 @@ const AboutPage = () => {
         {
           scrollTrigger: {
             // @ts-ignore
-            trigger: bigLambda3Ref.current,
+            trigger: bigLambda1Ref.current,
             // markers: true,
             start: "top 25%",
-            end: "top top",
+            end: "top 10%",
             scrub: 1,
             toggleActions: "play none none none",
           },
-          x: -20,
-          y: 620,
-          scale: 0.2,
+          x: -50,
+          y: 530,
+          scale: 0.5,
           transformOrigin: "center center",
-          // duration: 1,
-          // delay: 0.5,
-          // @ts-ignore
         },
         "<"
       );
@@ -428,20 +238,17 @@ const AboutPage = () => {
         {
           scrollTrigger: {
             // @ts-ignore
-            trigger: bigLambda4Ref.current,
+            trigger: bigLambda1Ref.current,
             // markers: true,
             start: "top 25%",
-            end: "top top",
+            end: "top 10%",
             scrub: 1,
             toggleActions: "play none none none",
           },
-          x: -20,
-          y: 620,
-          scale: 0.2,
+          x: -50,
+          y: 530,
+          scale: 0.5,
           transformOrigin: "center center",
-          // duration: 1,
-          // delay: 0.5,
-          // @ts-ignore
         },
         "<"
       );
@@ -451,20 +258,17 @@ const AboutPage = () => {
         {
           scrollTrigger: {
             // @ts-ignore
-            trigger: bigLambda5Ref.current,
+            trigger: bigLambda1Ref.current,
             // markers: true,
             start: "top 25%",
-            end: "top top",
+            end: "top 10%",
             scrub: 1,
             toggleActions: "play none none none",
           },
-          x: -20,
-          y: 620,
-          scale: 0.2,
+          x: -50,
+          y: 530,
+          scale: 0.5,
           transformOrigin: "center center",
-          // duration: 1,
-          // delay: 0.5,
-          // @ts-ignore
         },
         "<"
       );
@@ -474,20 +278,17 @@ const AboutPage = () => {
         {
           scrollTrigger: {
             // @ts-ignore
-            trigger: bigLambda6Ref.current,
+            trigger: bigLambda1Ref.current,
             // markers: true,
             start: "top 25%",
-            end: "top top",
+            end: "top 10%",
             scrub: 1,
             toggleActions: "play none none none",
           },
-          x: -20,
-          y: 620,
-          scale: 0.2,
+          x: -50,
+          y: 530,
+          scale: 0.5,
           transformOrigin: "center center",
-          // duration: 1,
-          // delay: 0.5,
-          // @ts-ignore
         },
         "<"
       );
@@ -497,58 +298,171 @@ const AboutPage = () => {
         {
           scrollTrigger: {
             // @ts-ignore
-            trigger: bigLambda7Ref.current,
+            trigger: bigLambda1Ref.current,
             // markers: true,
             start: "top 25%",
-            end: "top top",
+            end: "top 10%",
             scrub: 1,
             toggleActions: "play none none none",
+          },
+          x: -50,
+          y: 530,
+          scale: 0.5,
+          transformOrigin: "center center",
+        },
+        "<"
+      );
+    });
+
+    mm.add("(max-width: 426px)", () => {
+      tl.to(
+        bigLambda1Ref.current,
+        {
+          scrollTrigger: {
+            // @ts-ignore
+            trigger: bigLambda1Ref.current,
+            // markers: true,
+            start: "top 25%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none play",
           },
           x: -20,
           y: 620,
           scale: 0.2,
           transformOrigin: "center center",
-          // duration: 1,
-          // delay: 0.5,
-          // @ts-ignore
         },
         "<"
       );
 
-      // tl.to(imgRef.current, {
-      //   scrollTrigger: {
-      //     trigger: imgRef.current,
-      //     // markers: true,
-      //     start: "bottom 70%",
-      //     end: "top 30%",
-      //   },
-      //   opacity: 1,
-      //   yPercent: 0,
-      // });
+      tl.to(
+        bigLambda2Ref.current,
+        {
+          scrollTrigger: {
+            // @ts-ignore
+            trigger: bigLambda1Ref.current,
+            // markers: true,
+            start: "top 25%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none play",
+          },
+          x: -20,
+          y: 620,
+          scale: 0.2,
+          transformOrigin: "center center",
+        },
+        "<"
+      );
 
-      // tl.to(
-      //   richTxt,
-      //   {
-      //     scrollTrigger: {
-      //       trigger: richTxt,
-      //       // markers: true,
-      //       start: "top bottom",
-      //       end: "top 80%",
-      //       scrub: 1,
-      //       toggleActions: "play none play reset",
-      //     },
-      //     opacity: 1,
-      //     yPercent: 0,
-      //   },
-      //   "<"
-      // );
+      tl.to(
+        bigLambda3Ref.current,
+        {
+          scrollTrigger: {
+            // @ts-ignore
+            trigger: bigLambda1Ref.current,
+            // markers: true,
+            start: "top 25%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none play",
+          },
+          x: -20,
+          y: 620,
+          scale: 0.2,
+          transformOrigin: "center center",
+        },
+        "<"
+      );
+
+      tl.to(
+        bigLambda4Ref.current,
+        {
+          scrollTrigger: {
+            // @ts-ignore
+            trigger: bigLambda1Ref.current,
+            // markers: true,
+            start: "top 25%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none play",
+          },
+          x: -20,
+          y: 620,
+          scale: 0.2,
+          transformOrigin: "center center",
+        },
+        "<"
+      );
+
+      tl.to(
+        bigLambda5Ref.current,
+        {
+          scrollTrigger: {
+            // @ts-ignore
+            trigger: bigLambda1Ref.current,
+            // markers: true,
+            start: "top 25%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none play",
+          },
+          x: -20,
+          y: 620,
+          scale: 0.2,
+          transformOrigin: "center center",
+        },
+        "<"
+      );
+
+      tl.to(
+        bigLambda6Ref.current,
+        {
+          scrollTrigger: {
+            // @ts-ignore
+            trigger: bigLambda1Ref.current,
+            // markers: true,
+            start: "top 25%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none play",
+          },
+          x: -20,
+          y: 620,
+          scale: 0.2,
+          transformOrigin: "center center",
+        },
+        "<"
+      );
+
+      tl.to(
+        bigLambda7Ref.current,
+        {
+          scrollTrigger: {
+            // @ts-ignore
+            trigger: bigLambda1Ref.current,
+            // markers: true,
+            start: "top 25%",
+            end: "top 10%",
+            scrub: 1,
+            toggleActions: "play none none play",
+          },
+          x: -20,
+          y: 620,
+          scale: 0.2,
+          transformOrigin: "center center",
+        },
+        "<"
+      );
     });
   }, {});
 
   return (
     <>
       <div>
-        <div className={`h-[865px] w-full `}>{/* <GridSVG /> */}</div>
+        <div className={`h-[865px] w-full pointer-events-none`}>
+          <GridSVG />
+        </div>
         <h1
           // @ts-ignore
           ref={AboutMainText}
@@ -934,7 +848,7 @@ const AboutPage = () => {
 
         {/* working morph svg */}
         {/* <div className="flex justify-center"> */}
-          {/* <svg
+        {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               width="138"
               height="162"
@@ -988,13 +902,13 @@ const AboutPage = () => {
               </defs>
             </svg> */}
 
-          {/* <div ref={imgRef} style={{ transform: "translate(-50px, 0)" }}>
+        {/* <div ref={imgRef} style={{ transform: "translate(-50px, 0)" }}>
               <Image ref={imgRef} src={logo} alt="xVS" className="" />
             </div> */}
         {/* </div> */}
         <p
           // @ts-ignore
-          className="text-[20px]/[40px] font-light text-center xl:w-[37%] lg:w-[80%] max-[769px]:w-[90%] mx-auto mt-[50px] text-[#F3EDDE] max-[426px]:text-[0.5rem]/[1rem] max-[426px]:mt-[22px]"
+          className="text-[20px]/[40px] font-light text-center xl:w-[37%] lg:w-[80%] max-[769px]:w-[90%]  max-[769px]:text-[1rem]/[2rem] mx-auto mt-[50px] text-[#F3EDDE] max-[426px]:text-[0.5rem]/[1rem] max-[426px]:mt-[22px]"
         >
           With the inspiration of designing we started back in 2014 and bringing
           them to reality since then. From cosmetic startups to big automotive
@@ -1012,7 +926,7 @@ const AboutPage = () => {
           size="8rem"
           tracking="52px"
         />
-        <p className="text-[#F3EDDE] font-light tracking-wider max-[426px]:text-[0.5rem]">
+        <p className="text-[#F3EDDE] font-light tracking-wider max-[426px]:text-[0.5rem] max-[769px]:text-[0.75rem]">
           We keep it simple and listen...
         </p>
         <ProcessCards />
@@ -1021,7 +935,7 @@ const AboutPage = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-[20px] font-light mt-[66px] xl:w-[67%] lg:w-[80%] mx-auto max-[769px]:w-[90%] max-[426px]:text-[0.5rem] max-[426px]:mt-[40px]"
+          className="text-[20px] font-light mt-[66px] xl:w-[67%] lg:w-[80%] mx-auto max-[769px]:w-[90%] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] max-[426px]:mt-[40px]"
         >
           At xVS we design using tools but it's more than that, it's the
           aspiration of all who come together to make inspiration a reality.
@@ -1034,7 +948,7 @@ const AboutPage = () => {
           size="8rem"
           tracking="52px"
         />
-        <p className="text-[#F3EDDE] font-light tracking-wider max-[426px]:text-[0.5rem]">
+        <p className="text-[#F3EDDE] font-light tracking-wider max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem]">
           Hear from visionaries and experts
         </p>
         <Clients />

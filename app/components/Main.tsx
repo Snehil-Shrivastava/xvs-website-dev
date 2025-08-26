@@ -125,7 +125,7 @@ const Main = () => {
         camera={{ position: [0, 1, 1], fov: 50 }}
         style={{ height: "520px" }}
       >
-        <ambientLight intensity={10} />
+        <ambientLight intensity={1} />
         <directionalLight
           position={[5, 5, 0]}
           castShadow
@@ -135,16 +135,16 @@ const Main = () => {
           shadow-camera-right={5}
           shadow-camera-top={5}
           shadow-camera-bottom={-5}
-          intensity={10}
+          intensity={1}
         />
         <Model />
         <OrbitControls />
         <Environment preset="studio" />
       </Canvas> */}
 
-      <Canvas shadows camera={{ fov: 40 }} style={{ height: "520px" }}>
+      {/* <Canvas shadows camera={{ fov: 40, position: [5, 0, 0] }} style={{ height: "520px" }}>
         <ambientLight intensity={1} />
-        {/* <directionalLight
+        <directionalLight
           position={[5, 2, 0]}
           castShadow
           shadow-camera-near={0.1}
@@ -154,7 +154,7 @@ const Main = () => {
           shadow-camera-top={5}
           shadow-camera-bottom={-5}
           intensity={1}
-        /> */}
+        />
         <Model2 />
         <EffectComposer>
           <DepthOfField
@@ -169,8 +169,8 @@ const Main = () => {
         <GizmoHelper>
           <GizmoViewport />
         </GizmoHelper>
-        <Environment preset="apartment" />
-      </Canvas>
+        <Environment preset="forest" />
+      </Canvas> */}
 
       {/* <Canvas camera={{position: [0,5,20]}} style={{height: '520px'}}>
         <directionalLight intensity={2} position={[0, 3, 5]} />

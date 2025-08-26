@@ -13,8 +13,8 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 
 const Model2 = (props: any) => {
   const group = useRef(null);
-  // const { scene, animations } = useGLTF("/assests/models/X 3.gltf");
-  // const { actions } = useAnimations(animations, group);
+  const { scene, animations } = useGLTF("/assests/models/x5/X 5.gltf");
+  const { actions } = useAnimations(animations, group);
   // @ts-ignore
   //   const sceneRef = useRef(null);
 
@@ -23,7 +23,7 @@ const Model2 = (props: any) => {
   //     transmission: { value:0.1 },
   //   });
 
-  const gltf = useLoader(GLTFLoader, '/assests/models/x5/X 5.gltf')
+  // const gltf = useLoader(GLTFLoader, '/assests/models/x5/X 5.gltf')
 
   // useEffect(() => {
   //   if (actions && animations.length > 0) {
@@ -31,7 +31,7 @@ const Model2 = (props: any) => {
   //   }
   // }, [actions, animations]);
 
-  return <primitive ref={group} object={gltf.scene} {...props} />;
+  return <primitive ref={group} object={scene} {...props} />;
 };
 
 export default Model2;

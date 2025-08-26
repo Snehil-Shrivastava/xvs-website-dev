@@ -204,7 +204,7 @@ const GridSVG = () => {
       // viewBox={`0 0 ${svgViewBoxSize} ${svgViewBoxSize}`}
       xmlns="http://www.w3.org/2000/svg"
       // Tailwind classes for styling the SVG container itself.
-      className={`rounded-2xl grid-container`}
+      className={`rounded-2xl grid-container pointer-events-none`}
     >
       {/* Render all the dynamically created grid cells */}
       {renderGridCells()}

@@ -5,10 +5,9 @@ const Branding = () => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="50"
-      height="30"
       viewBox="0 0 84 71"
       fill="none"
-      className="scale-[2] origin-center"
+      className="scale-[2] origin-center h-[30px] max-[769px]:scale-[4]"
     >
       <g filter="url(#filter0_f_3608_3313)">
         <path
