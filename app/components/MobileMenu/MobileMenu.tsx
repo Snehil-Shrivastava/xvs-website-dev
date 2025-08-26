@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import Modal from "../Modal/Modal";
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,11 +12,11 @@ export default function MobileMenu() {
   };
 
   return (
-    <div className="relative">
+    <div className="h-full relative">
       {/* Button with hamburger/close toggle */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="relative p-2 rounded-md focus:outline-none z-50 cursor-pointer max-[426px]:p-0"
+        className="relative z-[9999]"
       >
         {isOpen ? (
           // Close Icon
@@ -41,6 +42,7 @@ export default function MobileMenu() {
             height="18"
             viewBox="0 0 28 18"
             fill="none"
+            className="max-[426px]:w-[18.5px] max-[426px]:h-[12px]"
           >
             <g clipPath="url(#clip0_2340_560)">
               <path
@@ -71,7 +73,7 @@ export default function MobileMenu() {
 
       {/* Expanding menu */}
       <div
-        className={`bg-black/[0.01] fixed inset-0 transition-transform duration-400 ease-in-out ${
+        className={`bg-black/[0.1] fixed right-0 bottom-0 transition-transform duration-400 ease-in-out h-[100vh] w-[100vw] top-0 -left-[95px] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -145,6 +147,7 @@ export default function MobileMenu() {
           </div>
         </div>
       </div>
+      {/* <Modal isOpen={isOpen} /> */}
     </div>
   );
 }

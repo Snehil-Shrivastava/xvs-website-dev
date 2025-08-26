@@ -3,11 +3,13 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
 
 import './grid-svg.css'
+import useWindowWidth from "@/app/hooks/windowWidth";
 
 const GridSVG = () => {
+  const width = useWindowWidth()
   // Define grid dimensions
   const gridSize = 35; // For a 10x10 grid
-  const svgViewBoxSize = 1950; // A fixed viewBox size for consistent cell sizing
+  const svgViewBoxSize = width; // A fixed viewBox size for consistent cell sizing
   const cellSize = svgViewBoxSize / gridSize;
 
   const [litCells, setLitCells] = useState({});

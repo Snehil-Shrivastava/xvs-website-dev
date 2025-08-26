@@ -114,7 +114,7 @@ const ProcessGlowCards = ({
       ref={bodyContainerRef}
       className={`${styles.bodyContainer} ${
         order === 1 ? styles.bodyContainerFirst : styles.bodyContainerLast
-      } max-[769px]:flex-1 w-[580px] max-[426px]:w-full`}
+      } max-[1441px]:flex-1 max-[1441px]:w-auto max-[1025px]:flex-1 max-[1025px]:w-auto max-[769px]:flex-1 w-[580px] max-[426px]:w-full`}
     >
       <div
         ref={cardLayerRef}
@@ -133,8 +133,8 @@ const ProcessGlowCards = ({
             }`}
           >
             <div className={styles["card-content"]}>
-              <div className="text-left py-[48px] mt-auto flex flex-col gap-[48px] max-[769px]:mt-[0] max-[769px]:gap-[24px] max-[769px]:py-[38px] max-[426px]:py-[12px] max-[426px]:gap-[8px]">
-                <div className="flex items-center w-[80%] mx-auto gap-[32px] justify-center max-[426px]:gap-0 max-[769px]:gap-[8px]">
+              <div className="text-left py-[48px] mt-auto flex flex-col gap-[48px] max-[1441px]:mt-[0] max-[1025px]:mt-[0] max-[769px]:mt-[0] max-[1025px]:gap-[24px] max-[769px]:gap-[24px] max-[769px]:py-[38px] max-[426px]:py-[12px] max-[426px]:gap-[8px]">
+                <div className="flex items-center w-[80%] mx-auto gap-[32px] justify-center max-[426px]:gap-0 max-[769px]:gap-[8px] max-[1025px]:gap-[22px]">
                   {order === 1 ? (
                     // <div className="flex items-center relative bg-glow">
                     //   <span
@@ -175,11 +175,11 @@ const ProcessGlowCards = ({
                     // </div>
                     <Branding />
                   )}
-                  <h1 className="text-[64px] font-semibold tracking-wide text-[#F3EDDE] max-[769px]:text-[2.3rem] max-[426px]:text-[1rem]/[2rem]">
+                  <h1 className="text-[64px] font-semibold tracking-wide text-[#F3EDDE] max-[1441px]:text-[4rem] max-[1025px]:text-[2rem] max-[769px]:text-[2.3rem] max-[426px]:text-[1rem]/[2rem]">
                     {heading}
                   </h1>
                 </div>
-                <p className="text-[18px]/[35px] tracking-wider w-[72%] mx-auto font-light text-left max-[426px]:text-[0.5rem]/[1rem] max-[426px]:w-[85%] max-[769px]:text-[0.625rem]/[1.2rem]">
+                <p className="max-[1441px]:text-[18px]/[35px] tracking-wider w-[72%] mx-auto font-light text-left max-[1025px]:text-[1rem]/[2rem] max-[426px]:text-[0.5rem]/[1rem] max-[426px]:w-[85%] max-[769px]:text-[0.625rem]/[1.2rem]">
                   {description}
                 </p>
               </div>

@@ -23,6 +23,8 @@ import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MorphSVGPlugin from "gsap/MorphSVGPlugin";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
+import BIgLambda from "../components/SVGs/BIgLambda";
+import SmallLambda from "../components/SVGs/SmallLambda";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, MorphSVGPlugin, ScrollSmoother);
 
@@ -279,7 +281,7 @@ const AboutPage = () => {
           scrollTrigger: {
             // @ts-ignore
             trigger: bigLambda1Ref.current,
-            // markers: true,
+            markers: true,
             start: "top 25%",
             end: "top 10%",
             scrub: 1,
@@ -299,7 +301,7 @@ const AboutPage = () => {
           scrollTrigger: {
             // @ts-ignore
             trigger: bigLambda1Ref.current,
-            // markers: true,
+            markers: true,
             start: "top 25%",
             end: "top 10%",
             scrub: 1,
@@ -460,147 +462,23 @@ const AboutPage = () => {
   return (
     <>
       <div>
-        <div className={`h-[865px] w-full pointer-events-none`}>
+        <div
+          className={`min-[2200px]:h-[100vh] h-[865px] w-full pointer-events-none`}
+        >
           <GridSVG />
         </div>
         <h1
           // @ts-ignore
           ref={AboutMainText}
-          className="absolute text-center top-[150px] left-1/2 -translate-x-1/2 w-[720px] mx-auto text-[#F3EDDE] text-[72px]/[85px] max-[769px]:text-[3rem]/[3.5rem] max-[769px]:w-[60%] font-semibold aboutText pointer-events-none max-[426px]:text-[2.2rem]/[2.8rem] max-[426px]:w-4/5"
+          className="absolute text-center top-[150px] left-1/2 -translate-x-1/2 w-[720px] mx-auto text-[#F3EDDE] text-[72px]/[85px] max-[1025px]:text-[4rem]/[5rem] max-[769px]:text-[3rem]/[3.5rem] max-[769px]:w-[60%] font-semibold aboutText pointer-events-none max-[426px]:text-[2.2rem]/[2.8rem] max-[426px]:w-4/5"
         >
           Inspiration to interpreting reality
         </h1>
         <div
           // id="smooth-wrapper"
-          className={`absolute left-1/2 -translate-x-1/2 top-[380px] max-[426px]:top-[280px] pointer-events-none ${styles.circleGlow}`}
+          className={`absolute left-1/2 -translate-x-1/2 top-[380px] max-[426px]:top-[280px] pointer-events-none h-[300px] w-[280px] ${styles.circleGlow}`}
         >
-          {/* <Image src={logo2} alt="xvs logo" /> */}
           {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="138"
-            height="162"
-            viewBox="0 0 138 162"
-            fill="none"
-          >
-            <g filter="url(#filter0_d_2808_3219)">
-              <path
-                ref={lambdaRef}
-                d="M131.003 0L89.2679 76.6469L134 151.435L90.8791 152.29L68.2507 114.784L47.0836 153.145L4 154L87.8818 0.85492L131.003 0Z"
-                fill="#F79839"
-              />
-              <path
-                ref={lambdaMirrorRef}
-                d="M6.99707 0L48.7321 76.6469L4 151.435L47.1209 152.29L69.7493 114.784L90.9164 153.145L134 154L50.1182 0.85492L6.99707 0Z"
-                fill="#F79839"
-                // style={{ visibility: "hidden" }}
-              />
-            </g>
-            <defs>
-              <filter
-                id="filter0_d_2808_3219"
-                x="0"
-                y="0"
-                width="138"
-                height="162"
-                filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
-              >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  result="hardAlpha"
-                />
-                <feOffset dy="4" />
-                <feGaussianBlur stdDeviation="2" />
-                <feComposite in2="hardAlpha" operator="out" />
-                <feColorMatrix
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                />
-                <feBlend
-                  mode="normal"
-                  in2="BackgroundImageFix"
-                  result="effect1_dropShadow_2808_3219"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_dropShadow_2808_3219"
-                  result="shape"
-                />
-              </filter>
-            </defs>
-          </svg> */}
-
-          {/* working morph svg */}
-          {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="414"
-            height="810"
-            viewBox="0 0 414 810"
-            fill="none"
-          >
-            <g filter="url(#filter0_d_2808_3219)">
-
-              <path
-                ref={lambdaRef}
-                d="M131.003 0L89.2679 76.6469L134 151.435L90.8791 152.29L68.2507 114.784L47.0836 153.145L4 154L87.8818 0.85492L131.003 0Z"
-                fill="#F79839"
-                transform="translate(138, 0)"
-              />
-
-
-              <path
-                ref={lambdaMirrorRef}
-                d="M6.99707 0L48.7321 76.6469L4 151.435L47.1209 152.29L69.7493 114.784L90.9164 153.145L134 154L50.1182 0.85492L6.99707 0Z"
-                fill="#F79839"
-                // transform="translate(0, 162)"
-                style={{ visibility: "hidden" }}
-              />
-            </g>
-
-            <defs>
-              <filter
-                id="filter0_d_2808_3219"
-                x="0"
-                y="0"
-                width="414"
-                height="1200"
-                filterUnits="userSpaceOnUse"
-                colorInterpolationFilters="sRGB"
-              >
-                <feFlood floodOpacity="0" result="BackgroundImageFix" />
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  result="hardAlpha"
-                />
-                <feOffset dy="4" />
-                <feGaussianBlur stdDeviation="2" />
-                <feComposite in2="hardAlpha" operator="out" />
-                <feColorMatrix
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                />
-                <feBlend
-                  mode="normal"
-                  in2="BackgroundImageFix"
-                  result="effect1_dropShadow_2808_3219"
-                />
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_dropShadow_2808_3219"
-                  result="shape"
-                />
-              </filter>
-            </defs>
-          </svg> */}
-
-          <svg
             // id="smooth-content"
             xmlns="http://www.w3.org/2000/svg"
             width="350"
@@ -806,7 +684,15 @@ const AboutPage = () => {
                 <stop offset="1" stopColor="white" stopOpacity="0" />
               </linearGradient>
             </defs>
-          </svg>
+          </svg> */}
+          <div className="relative h-full">
+            <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
+              <SmallLambda />
+            </div>
+            <div className="absolute">
+              <BIgLambda />
+            </div>
+          </div>
         </div>
       </div>
       {/* <div> */}
@@ -908,7 +794,7 @@ const AboutPage = () => {
         {/* </div> */}
         <p
           // @ts-ignore
-          className="text-[20px]/[40px] font-light text-center xl:w-[37%] lg:w-[80%] max-[769px]:w-[90%]  max-[769px]:text-[1rem]/[2rem] mx-auto mt-[50px] text-[#F3EDDE] max-[426px]:text-[0.5rem]/[1rem] max-[426px]:mt-[22px]"
+          className="text-[20px]/[40px] font-light text-center max-[2561px]:w-[50%] max-[1441px]:w-[60%] max-[1025px]:w-[85%] max-[769px]:w-[90%] max-[769px]:text-[1rem]/[2rem] mx-auto mt-[50px] text-[#F3EDDE] max-[426px]:text-[0.5rem]/[1rem] max-[426px]:mt-[22px]"
         >
           With the inspiration of designing we started back in 2014 and bringing
           them to reality since then. From cosmetic startups to big automotive
@@ -919,7 +805,7 @@ const AboutPage = () => {
         {/* <DivLogoIcon /> */}
       </div>
       {/* </div> */}
-      <div className="text-center my-[200px] w-[80%] mx-auto max-[769px]:w-[90%] max-[426px]:my-[112px]">
+      <div className="text-center my-[200px] w-[80%] mx-auto max-[1025px]:w-[85%] max-[769px]:w-[90%] max-[426px]:my-[112px]">
         <SectionHeadingText
           SectionTitle="PROCESS"
           buttonTitle="PROCESS"
@@ -935,7 +821,7 @@ const AboutPage = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-[20px] font-light mt-[66px] xl:w-[67%] lg:w-[80%] mx-auto max-[769px]:w-[90%] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] max-[426px]:mt-[40px]"
+          className="text-[20px] font-light mt-[66px] xl:w-[67%] lg:w-[80%] mx-auto max-[1025px]:text-[1rem] max-[769px]:w-[90%] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] max-[426px]:mt-[40px]"
         >
           At xVS we design using tools but it's more than that, it's the
           aspiration of all who come together to make inspiration a reality.

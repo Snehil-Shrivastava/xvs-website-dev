@@ -81,6 +81,8 @@ import ProjectsImg from "../../../public/assests/layer.png";
 
 import animatedIcon from "../../../public/Sample.gif";
 
+import Gif3d from '../../../public/assests/videos&gifs/3D Product Render And Animation-png.gif'
+
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -153,8 +155,8 @@ const HoverGlowCards = () => {
           </div>
         ))}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[40%] pointer-events-none">
-          <div className="scale-[2.3] absolute -top-[1rem] max-[769px]:top-[-2rem]">
-            <Image src={animatedIcon} alt="icon" />
+          <div className="scale-[2] absolute -top-[1rem] max-[769px]:top-[-2rem]">
+            <Image src={Gif3d} alt="icon" />
           </div>
         </div>
       </div>

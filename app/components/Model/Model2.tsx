@@ -25,11 +25,11 @@ const Model2 = (props: any) => {
 
   // const gltf = useLoader(GLTFLoader, '/assests/models/x5/X 5.gltf')
 
-  // useEffect(() => {
-  //   if (actions && animations.length > 0) {
-  //     actions[animations[0].name]?.reset().fadeIn(0.5).play();
-  //   }
-  // }, [actions, animations]);
+  useEffect(() => {
+    if (actions && animations.length > 0) {
+      actions[animations[0].name]?.reset().fadeIn(0.5).play();
+    }
+  }, [actions, animations]);
 
   return <primitive ref={group} object={scene} {...props} />;
 };

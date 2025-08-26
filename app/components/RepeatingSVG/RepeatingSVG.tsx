@@ -28,12 +28,12 @@ const RepeatingSVG = () => {
     >
       {/* Layer 1: The base, dimmer SVG */}
       <div className={styles.baseLayer}>
-        <MotifSVG />
+        <MotifSVG className="" />
       </div>
 
       {/* Layer 2: The glowing SVG, revealed by the mouse mask */}
       <div className={styles.glowLayer}>
-        <MotifSVG />
+        <MotifSVG className="" />
       </div>
     </div>
   );

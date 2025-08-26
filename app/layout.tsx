@@ -1,7 +1,7 @@
 
 
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto, Poppins } from "next/font/google";
+import { Roboto, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Sections/Navbar/Navbar";
 import Footer from "../app/components/Sections/Footer/Footer";
@@ -11,16 +11,6 @@ import MouseGlow from "./components/MouseGlow/MouseGlow";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const roboto = Roboto({
   subsets: ["latin"],

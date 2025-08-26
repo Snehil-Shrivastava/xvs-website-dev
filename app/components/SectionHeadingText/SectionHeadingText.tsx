@@ -12,6 +12,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
 
+import localFont from "next/font/local";
+import ServicesBtnSVG from "../SVGs/ServicesBtnSVG";
+import ReviewsBtnSVG from "../SVGs/ReviewsBtnSVG";
+
+const calSans = localFont({
+  src: "../../../public/fonts/CalSans-Regular.ttf",
+  variable: "--font-calSans",
+});
+
 gsap.registerPlugin(ScrollTrigger);
 
 const SectionHeadingText = ({
@@ -27,8 +36,8 @@ const SectionHeadingText = ({
 }) => {
   const xlStyles = {
     fontSize: size,
-    lineHeight: tracking
-  }
+    lineHeight: tracking,
+  };
 
   const btnRef = useRef(null);
   const headingRef = useRef(null);
@@ -71,7 +80,6 @@ const SectionHeadingText = ({
   });
 
   return (
-
     <div className="relative">
       {/* <h1
         ref={headingRef}
@@ -84,7 +92,7 @@ const SectionHeadingText = ({
       {/* <div className="absolute inset-0 bg-[#282828]" style={myStyles}></div> */}
 
       <h1
-        className={`min-[2560px]:text-[12rem]/[12vh] min-[2560px]:tracking-[4rem] min-[1905px]:text-[9.5rem]/[13vh] min-[1905px]:tracking-[4rem] min-[1440px]:text-[7.5rem]/[12vh] min-[1440px]:tracking-[3.2rem] min-[1024px]:text-[6.5rem]/[12vh] min-[1024px]:tracking-[2.8rem] max-[1024px]:text-[5.6rem]/[12vh] max-[1024px]:tracking-[1.8rem] max-[426px]:text-[3.375rem] max-[426px]:leading-none max-[426px]:tracking-[0.8rem] font-bold text-center`}
+        className={`min-[2560px]:text-[12rem]/[12vh] min-[2560px]:tracking-[4rem] min-[1905px]:text-[9.5rem]/[13vh] min-[1905px]:tracking-[4rem] min-[1440px]:text-[7.5rem]/[12vh] min-[1440px]:tracking-[3.2rem] min-[1024px]:text-[6.5rem]/[12vh] min-[1024px]:tracking-[2.8rem] max-[1024px]:text-[5.6rem]/[12vh] max-[1024px]:tracking-[1.8rem] max-[426px]:text-[3.375rem] max-[426px]:leading-none max-[426px]:tracking-[0.8rem] font-bold text-center ${calSans.className}`}
         style={{
           maskImage:
             "linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.001) 90%)",
@@ -108,9 +116,11 @@ const SectionHeadingText = ({
         </Link>
       </div> */}
 
-      <div className={`${styles.btnContainer} flex items-center justify-center`}>
+      <div
+        className={`${styles.btnContainer} flex items-center justify-center`}
+      >
         <div
-          className={`max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] inline min-h-[32%] h-[32%] max-[426px]:h-auto max-[426px]:min-h-auto backdrop-blur-xs text-[#F79839] cursor-pointer ${styles.sectionHeadingBtnContainer}`}
+          className={`max-[1906px]:text-[1.2rem] max-[1441px]:text-[1rem] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] inline min-h-[32%] max-[1906px]:min-h-auto max-[1026px]:h-auto max-[426px]:h-auto max-[426px]:min-h-auto backdrop-blur-xs text-[#F79839] cursor-pointer ${styles.sectionHeadingBtnContainer}`}
         >
           {/* <button
             className={`max-[769px]:text-[0.75rem] absolute inset-0 h-full w-full px-6`}
@@ -122,8 +132,17 @@ const SectionHeadingText = ({
           >
             {buttonTitle}
           </button> */}
-          <button className={`h-full px-6 max-[426px]:px-4 cursor-pointer py-1 ${styles.sectionHeadingBtn}`}>
+          <button
+            className={`flex items-center gap-[12px] max-[1906px]:py-[10px] max-[1441px]:py-[8px] max-[1026px]:py-[8px] max-[769px]:gap-[12px] max-[426px]:gap-[6px] h-full px-6 max-[426px]:px-[0.5rem] max-[426px]:py-[0.375rem] cursor-pointer py-1 ${styles.sectionHeadingBtn}`}
+          >
             {buttonTitle}
+            {SectionTitle == "SERVICES" ? (
+              <ServicesBtnSVG />
+            ) : SectionTitle == "WORDS" ? (
+              <ReviewsBtnSVG />
+            ) : (
+              "null"
+            )}
           </button>
         </div>
       </div>

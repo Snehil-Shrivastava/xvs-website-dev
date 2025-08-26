@@ -10,6 +10,16 @@
   /* width: 18%; */
 }
 
+.btnContainer::before {
+  content: "";
+  width: 40px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 0 18px 1px #9595952e;
+}
+
 .sectionHeadingBtnContainer {
   clip-path: polygon(
     0% 11px,
@@ -30,8 +40,8 @@
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  box-shadow: 0 0 18px 1px rgba(254, 146, 39);
-  background-color: rgba(254, 146, 39, 0.3);
+  /* box-shadow: 0 0 18px 1px rgba(254, 146, 39);
+  background-color: rgba(254, 146, 39, 0.3); */
   z-index: -5;
 }
 

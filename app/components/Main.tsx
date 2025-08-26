@@ -6,6 +6,8 @@ import StatsSection from "./Sections/StatsSection/StatsSection";
 import SwiperCarousel from "./Sections/CarouselSection/SwiperCarusel";
 import Reviews from "./Sections/ReviewsSection/Reviews";
 
+import Gif3d from '../../public/assests/videos&gifs/3D Product Render And Animation-png.gif'
+
 // import React, { Suspense, useRef } from "react";
 import * as motion from "motion/react-client";
 
@@ -38,57 +40,30 @@ import MagicBento from "./ReactBits/MagicBento/MagicBento";
 import CardGlow from "./ReactBits/CardGlow/CardGlow";
 import Model2 from "./Model/Model2";
 
-// function SpinningBox() {
-//   // @ts-ignore
-//   const meshRef = useRef();
-
-//   useFrame(() => {
-//     if (meshRef.current) {
-//       // @ts-ignore
-//       // meshRef.current.rotation.y += 0.003; // Rotate around Y-axis
-//     }
-//   });
-
-//   return <Model ref={meshRef} position={[0, 0, 0]} scale={[3, 3, 3]} />;
-// }
-
 const Main = () => {
   return (
-    <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] max-[1024px]:w-[90%] mx-auto mt-[157px] text-center relaive">
-      <header className="relative pointer-events-none max-[426px]:w-4/5 max-[426px]:mx-auto">
-        {/* <p className="absolute left-[28%] max-[2560px]:left-[20%] 2xl:text-[1.5rem]/[1.5rem] xl:text-[1.3rem]/[1.3rem] lg:text-[1.2rem] max-[1024px]:text-[0.75rem] max-[1024px]:top-[30px] max-[1024px]:left-[23%] font-light max-[769px]:text-[0.875rem] max-[769px]:left-[20%] max-[426px]:right-0 max-[426px]:left-auto  max-[426px]:w-[150px] max-[426px]:text-start  max-[426px]:top-[20px] max-[426px]:text-[0.85rem]">
+    <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] max-[1024px]:w-[90%] mx-auto max-[1906px]:pt-[200px] max-[1441px]:pt-[180px] max-[1026px]:pt-[180px] max-[769px]:pt-[180px] max-[426px]:pt-[60px] text-center relaive">
+      <header className="relative pointer-events-none max-[426px]:w-[95%] max-[426px]:mx-auto">
+        <p className="max-[1906px]:text-[2rem] max-[1441px]:text-[1.5rem] max-[1026px]:text-[1.2rem] max-[769px]:text-[0.875rem] max-[426px]:text-[0.75rem]">
           Creating Unforgettable Design
-        </p> */}
+        </p>
         <div className="flex justify-center">
-          {" "}
-          {/*  max-[426px]:flex-col */}
           <div className="flex">
-            <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[769px]:text-[7.5rem] inline max-[426px]:text-[62px]">
+            <h1 className="text-[#f59748] font-semibold max-[1906px]:text-[14rem]/[12rem] max-[1441px]:text-[12rem]/[14rem] max-[1025px]:text-[10rem]/[11rem] max-[769px]:text-[7.5rem]/[10rem] inline max-[426px]:text-[62px]/[80px]">
               e
             </h1>
-            <div className="2xl:w-[180px] xl:w-[150px] lg:w-[140px] max-[1024px]:w-[80px] max-[426px]:w-[45px] overflow-hidden">
+            <div className="2xl:w-[180px] max-[1441px]:w-[170px] max-[1025px]:w-[140px] max-[769px]:w-[80px] max-[426px]:w-[45px] overflow-hidden">
               <AnimatedJSON />
             </div>
           </div>
-          {/* <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[769px]:text-[7.5rem] inline max-[426px]:hidden">
-            perience
-          </h1> */}
-          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[769px]:text-[7.5rem] inline max-[426px]:text-[62px]">
+          <h1 className="text-[#f59748] font-semibold max-[1906px]:text-[14rem]/[12rem] max-[1441px]:text-[12rem]/[14rem] max-[1025px]:text-[10rem]/[11rem] max-[769px]:text-[7.5rem]/[10rem] inline max-[426px]:text-[62px]/[80px]">
             perience
           </h1>
-          {/* <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[426px]:leading-[78px] max-[426px]:text-start hidden max-[426px]:inline">
-            perie
-          </h1>{" "}
-          <h1 className="text-[#f59748] font-semibold 2xl:text-[14rem]/[12rem] xl:text-[12rem]/[10rem] lg:text-[10rem]/[11rem] max-[1024px]:text-[7rem] max-[426px]:leading-[78px] max-[426px]:text-start hidden max-[426px]:inline">
-            nce
-          </h1> */}
         </div>
-        {/* <div className="w-[320px] absolute top-[-80px] left-[16.3rem]">
-            <AnimatedJSON />
-          </div> */}
       </header>
       <ReelSection />
       <StatsSection />
+      {/* <Image src={Gif3d} alt="gif" /> */}
       {/* <MagicBento
         textAutoHide={true}
         enableStars={false}
@@ -143,7 +118,7 @@ const Main = () => {
       </Canvas> */}
 
       {/* <Canvas shadows camera={{ fov: 40, position: [5, 0, 0] }} style={{ height: "520px" }}>
-        <ambientLight intensity={1} />
+        <ambientLight intensity={10} />
         <directionalLight
           position={[5, 2, 0]}
           castShadow
@@ -153,7 +128,7 @@ const Main = () => {
           shadow-camera-right={5}
           shadow-camera-top={5}
           shadow-camera-bottom={-5}
-          intensity={1}
+          intensity={10}
         />
         <Model2 />
         <EffectComposer>
@@ -169,7 +144,7 @@ const Main = () => {
         <GizmoHelper>
           <GizmoViewport />
         </GizmoHelper>
-        <Environment preset="forest" />
+        <Environment preset="apartment" />
       </Canvas> */}
 
       {/* <Canvas camera={{position: [0,5,20]}} style={{height: '520px'}}>

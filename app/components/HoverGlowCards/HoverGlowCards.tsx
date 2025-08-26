@@ -12,6 +12,7 @@ import StarImg from "../../../public/assests/star.png";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectsSVG from "../SVGs/ProjectsSVG";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -153,7 +154,8 @@ const HoverGlowCards = () => {
       className={`${styles.bodyContainer} lg:mb-[220px] max-[1024px]:mb-[143px] max-[426px]:mb-[5rem]`}
     >
       <div id="cards" className={styles.cards} ref={cardsContainerRef}>
-        {cardData.map((card, index) => (
+        {cardData.map((card, index) => {
+          return (
           <div
             key={index}
             className={`${styles.cardShadowContainer} relative lg:h-[360px] max-[1024px]:h-[280px]`}
@@ -201,6 +203,7 @@ const HoverGlowCards = () => {
                       height={103}
                       className="absolute top-[15%] right-[10%] max-[1024px]:w-[120px]"
                     />
+
                   ) : (
                     <Image
                       src={card.img}
@@ -209,12 +212,17 @@ const HoverGlowCards = () => {
                       height={103}
                       className="absolute top-[15%] right-[10%] max-[1024px]:w-[78px]"
                     />
+                    // <div className="absolute top-[15%] right-[10%] max-[1024px]:w-[78px]">
+
+                    // {/* @ts-ignore */}
+                    // {Icon.blurDataURL}
+                    // </div>
                   )}
                 </div>
               </div>
             </div>
           </div>
-        ))}
+        )})}
       </div>
     </div>
   );
