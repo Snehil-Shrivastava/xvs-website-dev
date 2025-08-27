@@ -154,7 +154,7 @@ tl.to(cardLayer0, {
 
   return (
     <div
-      className={`${styles.bodyContainer} lg:mb-[220px] max-[1024px]:mb-[143px] max-[426px]:mb-[5rem]`}
+      className={`${styles.bodyContainer}  2xl:w-4/5 2xl:mx-auto lg:mb-[220px] max-[1024px]:mb-[143px] max-[426px]:mb-[5rem]`}
     >
       <div id="cards" className={styles.cards} ref={cardsContainerRef}>
         {cardData.map((card, index) => {
