@@ -8,6 +8,7 @@ const SmallLambda = () => {
       height="162"
       viewBox="0 0 139 162"
       fill="none"
+      className="h-15.5 w-13"
     >
       <g filter="url(#filter0_d_3595_2121)">
         <path

@@ -461,22 +461,22 @@ const AboutPage = () => {
 
   return (
     <>
-      <div>
+      <div className="relative">
         <div
-          className={`min-[2200px]:h-[100vh] h-[865px] w-full pointer-events-none`}
+          className={`min-[2200px]:h-[100vh] h-[380px] w-full pointer-events-none`}
         >
           <GridSVG />
         </div>
         <h1
           // @ts-ignore
           ref={AboutMainText}
-          className="absolute text-center top-[150px] left-1/2 -translate-x-1/2 w-[720px] mx-auto text-[#F3EDDE] text-[72px]/[85px] max-[1025px]:text-[4rem]/[5rem] max-[769px]:text-[3rem]/[3.5rem] max-[769px]:w-[60%] font-semibold aboutText pointer-events-none max-[426px]:text-[2.2rem]/[2.8rem] max-[426px]:w-4/5"
+          className="absolute text-center top-17.5 left-1/2 -translate-x-1/2 mx-auto text-[#F3EDDE] font-semibold aboutText pointer-events-none text-[1.8rem]/[2rem] w-4/5"
         >
           Inspiration to interpreting reality
         </h1>
         <div
           // id="smooth-wrapper"
-          className={`absolute left-1/2 -translate-x-1/2 top-[380px] max-[426px]:top-[280px] pointer-events-none h-[300px] w-[280px] ${styles.circleGlow}`}
+          className={`absolute left-1/2 -translate-x-1/2 top-40 pointer-events-none h-24 w-21 ${styles.circleGlow}`}
         >
           {/* <svg
             // id="smooth-content"
