@@ -72,7 +72,7 @@ export default function MobileMenu() {
       </button>
 
       {/* Expanding menu */}
-      <div
+      {/* <div
         className={`bg-black/[0.1] fixed right-0 bottom-0 transition-transform duration-400 ease-in-out h-[100vh] w-[100vw] top-0 -left-[95px] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
@@ -146,7 +146,7 @@ export default function MobileMenu() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       {/* <Modal isOpen={isOpen} /> */}
     </div>
   );

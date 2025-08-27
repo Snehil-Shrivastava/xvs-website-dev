@@ -1,5 +1,6 @@
-@media screen and (max-width: 1024px) {
+@media (min-width: 425px) and (max-width: 1024px) {
 .svg-container > svg {
-    transform: scale(2.65) !important;
+    transform: scale(2.5) !important;
 }
 }
+

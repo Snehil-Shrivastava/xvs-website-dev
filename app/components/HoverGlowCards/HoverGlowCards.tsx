@@ -94,8 +94,10 @@ const HoverGlowCards = () => {
     const cardLayer3 = cardLayerRef3.current;
 
     const tl = gsap.timeline();
+    const mm = gsap.matchMedia()
 
-    tl.to(cardLayer0, {
+    mm.add('(min-width: 768px)', () => {
+tl.to(cardLayer0, {
       scrollTrigger: {
         trigger: cardLayer0,
         // markers: true,
@@ -147,6 +149,7 @@ const HoverGlowCards = () => {
       width: 0,
       // duration: 0.5,
     }, "<");
+    })
   });
 
   return (
@@ -170,7 +173,7 @@ const HoverGlowCards = () => {
                   ? cardLayerRef2
                   : cardLayerRef3
               }
-              className="absolute inset-0 bg-[#282828] z-[5]"
+              className="absolute inset-0 bg-[#282828] z-[5] min-[768px]:block hidden"
             ></div>
             <div
               className={`${styles.card} ${
