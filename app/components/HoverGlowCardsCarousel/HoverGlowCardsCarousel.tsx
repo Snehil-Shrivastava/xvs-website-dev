@@ -81,7 +81,7 @@ import ProjectsImg from "../../../public/assests/layer.png";
 
 import animatedIcon from "../../../public/Sample.gif";
 
-import Gif3d from '../../../public/assests/videos&gifs/3D Product Render And Animation-png.gif'
+import Gif3d from '../../../public/assests/videos&gifs/3D Product Render And Animation-png2.gif'
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

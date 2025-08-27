@@ -476,7 +476,7 @@ const AboutPage = () => {
         </h1>
         <div
           // id="smooth-wrapper"
-          className={`absolute left-1/2 -translate-x-1/2 top-40 pointer-events-none h-24 w-21 ${styles.circleGlow}`}
+          className={`absolute left-1/2 -translate-x-1/2 top-40 pointer-events-none h-24 w-21`}
         >        
           <div className="relative h-full">
             <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
@@ -548,7 +548,7 @@ const AboutPage = () => {
           aspiration of all who come together to make inspiration a reality.
         </motion.p>
       </div>
-      <div className="w-[80%] mx-auto text-center max-[769px]:w-[90%]">
+      <div className="w-[80%] mx-auto text-center max-[769px]:w-[95%]">
         <SectionHeadingText
           SectionTitle="CLIENTS"
           buttonTitle="REVIEWS"

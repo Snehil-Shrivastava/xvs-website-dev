@@ -46,7 +46,8 @@
     );
   }
 
-    .client-banner {
-    gap: 28px;
+  .client-banner {
+    row-gap: 28px;
+    column-gap: 20px;
   }
 }

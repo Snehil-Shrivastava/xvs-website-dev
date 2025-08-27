@@ -15,6 +15,7 @@ import { Observer } from "gsap/Observer";
 import localFont from "next/font/local";
 import ServicesBtnSVG from "../SVGs/ServicesBtnSVG";
 import ReviewsBtnSVG from "../SVGs/ReviewsBtnSVG";
+import Gears from "../SVGs/Gears";
 
 const calSans = localFont({
   src: "../../../public/fonts/CalSans-Regular.ttf",
@@ -120,7 +121,7 @@ const SectionHeadingText = ({
         className={`${styles.btnContainer} flex items-center justify-center`}
       >
         <div
-          className={`max-[1906px]:text-[1.2rem] max-[1441px]:text-[1rem] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] inline min-h-[32%] max-[1906px]:min-h-auto max-[1026px]:h-auto max-[426px]:h-auto max-[426px]:min-h-auto backdrop-blur-xs text-[#F79839] cursor-pointer ${styles.sectionHeadingBtnContainer}`}
+          className={`max-[1906px]:text-[1.2rem] max-[1441px]:text-[1rem] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem]/[0.5rem] inline min-h-[32%] max-[1906px]:min-h-auto max-[1026px]:h-auto max-[426px]:h-auto max-[426px]:min-h-auto backdrop-blur-xs text-[#F79839] cursor-pointer ${styles.sectionHeadingBtnContainer}`}
         >
           {/* <button
             className={`max-[769px]:text-[0.75rem] absolute inset-0 h-full w-full px-6`}
@@ -135,14 +136,21 @@ const SectionHeadingText = ({
           <button
             className={`flex items-center gap-[12px] min-[1906px]:py-[11px] max-[1906px]:py-[10px] max-[1441px]:py-[8px] max-[1026px]:py-[8px] max-[769px]:gap-[12px] max-[426px]:gap-[6px] h-full px-6 max-[426px]:px-[0.5rem] max-[426px]:py-[0.375rem] cursor-pointer py-1 ${styles.sectionHeadingBtn}`}
           >
+            <span>
+
             {buttonTitle}
+            </span>
             {SectionTitle == "SERVICES" ? (
               <ServicesBtnSVG />
             ) : SectionTitle == "WORDS" ? (
               <ReviewsBtnSVG />
-            ) : (
-              "null"
-            )}
+            ) : SectionTitle == "CLIENTS" ? (
+              <ReviewsBtnSVG />
+            ) : SectionTitle == "PROCESS" ? (
+              <Gears />
+            ) : "null"
+            
+            }
           </button>
         </div>
       </div>
