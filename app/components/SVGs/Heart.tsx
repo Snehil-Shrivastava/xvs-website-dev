@@ -22,7 +22,7 @@ const Heart = () => {
       <foreignObject x="19.5619" y="21.5287" width="33.2443" height="31.5994">
         <div
         //   xmlns="http://www.w3.org/1999/xhtml"
-          style={{backdropFilter:"blur(2.76px)", clipPath:"url(#bgblur_0_3608_3305_clip_path)", height:"100%;", width:"100%"}}
+          style={{backdropFilter:"blur(2.76px)", clipPath:"url(#bgblur_0_3608_3305_clip_path)", height:"100%", width:"100%"}}
         ></div>
       </foreignObject>
       <path

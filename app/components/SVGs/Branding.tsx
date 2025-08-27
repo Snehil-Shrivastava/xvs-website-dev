@@ -7,7 +7,7 @@ const Branding = () => {
       width="50"
       viewBox="0 0 84 71"
       fill="none"
-      className="scale-[2] origin-center h-[30px] max-[769px]:scale-[4] max-[1025px]:scale-[4] max-[1441px]:scale-[6]"
+      className="max-[426px]:scale-[2] origin-center h-[30px] max-[769px]:scale-[4] max-[1025px]:scale-[4] max-[1441px]:scale-[6]"
     >
       <g filter="url(#filter0_f_3608_3313)">
         <path

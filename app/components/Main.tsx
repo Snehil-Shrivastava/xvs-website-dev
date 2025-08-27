@@ -42,7 +42,7 @@ import Model2 from "./Model/Model2";
 
 const Main = () => {
   return (
-    <section className="mx-auto pt-[60px] text-center relative w-9/10">
+    <section className="mx-auto max-sm:pt-[60px] text-center relative w-9/10 sm:max-lg:pt-[102px] lg:max-2xl:pt-[150px] min-[1536px]:max-[1906px]:pt-[200px] min-[1906px]:pt-[250px]">
       <header className="relative pointer-events-none w-[95%] mx-auto">
         <p className="max-sm:text-[0.75rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] xl:max-2xl:text-[1.5rem] min-[1536px]:max-[1905px]:text-[1.5rem] min-[1905px]:text-[1.8rem]">
           Creating Unforgettable Design

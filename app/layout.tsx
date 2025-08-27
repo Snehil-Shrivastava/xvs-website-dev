@@ -1,5 +1,3 @@
-
-
 import type { Metadata } from "next";
 import { Roboto, Poppins } from "next/font/google";
 import "./globals.css";
@@ -34,7 +32,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   // useGSAP(() => {
   //   const smoother = ScrollSmoother.create({
   //     wrapper: '#smooth-wrapper',
@@ -45,16 +42,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        <div id="smooth-wrapper">
-          <div id="smooth-content">
-            <ModalProvider>
-              <Navbar />
-              {/* <MouseGlow /> */}
-              {children}
-              <Footer />
-            </ModalProvider>
-          </div>
-        </div>
+        {/* <ModalProvider> */}
+          <Navbar />
+          {/* <MouseGlow /> */}
+          {children}
+          <Footer />
+        {/* </ModalProvider> */}
       </body>
     </html>
   );
