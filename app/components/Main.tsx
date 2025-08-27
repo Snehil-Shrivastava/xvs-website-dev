@@ -42,21 +42,21 @@ import Model2 from "./Model/Model2";
 
 const Main = () => {
   return (
-    <section className="2xl:w-2/3 xl:w-[70%] lg:w-[90%] max-[1024px]:w-[90%] mx-auto max-[1906px]:pt-[200px] max-[1441px]:pt-[180px] max-[1026px]:pt-[180px] max-[769px]:pt-[180px] max-[426px]:pt-[60px] text-center relaive">
-      <header className="relative pointer-events-none max-[426px]:w-[95%] max-[426px]:mx-auto">
-        <p className="max-[1906px]:text-[2rem] max-[1441px]:text-[1.5rem] max-[1026px]:text-[1.2rem] max-[769px]:text-[0.875rem] max-[426px]:text-[0.75rem]">
+    <section className="mx-auto pt-[60px] text-center relative w-9/10">
+      <header className="relative pointer-events-none w-[95%] mx-auto">
+        <p className="text-[0.75rem] sm:max-lg:text-[0.875rem]">
           Creating Unforgettable Design
         </p>
         <div className="flex justify-center">
           <div className="flex">
-            <h1 className="text-[#f59748] font-semibold max-[1906px]:text-[14rem]/[12rem] max-[1441px]:text-[12rem]/[14rem] max-[1025px]:text-[10rem]/[11rem] max-[769px]:text-[7.5rem]/[10rem] inline max-[426px]:text-[62px]/[80px]">
+            <h1 className="text-[#f59748] font-semibold inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]">
               e
             </h1>
-            <div className="2xl:w-[180px] max-[1441px]:w-[170px] max-[1025px]:w-[140px] max-[769px]:w-[80px] max-[426px]:w-[45px] overflow-hidden">
+            <div className="w-[45px] overflow-hidden sm:max-lg:w-20">
               <AnimatedJSON />
             </div>
           </div>
-          <h1 className="text-[#f59748] font-semibold max-[1906px]:text-[14rem]/[12rem] max-[1441px]:text-[12rem]/[14rem] max-[1025px]:text-[10rem]/[11rem] max-[769px]:text-[7.5rem]/[10rem] inline max-[426px]:text-[62px]/[80px]">
+          <h1 className="text-[#f59748] font-semibold inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]">
             perience
           </h1>
         </div>

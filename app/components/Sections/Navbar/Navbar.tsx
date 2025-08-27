@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="w-9/10 mx-auto">
-        <div className="flex justify-between mt-4.5 h-7">
+        <div className="flex justify-between mt-4.5 h-7 sm:max-lg:mt-6.5 sm:max-lg:h-11.25">
           <Link href="./" className="h-full">
             <XVSlogo />
           </Link>

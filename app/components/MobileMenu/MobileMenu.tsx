@@ -12,7 +12,7 @@ export default function MobileMenu() {
   };
 
   return (
-    <div className="h-full relative">
+    <div className="h-full relative flex items-center">
       {/* Button with hamburger/close toggle */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
@@ -42,7 +42,7 @@ export default function MobileMenu() {
             height="18"
             viewBox="0 0 28 18"
             fill="none"
-            className="max-[426px]:w-[18.5px] max-[426px]:h-[12px]"
+            className="w-[18.5px] h-[12px] sm:max-lg:w-7.5 sm:max-lg:h-5"
           >
             <g clipPath="url(#clip0_2340_560)">
               <path

@@ -8,7 +8,7 @@ const XVSlogo = () => {
       height="58"
       viewBox="0 0 60 58"
       fill="none"
-      className="max-[426px]:w-[29px] max-[426px]:h-full"
+      className="w-[29px] h-full sm:max-lg:w-12"
     >
       <g clipPath="url(#clip0_2340_539)">
         <path
