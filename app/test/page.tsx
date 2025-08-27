@@ -44,30 +44,35 @@ export default function SvgScrollTransition() {
   }, { dependencies: [] });
 
   return (
-    <div ref={container} style={{ minHeight: "200vh", position: "relative" }}>
-      {/* Top Section */}
-      <div style={{ height: "80vh", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: '1px solid green' }}>
-        <svg
-          ref={svgRef}
-          width="100"
-          height="100"
-          style={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}
-        >
-          <circle cx="50" cy="50" r="40" fill="tomato" />
-        </svg>
-      </div>
-      {/* Bottom Section */}
-      <div style={{ minHeight: "80vh", position: "relative" }}>
-        <div ref={targetRef} style={{
-          width: "40px",
-          height: "40px",
-          position: "absolute",
-          left: "50%",
-          top: "40px",
-        //   transform: "translateX(-50%)",
-          pointerEvents: "none",
-        }} />
-      </div>
+    // <div ref={container} style={{ minHeight: "200vh", position: "relative", border: '1px solid white', padding: '8px' }}>
+    //   {/* Top Section */}
+    //   <div style={{ height: "80vh", display: "flex", alignItems: "center", justifyContent: "center", position: "relative", border: '1px solid green' }}>
+    //     <svg
+    //       ref={svgRef}
+    //       width="100"
+    //       height="100"
+    //       style={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}
+    //     >
+    //       <circle cx="50" cy="50" r="40" fill="tomato" />
+    //     </svg>
+    //   </div>
+    //   {/* Bottom Section */}
+    //   <div style={{ minHeight: "80vh", position: "relative", border: '1px solid blue' }}>
+    //     <div ref={targetRef} style={{
+    //       width: "40px",
+    //       height: "40px",
+    //       position: "absolute",
+    //       left: "50%",
+    //       top: "40px",
+    //     //   transform: "translateX(-50%)",
+    //       pointerEvents: "none",
+    //     }} />
+    //   </div>
+    // </div>
+
+    <div>
+      <div></div>
+      <div></div>
     </div>
   );
 }

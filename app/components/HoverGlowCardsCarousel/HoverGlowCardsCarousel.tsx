@@ -155,7 +155,7 @@ const HoverGlowCards = () => {
           </div>
         ))}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] h-[40%] pointer-events-none">
-          <div className="scale-[2] absolute -top-[1rem] max-[769px]:top-[-2rem] max-sm:hidden">
+          <div className="scale-[2] absolute -top-[1rem] max-[769px]:top-[-2rem]">
             <Image src={Gif3d} alt="icon" />
           </div>
         </div>
