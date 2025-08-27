@@ -44,19 +44,19 @@ const Main = () => {
   return (
     <section className="mx-auto pt-[60px] text-center relative w-9/10">
       <header className="relative pointer-events-none w-[95%] mx-auto">
-        <p className="text-[0.75rem] sm:max-lg:text-[0.875rem]">
+        <p className="text-[0.75rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem]">
           Creating Unforgettable Design
         </p>
         <div className="flex justify-center">
           <div className="flex">
-            <h1 className="text-[#f59748] font-semibold inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]">
+            <h1 className="text-[#f59748] font-semibold inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem]">
               e
             </h1>
-            <div className="w-[45px] overflow-hidden sm:max-lg:w-20">
+            <div className="w-[45px] overflow-hidden sm:max-lg:w-20 lg:max-xl:w-34">
               <AnimatedJSON />
             </div>
           </div>
-          <h1 className="text-[#f59748] font-semibold inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]">
+          <h1 className="text-[#f59748] font-semibold inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem]">
             perience
           </h1>
         </div>
