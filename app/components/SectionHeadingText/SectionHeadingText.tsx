@@ -133,7 +133,7 @@ const SectionHeadingText = ({
             {buttonTitle}
           </button> */}
           <button
-            className={`flex items-center gap-[12px] max-[1906px]:py-[10px] max-[1441px]:py-[8px] max-[1026px]:py-[8px] max-[769px]:gap-[12px] max-[426px]:gap-[6px] h-full px-6 max-[426px]:px-[0.5rem] max-[426px]:py-[0.375rem] cursor-pointer py-1 ${styles.sectionHeadingBtn}`}
+            className={`flex items-center gap-[12px] min-[1906px]:py-[11px] max-[1906px]:py-[10px] max-[1441px]:py-[8px] max-[1026px]:py-[8px] max-[769px]:gap-[12px] max-[426px]:gap-[6px] h-full px-6 max-[426px]:px-[0.5rem] max-[426px]:py-[0.375rem] cursor-pointer py-1 ${styles.sectionHeadingBtn}`}
           >
             {buttonTitle}
             {SectionTitle == "SERVICES" ? (

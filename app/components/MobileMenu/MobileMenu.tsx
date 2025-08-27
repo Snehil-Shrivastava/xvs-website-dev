@@ -42,7 +42,7 @@ export default function MobileMenu() {
             height="18"
             viewBox="0 0 28 18"
             fill="none"
-            className="w-[18.5px] h-[12px] sm:max-lg:w-7.5 sm:max-lg:h-5 lg:max-2xl:w-7 lg:max-2xl:h-4.5 min-[1905px]:w-8 min-[1905px]:h-6"
+            className="w-[18.5px] h-[12px] sm:max-lg:w-7.5 sm:max-lg:h-5 lg:max-2xl:w-7 lg:max-2xl:h-4.5 min-[1536px]:max-[1905px]:w-7 min-[1536px]:max-[1905px]:h-4.5 min-[1905px]:w-8 min-[1905px]:h-6"
           >
             <g clipPath="url(#clip0_2340_560)">
               <path
