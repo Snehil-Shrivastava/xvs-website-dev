@@ -74,25 +74,20 @@
 }
 
 .pulse-glow-footer {
-    background-color: rgba(243, 150, 56, 0.69);
+  background-color: rgba(243, 150, 56, 0.69);
   width: 920px;
   height: auto;
   position: absolute;
   bottom: 0;
   right: -20%;
-  /* transform: translate(-50%, -50%); */
-
-  /* transform: rotate(18deg); */
-
   border-radius: 50%;
 
   box-shadow: 0 0 250px 250px rgba(243, 150, 56, 0.5);
   transform-origin: center;
-  animation: pulsingDiv 5s ease-in-out infinite;
+  animation: pulsingDiv 3s ease-in-out infinite;
 }
 
 @keyframes pulsingDiv {
-
   0% {
     transform: scale(1.6);
     transform-origin: center;
@@ -106,7 +101,6 @@
     transform-origin: center;
   }
 }
-
 
 @media screen and (max-width: 426px) {
   .footer-container {
@@ -137,5 +131,29 @@
       calc(100% - 1px) 1px,
       12px 1px
     );
+  }
+
+  .pulse-glow-footer {
+    box-shadow: 0 0 50px 80px rgba(243, 150, 56, 0.5);
+  }
+}
+
+@media (min-width: 426px) and (max-width: 769px) {
+  .pulse-glow-footer {
+    box-shadow: 0 0 80px 150px rgba(243, 150, 56, 0.5);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .pulse-glow-footer {
+    box-shadow: 0 0 100px 150px rgba(243, 150, 56, 0.5);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1441px) {
+  .pulse-glow-footer {
+    box-shadow: 0 0 250px 250px rgba(243, 150, 56, 0.5);
+    bottom: -20%;
+    right: -20%;
   }
 }

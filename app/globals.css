@@ -8,6 +8,10 @@
   --card-box-shadow: 0 0 28px 16px var(--box-shadow-color);
 }
 
+:root:has(.no-scroll) {
+  overflow: hidden;
+}
+
 @theme {
   --breakpoint-3xl: 1905px;
 }
