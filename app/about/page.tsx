@@ -463,20 +463,20 @@ const AboutPage = () => {
     <>
       <div className="relative">
         <div
-          className={`min-[2200px]:h-[100vh] max-sm:h-100 sm:max-lg:h-125 lg:max-xl:h-162.5 xl:max-2xl:h-215 w-full pointer-events-none`}
+          className={`min-[2200px]:h-[100vh] max-sm:h-100 sm:max-lg:h-125 lg:max-xl:h-162.5 xl:max-2xl:h-215  min-[1536px]:max-[1906px]:h-280 w-full pointer-events-none`}
         >
           <GridSVG />
         </div>
         <h1
           // @ts-ignore
           ref={AboutMainText}
-          className="absolute text-center max-sm:top-17.5 sm:max-lg:top-25 lg:max-xl:top-35 xl:max-2xl:top-40 left-1/2 -translate-x-1/2 mx-auto text-[#F3EDDE] font-semibold aboutText pointer-events-none max-sm:text-[1.8rem]/[2rem] max-sm:w-4/5 sm:max-lg:w-3/5 sm:max-lg:text-[2.5rem]/[3rem] lg:max-xl:w-3/5 lg:max-xl:text-[3.5rem]/[4rem] xl:max-2xl:text-[4rem]/[5rem]"
+          className="absolute text-center max-sm:top-17.5 sm:max-lg:top-25 lg:max-xl:top-35 xl:max-2xl:top-40  min-[1536px]:max-[1906px]:top-48 left-1/2 -translate-x-1/2 mx-auto text-[#F3EDDE] font-semibold aboutText pointer-events-none max-sm:text-[1.8rem]/[2rem] max-sm:w-4/5 sm:max-lg:w-3/5 sm:max-lg:text-[2.5rem]/[3rem] lg:max-xl:w-3/5 lg:max-xl:text-[3.5rem]/[4rem] xl:max-2xl:text-[4rem]/[5rem] min-[1536px]:max-[1906px]:text-[4.2rem]/[5rem] min-[1536px]:max-[1906px]:w-2/5"
         >
           Inspiration to interpreting reality
         </h1>
         <div
           // id="smooth-wrapper"
-          className={`absolute left-1/2 -translate-x-1/2 max-sm:top-40 pointer-events-none max-sm:h-24 max-sm:w-21 sm:max-lg:top-56.5 sm:max-lg:w-29 sm:max-lg:h-33.75 lg:max-xl:top-80 lg:max-2xl:w-51 lg:max-2xl:h-59.25 xl:max-2xl:top-95`}
+          className={`absolute left-1/2 -translate-x-1/2 max-sm:top-40 pointer-events-none max-sm:h-24 max-sm:w-21 sm:max-lg:top-56.5 sm:max-lg:w-29 sm:max-lg:h-33.75 lg:max-xl:top-80 lg:max-2xl:w-51 lg:max-2xl:h-59.25 xl:max-2xl:top-95 min-[1536px]:max-[1906px]:w-80 min-[1536px]:max-[1906px]:h-100 min-[1536px]:max-[1906px]:top-100`}
         >        
           <div className="relative h-full">
             <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
@@ -517,7 +517,7 @@ const AboutPage = () => {
         </svg>
         <p
           // @ts-ignore
-          className="font-light text-center w-4/5 mx-auto text-[#F3EDDE] text-[0.5rem]/[1rem] sm:max-lg:text-[1rem]/[2rem] lg:max-xl:text-[1rem]/[2rem] lg:max-xl:w-7/10 lg:max-xl:mt-15 xl:max-2xl:text-[1.25rem]/[2.5rem] xl:max-2xl:mt-20 xl:max-2xl:w-3/5 mt-[22px]"
+          className="font-light text-center w-4/5 mx-auto text-[#F3EDDE] text-[0.5rem]/[1rem] sm:max-lg:text-[1rem]/[2rem] lg:max-xl:text-[1rem]/[2rem] lg:max-xl:w-7/10 lg:max-xl:mt-15 xl:max-2xl:text-[1.25rem]/[2.5rem] xl:max-2xl:mt-20 xl:max-2xl:w-3/5 min-[1536px]:max-[1906px]:text-[1.75rem]/[3rem] min-[1536px]:max-[1906px]:w-3/5 min-[1536px]:max-[1906px]:mt-20 mt-[22px]"
         >
           With the inspiration of designing we started back in 2014 and bringing
           them to reality since then. From cosmetic startups to big automotive

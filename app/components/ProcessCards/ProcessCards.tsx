@@ -18,7 +18,7 @@ const cardData = [
 
 const ProcessCards = () => {
   return (
-    <div className="flex gap-[28px] mt-[64px] card-container justify-center items-center max-[1441px]:items-stretch max-[1025px]:items-stretch max-[769px]:items-stretch max-[426px]:gap-[8px] max-[426px]:mt-[22px]">
+    <div className="flex gap-[28px] mt-[64px] card-container justify-center items-center max-[1906px]:items-stretch max-[1441px]:items-stretch max-[1025px]:items-stretch max-[769px]:items-stretch max-[426px]:gap-[8px] max-[426px]:mt-[22px]">
       {/* <div className="bg-[#ffffff24] backdrop-blur-2xl w-[580px] h-[auto] card-left">
         <div className="py-[48px] bg-[#2d2e2e] card-left-inner border border-[#ffffff24] flex flex-col gap-[48px]">
           <motion.div

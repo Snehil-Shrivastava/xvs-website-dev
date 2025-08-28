@@ -37,20 +37,20 @@ const Clients = () => {
   return (
     <div className="py-[98px] mt-[64px] review-box max-[1025px]:py-[64px] max-[769px]:py-[48px] max-[426px]:py-[36px]">
       <div className="w-[80%] mx-auto max-[426px]:w-[85%]">
-        <div className="client-banner pb-[88px] select-none max-[1441px]:gap-[32px] max-[1025px]:gap-[32px] max-[1025px]:pb-[40px] max-[769px]:pb-[48px] max-[769px]:gap-[32px] max-[426px]:pb-[32px]">
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
+        <div className="client-banner pb-[88px] select-none max-[1906px]:gap-15 max-[1441px]:gap-[32px] max-[1025px]:gap-[32px] max-[1025px]:pb-[40px] max-[769px]:pb-[48px] max-[769px]:gap-[32px] max-[426px]:pb-[32px]">
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
 
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
-          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px]" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
+          <Image src={logo1} alt="" className="mx-auto w-auto max-[1441px]:w-[92px] max-[1906px]:w-30" />
         </div>
         <div className="mt-[48px] max-[1025px]:mt-[28px] max-[769px]:mt-[32px] max-[426px]:mt-[22px]">
           <div className="flex gap-[22px] justify-center select-none">
