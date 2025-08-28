@@ -24,7 +24,7 @@ const RepeatingSVG = () => {
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className={`absolute -top-[10px] left-0 right-0 h-[828px] ${styles.repeatingBgContainer}`}
+      className={`absolute -top-[10px] left-0 right-0 h-[828px] z-[55] ${styles.repeatingBgContainer}`}
     >
       {/* Layer 1: The base, dimmer SVG */}
       <div className={styles.baseLayer}>

@@ -8,21 +8,28 @@ const HamburgerMenu = ({
   toggle: () => void;
 }) => {
   return (
-    <button className="relative z-[9999]" onClick={toggle} aria-label="Toggle navigation menu">
+    <button
+      className="fixed right-[10%] z-[9999] mt-6.5 sm:max-lg:mt-[38.5px] lg:max-xl:mt-12 xl:max-2xl:mt-13 min-[1536px]:max-[1905px]:mt-19 min-[1905px]:mt-19"
+      onClick={toggle}
+      aria-label="Toggle navigation menu"
+    >
       {isOpen ? (
         // Close Icon
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="w-6 h-6 scale-[1.5] origin-center max-[426px]:scale-[0.75]"
+          width="28"
+          height="18"
+          viewBox="0 0 25 25"
           fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
+          className="w-[12px] h-[12px] sm:max-lg:w-7.5 sm:max-lg:h-5 lg:max-2xl:w-7 lg:max-2xl:h-4.5 min-[1536px]:max-[1905px]:w-7 min-[1536px]:max-[1905px]:h-4.5 min-[1905px]:w-8 min-[1905px]:h-6"
         >
           <path
+            d="M1 1L24 24M24 1L1 24"
+            stroke="white"
+            strokeWidth="2"
+            strokeMiterlimit="10"
             strokeLinecap="round"
             strokeLinejoin="round"
-            d="M6 18L18 6M6 6l12 12"
           />
         </svg>
       ) : (

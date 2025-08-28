@@ -1,0 +1,39 @@
+.modal-container-outer {
+  clip-path: polygon(0 110px, 0 100%, 100% 100%, 100% 0, 110px 0);
+}
+
+@media (min-width: 640px) and (max-width: 769px) {
+  .modal-container-outer {
+    clip-path: polygon(0 190px, 0 100%, 100% 100%, 100% 0, 190px 0);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1025px) {
+  .modal-container-outer {
+    clip-path: polygon(0 250px, 0 100%, 100% 100%, 100% 0, 250px 0);
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1441px) {
+  .modal-container-outer {
+    clip-path: polygon(0 280px, 0 100%, 100% 100%, 100% 0, 280px 0);
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1906px) {
+  .modal-container-outer {
+    clip-path: polygon(0 340px, 0 100%, 100% 100%, 100% 0, 340px 0);
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1906px) {
+  .modal-container-outer {
+    clip-path: polygon(0 340px, 0 100%, 100% 100%, 100% 0, 340px 0);
+  }
+}
+
+@media (min-width: 1906px) {
+  .modal-container-outer {
+    clip-path: polygon(0 380px, 0 100%, 100% 100%, 100% 0, 380px 0);
+  }
+}

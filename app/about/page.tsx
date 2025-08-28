@@ -555,7 +555,7 @@ const AboutPage = () => {
           size="8rem"
           tracking="52px"
         />
-        <p className="text-[#F3EDDE] font-light tracking-wider max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem]">
+        <p className="text-[#F3EDDE] font-light tracking-wider max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] min-[1906px]:text-[22px]">
           Hear from visionaries and experts
         </p>
         <Clients />

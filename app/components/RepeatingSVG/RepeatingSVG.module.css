@@ -10,7 +10,7 @@
 .repeatingBgContainer {
   /* This fades out the entire component at the bottom, just like before */
   mask-image: linear-gradient(black 60%, transparent 85%);
-  z-index: 0;
+  /* z-index: 0; */
   overflow: hidden; /* Important for containing the glow filter */
   
   /* Initialize CSS variables for mouse position */
