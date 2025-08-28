@@ -21,11 +21,11 @@ const Footer = () => {
   return (
     <div className="mt-[170px] footer-container max-[426px]:mt-[5rem]">
       <div className="footer-content-container">
-        {/* <PulsingDiv /> */}
+        <div className="pulse-glow-footer"></div>
         <div className="mx-auto pb-[72px] max-[769px]:pb-[32px]">
-          <div className="2xl:w-[90%] xl:w-[100%] mx-auto">
+          <div className="mx-auto">
             <div className=" border-b border-b-[rgba(247,152,57,0.1)]">
-              <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:pb-[70px] max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:pb-[70px] max-[769px]:pt-[80px] max-[769px]:pb-[80px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[426px]:gap-[0.875rem] max-[426px]:flex-col max-[426px]:py-[2.5rem]">
+              <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] min-[1536px]:w-[90%] min-[1536px]:mx-auto max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:pb-[70px] max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:pb-[70px] max-[769px]:pt-[80px] max-[769px]:pb-[80px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[426px]:gap-[0.875rem] max-[426px]:flex-col max-[426px]:py-[2.5rem]">
                 <div className="flex-1">
                   <h1 className="2xl:text-[3.7rem]/[4rem] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[280px] max-[426px]:text-[1rem] font-bold tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-[95%] max-[426px]:w-full">
                     Let's start creating together
@@ -50,7 +50,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="footer-links-block max-[426px]:mx-auto mt-[22px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:mt-[44px] max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:mt-[64px]">
+            <div className="footer-links-block max-[426px]:mx-auto mt-[22px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:mt-[44px] max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:mt-[64px] min-[1536px]:w-[90%] min-[1536px]:mx-auto">
               <div className="footer-link-block first justify-between flex-[0.15] max-[1026px]:justify-start max-[1026px]:gap-[64px] max-[769px]:justify-start max-[769px]:gap-[46px] max-[426px]:justify-start max-[426px]:gap-[46px] gap-[36px]">
                 <div>
                   <Image
