@@ -8,7 +8,7 @@ const BIgLambda = () => {
       height="287"
       viewBox="-38 0 268 287"
       fill="none"
-      className="max-sm:w-21 max-sm:h-24 sm:max-lg:w-29 sm:max-lg:h-33.75 lg:max-xl:w-51 lg:max-xl:h-59.25"
+      className="max-sm:w-21 max-sm:h-24 sm:max-lg:w-29 sm:max-lg:h-33.75 lg:max-2xl:w-51 lg:max-2xl:h-59.25"
     >
       <foreignObject x="-29.3574" y="-9.99979" width="296.6" height="297">
         <div

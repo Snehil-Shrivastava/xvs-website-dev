@@ -8,7 +8,7 @@ const Gears = () => {
       height="7"
       viewBox="0 0 8 7"
       fill="none"
-      className="max-[426px]:scale-[2] origin-center max-[769px]:scale-[2.4] max-[1025px]:scale-[4] max-[1441px]:scale-[6]"
+      className="max-[426px]:scale-[2] origin-center max-[769px]:scale-[2.4] max-[1025px]:scale-[2.5] max-[1441px]:scale-[3]"
     >
       <mask id="path-1-inside-1_3814_1660" fill="white">
         <path
