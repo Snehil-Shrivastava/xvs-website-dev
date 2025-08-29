@@ -48,6 +48,7 @@ const calSans = localFont({
 });
 
 const Main = () => {
+
   return (
     <section className="mx-auto max-sm:pt-[60px] text-center relative w-9/10 sm:max-lg:pt-[102px] lg:max-2xl:pt-[150px] min-[1536px]:max-[1906px]:pt-[200px] min-[1906px]:pt-[250px]">
       <header className="relative pointer-events-none w-[95%] mx-auto z-[66]">
@@ -164,10 +165,17 @@ const Main = () => {
         <Environment preset="apartment" />
       </Canvas> */}
 
-      {/* <Canvas camera={{position: [0,5,20]}} style={{height: '520px'}}>
+      {/* <Canvas
+        camera={{ position: [5, 0, 0], fov: 80 }}
+        style={{ height: "520px" }}
+      >
         <directionalLight intensity={2} position={[0, 3, 5]} />
         <Environment preset="city" />
+        <ambientLight intensity={100} />
         <OrbitControls />
+        <GizmoHelper>
+          <GizmoViewport />
+        </GizmoHelper>
         <Model2 />
       </Canvas> */}
       <SwiperCarousel />
