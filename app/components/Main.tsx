@@ -57,7 +57,7 @@ const Main = () => {
         <div className="flex justify-center">
           <div className="flex">
             <h1
-              className={`text-[#f79839] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}
+              className={`text-[#e88e00] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}
             >
               e
             </h1>
@@ -72,7 +72,7 @@ const Main = () => {
             </div>
           </div>
           <h1
-            className={`text-[#f79839] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}
+            className={`text-[#e88e00] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}
           >
             perience
           </h1>
