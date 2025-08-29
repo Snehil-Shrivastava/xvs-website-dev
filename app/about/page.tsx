@@ -25,6 +25,7 @@ import MorphSVGPlugin from "gsap/MorphSVGPlugin";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import BIgLambda from "../components/SVGs/BIgLambda";
 import SmallLambda from "../components/SVGs/SmallLambda";
+import GridSVGBg from "../components/SVGs/GridSVGBg";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, MorphSVGPlugin, ScrollSmoother);
 
@@ -59,6 +60,7 @@ const AboutPage = () => {
 
   const svgRef = useRef(null);
   const containerRef = useRef(null);
+  const smallSvgRef = useRef(null);
 
   useGSAP(() => {
     const richTxt = richTxtRef.current;
@@ -177,289 +179,313 @@ const AboutPage = () => {
       yPercent: 0,
     });
 
-    mm.add("(min-width: 426px)", () => {
-      tl.to(
-        bigLambda1Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-          x: -50,
-          y: 530,
-          scale: 0.5,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda2Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-          x: -50,
-          y: 530,
-          scale: 0.5,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda3Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-          x: -50,
-          y: 530,
-          scale: 0.5,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda4Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-          x: -50,
-          y: 530,
-          scale: 0.5,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda5Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-          x: -50,
-          y: 530,
-          scale: 0.5,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda6Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-          x: -50,
-          y: 530,
-          scale: 0.5,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda7Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none none",
-          },
-          x: -50,
-          y: 530,
-          scale: 0.5,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
+    tl.to(smallSvgRef.current, {
+      scrollTrigger: {
+        trigger: smallSvgRef.current,
+        // markers: true,
+        start: "top 20%",
+        end: "bottom 20%",
+        scrub: 1,
+      },
+      scale: 0,
     });
 
-    mm.add("(max-width: 426px)", () => {
-      tl.to(
-        bigLambda1Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none play",
-          },
-          x: -20,
-          y: 620,
-          scale: 0.2,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda2Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none play",
-          },
-          x: -20,
-          y: 620,
-          scale: 0.2,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda3Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none play",
-          },
-          x: -20,
-          y: 620,
-          scale: 0.2,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda4Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none play",
-          },
-          x: -20,
-          y: 620,
-          scale: 0.2,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda5Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none play",
-          },
-          x: -20,
-          y: 620,
-          scale: 0.2,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda6Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none play",
-          },
-          x: -20,
-          y: 620,
-          scale: 0.2,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
-
-      tl.to(
-        bigLambda7Ref.current,
-        {
-          scrollTrigger: {
-            // @ts-ignore
-            trigger: bigLambda1Ref.current,
-            // markers: true,
-            start: "top 25%",
-            end: "top 10%",
-            scrub: 1,
-            toggleActions: "play none none play",
-          },
-          x: -20,
-          y: 620,
-          scale: 0.2,
-          transformOrigin: "center center",
-        },
-        "<"
-      );
+    tl.to(svgRef.current, {
+      scrollTrigger: {
+        trigger: svgRef.current,
+        // markers: true,
+        start: "top 20%",
+        end: "bottom 20%",
+        scrub: 1,
+      },
+      scale: 0.6,
+      y: 555,
+      x: -70,
     });
+
+    // mm.add("(min-width: 426px)", () => {
+    //   tl.to(
+    //     bigLambda1Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none none",
+    //       },
+    //       x: -50,
+    //       y: 530,
+    //       scale: 0.5,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda2Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none none",
+    //       },
+    //       x: -50,
+    //       y: 530,
+    //       scale: 0.5,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda3Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none none",
+    //       },
+    //       x: -50,
+    //       y: 530,
+    //       scale: 0.5,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda4Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none none",
+    //       },
+    //       x: -50,
+    //       y: 530,
+    //       scale: 0.5,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda5Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none none",
+    //       },
+    //       x: -50,
+    //       y: 530,
+    //       scale: 0.5,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda6Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none none",
+    //       },
+    //       x: -50,
+    //       y: 530,
+    //       scale: 0.5,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda7Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none none",
+    //       },
+    //       x: -50,
+    //       y: 530,
+    //       scale: 0.5,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+    // });
+
+    // mm.add("(max-width: 426px)", () => {
+    //   tl.to(
+    //     bigLambda1Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none play",
+    //       },
+    //       x: -20,
+    //       y: 620,
+    //       scale: 0.2,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda2Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none play",
+    //       },
+    //       x: -20,
+    //       y: 620,
+    //       scale: 0.2,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda3Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none play",
+    //       },
+    //       x: -20,
+    //       y: 620,
+    //       scale: 0.2,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda4Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none play",
+    //       },
+    //       x: -20,
+    //       y: 620,
+    //       scale: 0.2,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda5Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none play",
+    //       },
+    //       x: -20,
+    //       y: 620,
+    //       scale: 0.2,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda6Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none play",
+    //       },
+    //       x: -20,
+    //       y: 620,
+    //       scale: 0.2,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+
+    //   tl.to(
+    //     bigLambda7Ref.current,
+    //     {
+    //       scrollTrigger: {
+    //         // @ts-ignore
+    //         trigger: bigLambda1Ref.current,
+    //         // markers: true,
+    //         start: "top 25%",
+    //         end: "top 10%",
+    //         scrub: 1,
+    //         toggleActions: "play none none play",
+    //       },
+    //       x: -20,
+    //       y: 620,
+    //       scale: 0.2,
+    //       transformOrigin: "center center",
+    //     },
+    //     "<"
+    //   );
+    // });
   }, {});
 
   return (
@@ -468,7 +494,8 @@ const AboutPage = () => {
         <div
           className={`min-[2200px]:h-[100vh] max-sm:h-100 sm:max-lg:h-125 lg:max-xl:h-162.5 xl:max-2xl:h-215  min-[1536px]:max-[1906px]:h-280 w-full pointer-events-none`}
         >
-          <GridSVG />
+          {/* <GridSVG /> */}
+          <GridSVGBg />
         </div>
         <h1
           // @ts-ignore
@@ -484,7 +511,59 @@ const AboutPage = () => {
         >
           <div className="relative h-full">
             <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
-              <SmallLambda />
+              <svg
+                ref={smallSvgRef}
+                xmlns="http://www.w3.org/2000/svg"
+                width="139"
+                height="162"
+                viewBox="0 0 139 162"
+                fill="none"
+                className="max-sm:h-15.5 max-sm:w-13 sm:max-lg:w-18.5 sm:max-lg:h-22 lg:max-2xl:w-32.5 lg:max-2xl:h-38.5 min-[1536px]:max-[1906px]:w-50 min-[1536px]:max-[1906px]:h-70 min-[1906px]:w-60 min-[1906px]:h-80"
+              >
+                <g filter="url(#filter0_d_3595_2121)">
+                  <path
+                    d="M131.646 0.000213623L89.9105 76.6471L134.643 151.435L91.5217 152.29L68.8932 114.785L47.7262 153.145L4.64258 154L88.5244 0.855134L131.646 0.000213623Z"
+                    fill="#F79839"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_3595_2121"
+                    x="0.642578"
+                    y="0.000213623"
+                    width="138"
+                    height="162"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                  >
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="4" />
+                    <feGaussianBlur stdDeviation="2" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_3595_2121"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_3595_2121"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
             </div>
             <div className="absolute">
               <svg

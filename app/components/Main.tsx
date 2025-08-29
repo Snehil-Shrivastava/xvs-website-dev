@@ -6,7 +6,7 @@ import StatsSection from "./Sections/StatsSection/StatsSection";
 import SwiperCarousel from "./Sections/CarouselSection/SwiperCarusel";
 import Reviews from "./Sections/ReviewsSection/Reviews";
 
-import Gif3d from '../../public/assests/videos&gifs/3D Product Render And Animation-png.gif'
+import Gif3d from "../../public/assests/videos&gifs/3D Product Render And Animation-png.gif";
 
 // import React, { Suspense, useRef } from "react";
 import * as motion from "motion/react-client";
@@ -41,9 +41,11 @@ import CardGlow from "./ReactBits/CardGlow/CardGlow";
 import Model2 from "./Model/Model2";
 import localFont from "next/font/local";
 
+import spinningLambda from "../../public/assests/videos&gifs/x.gif";
+
 const calSans = localFont({
-  src: '../../public/fonts/CalSans-Regular.ttf'
-})
+  src: "../../public/fonts/CalSans-Regular.ttf",
+});
 
 const Main = () => {
   return (
@@ -54,14 +56,24 @@ const Main = () => {
         </p>
         <div className="flex justify-center">
           <div className="flex">
-            <h1 className={`text-[#f59748] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}>
+            <h1
+              className={`text-[#f59748] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}
+            >
               e
             </h1>
-            <div className="w-[45px] overflow-hidden sm:max-lg:w-20 lg:max-xl:w-34 xl:max-2xl:w-45 min-[1536px]:max-[1905px]:w-45 min-[1905px]:w-56">
-              <AnimatedJSON />
+            {/* <div className="w-[45px] overflow-hidden sm:max-lg:w-20 lg:max-xl:w-34 xl:max-2xl:w-45 min-[1536px]:max-[1905px]:w-45 min-[1905px]:w-56 relative"> */}
+            <div className="w-[45px] sm:max-lg:w-20 lg:max-xl:w-34 xl:max-2xl:w-[150px] min-[1536px]:max-[1905px]:w-45 min-[1905px]:w-56 relative overflow-visible">
+              {/* <AnimatedJSON /> */}
+              <Image
+                className="absolute top-[15%] scale-[1]"
+                src={spinningLambda}
+                alt=""
+              />
             </div>
           </div>
-          <h1 className={`text-[#f59748] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}>
+          <h1
+            className={`text-[#f59748] inline text-[62px]/[80px] sm:max-lg:text-[7.75rem]/[9rem]  lg:max-xl:text-[9.375rem]/[10.625rem] xl:max-2xl:text-[13.125rem]/[13.5rem] min-[1536px]:max-[1905px]:text-[13.125rem]/[14rem] min-[1905px]:text-[15.6rem]/[17rem] ${calSans.className}`}
+          >
             perience
           </h1>
         </div>

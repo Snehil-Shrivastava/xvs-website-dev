@@ -1,0 +1,29 @@
+.grid-svg-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+
+  mask-image: radial-gradient(#000, #0000 70%);
+}
+
+.grid-svg-content {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.grid-cell {
+  /* Use CSS variables passed from the component */
+  fill: var(--default-cell-fill);
+  /* The transition is now handled purely by CSS */
+  transition: fill 0.5s ease-in-out;
+}
+
+/* The 'lit' class will be toggled by our JavaScript */
+.grid-cell.lit {
+  fill: var(--glow-color);
+}

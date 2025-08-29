@@ -56,7 +56,7 @@ export default function SvgScrollTransition() {
     <div
       ref={container}
       style={{
-        minHeight: "150vh",
+        minHeight: "170vh",
         position: "relative",
         border: "1px solid white",
         padding: "8px",
