@@ -16,6 +16,7 @@ import localFont from "next/font/local";
 import ServicesBtnSVG from "../SVGs/ServicesBtnSVG";
 import ReviewsBtnSVG from "../SVGs/ReviewsBtnSVG";
 import Gears from "../SVGs/Gears";
+import Heart from "../SVGs/Heart";
 
 const calSans = localFont({
   src: "../../../public/fonts/CalSans-Regular.ttf",
@@ -148,7 +149,9 @@ const SectionHeadingText = ({
               <ReviewsBtnSVG />
             ) : SectionTitle == "PROCESS" ? (
               <Gears />
-            ) : "null"
+            ) : SectionTitle == "CONNECT" ? (
+              <ReviewsBtnSVG />
+            ) : 'null'
             
             }
           </button>

@@ -28,16 +28,16 @@ const Contact = () => {
             "radial-gradient(920px circle at center, #000000, transparent)",
         }}
       >
-        <div className="glow-dot-1"></div>
-        <div className="glow-dot-2"></div>
-        <div className="glow-dot-3"></div>
-        <div className="glow-dot-4"></div>
-        <div className="glow-dot-5"></div>
-        <div className="glow-dot-6"></div>
-        <div className="glow-dot-7"></div>
-        <div className="glow-dot-8"></div>
-        <div className="glow-dot-9"></div>
-        <div className="glow-dot-10"></div>
+        <div className="glow-dot-1 blur-xs"></div>
+        <div className="glow-dot-2 blur-xs"></div>
+        <div className="glow-dot-3 blur-xs"></div>
+        <div className="glow-dot-4 blur-xs"></div>
+        <div className="glow-dot-5 blur-xs"></div>
+        <div className="glow-dot-6 blur-xs"></div>
+        <div className="glow-dot-7 blur-xs"></div>
+        <div className="glow-dot-8 blur-xs"></div>
+        <div className="glow-dot-9 blur-xs"></div>
+        <div className="glow-dot-10 blur-xs"></div>
         <Image
           src={bgImg}
           alt="background"
@@ -103,7 +103,7 @@ const Contact = () => {
       </div> */}
 
       {/* contact form */}
-      <div className="w-[90%] 2xl:w-1/2 mx-auto relative">
+      <div className="w-[80%] 2xl:w-1/2 mx-auto relative">
         {/* <div
           className="absolute left-[20px] right-[20px] top-[30px] bottom-[30px] z-[1] bg-neutral-900/10 backdrop-blur-sm"
         ></div> */}
@@ -141,7 +141,7 @@ const Contact = () => {
                 buttonTitle="TOUCH"
                 tracking="32px"
               />
-              <div className="w-17/20 mx-auto mt-16">
+              <div className="w-3/4 mx-auto mt-16">
                 <div>
                   <Form action="">
                     <div className="text-sm flex flex-col gap-12 text-[#ffffffad]">

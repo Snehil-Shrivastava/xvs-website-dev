@@ -272,9 +272,9 @@
 
 /* --- HOVER STATE --- */
 /* On hover, slide the background into view from left to right */
-.send-btn:hover::before {
+/* .send-btn:hover::before {
   background-position: 0 0;
-}
+} */
 
 /* .send-btn-cnt::after {
   content: "";
@@ -326,7 +326,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #f39638;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
@@ -342,7 +342,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #fe9227;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
@@ -358,7 +358,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #fe9227;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
@@ -374,7 +374,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #fe9227;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
@@ -390,7 +390,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #fe9227;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
@@ -406,7 +406,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #fe9227;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
@@ -422,7 +422,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #fe9227;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
@@ -438,7 +438,7 @@ textarea:focus {
   width: 12px;
   height: 12px;
   background: #fe9227;
-  box-shadow: 0 0 20px 10px #f39638;
+  box-shadow: 0 0 15px 5px #f39638;
 
   border-radius: 50%;
 
