@@ -9,7 +9,7 @@ const HamburgerMenu = ({
 }) => {
   return (
     <button
-      className="fixed right-[10%] z-[9999] mt-6.5 sm:max-lg:mt-[38.5px] lg:max-xl:mt-12 xl:max-2xl:mt-13 min-[1536px]:max-[1905px]:mt-19 min-[1905px]:mt-19"
+      className="fixed right-[4%] z-[9999] mt-6.5 sm:max-lg:mt-[38.5px] lg:max-xl:mt-12 xl:max-2xl:mt-13 min-[1536px]:max-[1905px]:mt-19 min-[1905px]:mt-19 cursor-pointer"
       onClick={toggle}
       aria-label="Toggle navigation menu"
     >

@@ -16,10 +16,15 @@ import icon6 from "../../../../public/assests/Vector (7).png";
 
 import meetingSchedIcon from "../../../../public/assests/schedule-meeting-logo.png";
 import PulsingDiv from "../../PulsingDiv/PulsingDiv";
+import localFont from "next/font/local";
+
+const calSans = localFont({
+  src: '../../../../public/fonts/CalSans-Regular.ttf'
+})
 
 const Footer = () => {
   return (
-    <div className="mt-[170px] footer-container max-[426px]:mt-[5rem]">
+    <div className="mt-[170px] footer-container max-[426px]:mt-[5rem] w-9/10 mx-auto">
       <div className="footer-content-container">
         <div className="pulse-glow-footer"></div>
         <div className="mx-auto pb-[72px] max-[769px]:pb-[32px]">
@@ -27,7 +32,7 @@ const Footer = () => {
             <div className=" border-b border-b-[rgba(247,152,57,0.1)]">
               <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] min-[1536px]:w-[90%] min-[1536px]:mx-auto max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:pb-[70px] max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:pb-[70px] max-[769px]:pt-[80px] max-[769px]:pb-[80px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[426px]:gap-[0.875rem] max-[426px]:flex-col max-[426px]:py-[2.5rem]">
                 <div className="flex-1">
-                  <h1 className="2xl:text-[3.7rem]/[4rem] xl:text-[3.5rem]/[4.5rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[280px] max-[426px]:text-[1rem] font-bold tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-[95%] max-[426px]:w-full">
+                  <h1 className="2xl:text-[3.7rem]/[4rem] xl:text-[3rem]/[4rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[280px] max-[426px]:text-[1rem] font-bold tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-full max-[426px]:w-full">
                     Let's start creating together
                   </h1>
                 </div>
@@ -50,7 +55,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="footer-links-block max-[426px]:mx-auto mt-[22px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:mt-[44px] max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:mt-[64px] min-[1536px]:w-[90%] min-[1536px]:mx-auto">
+            <div className="footer-links-block max-[426px]:mx-auto mt-[22px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:mt-[44px] max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:mt-[58.58px] min-[1536px]:w-[90%] min-[1536px]:mx-auto">
               <div className="footer-link-block first justify-between flex-[0.15] max-[1026px]:justify-start max-[1026px]:gap-[64px] max-[769px]:justify-start max-[769px]:gap-[46px] max-[426px]:justify-start max-[426px]:gap-[46px] gap-[36px]">
                 <div>
                   <Image
@@ -94,27 +99,27 @@ const Footer = () => {
               </div>
               <div className="footer-link-block second flex-[0.65] max-[1906px]:flex max-[1906px]:justify-center max-[1441px]:flex max-[1441px]:justify-center">
                 <div className="max-[1025px]:mx-auto max-[1441px]:flex max-[1441px]:flex-col max-[1441px]:h-full max-[426px]:w-[70%] max-[769px]:w-[80%] max-[1026px]:w-[80%]">
-                  <h1 className="font-semibold text-[16px] mb-[16px] max-[426px]:text-[0.65rem]">
+                  <h1 className="font-semibold text-[18px] pb-[26px] max-[426px]:text-[0.65rem]">
                     Contacts
                   </h1>
-                  <p className="text-[16px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
+                  <p className="text-[14px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
                     2nd Floor, 1/23 Rajni Khand, Sharda Nagar,
                   </p>
-                  <p className="text-[16px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
+                  <p className="text-[14px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
                     Lucknow, UP (226002), India.
                   </p>
                   <div className="flex gap-[32px] mt-[72px] max-[1441px]:mt-auto max-[1026px]:mt-[52px] max-[769px]:gap-[44px] max-[769px]:mt-[22px] max-[426px]:flex-col max-[426px]:mt-[22px] max-[426px]:gap-0">
-                    <h1 className="text-[36px] max-[769px]:text-[2.2rem] font-semibold max-[426px]:text-[1.2rem]">
+                    <h1 className={`text-[53px] max-[769px]:text-[2.2rem] max-[426px]:text-[1.2rem] ${calSans.className}`}>
                       Say Hi!
                     </h1>
-                    <div>
+                    <div className="flex flex-col justify-center">
                       <a
                         href=""
-                        className="hover:underline text-[15px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem]"
+                        className="hover:underline text-[14px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem]"
                       >
                         info@xvscreations.com
                       </a>
-                      <p className=" text-[15px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem] max-[426px]:leading-[6px]">
+                      <p className=" text-[14px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem] max-[426px]:leading-[6px]">
                         +91-8726899713
                       </p>
                     </div>
@@ -122,10 +127,10 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-link-block third flex-[0.2]">
-                <h1 className="font-semibold text-[16px] mb-[16px] max-[426px]:text-[0.65rem]">
+                <h1 className="font-semibold text-[18px] pb-[26px] max-[426px]:text-[0.65rem]">
                   Services
                 </h1>
-                <div className="flex flex-col gap-[8px] text-[13px] max-[769px]:text-[0.75rem] max-[769px]:font-extralight max-[426px]:text-[0.5rem]">
+                <div className="flex flex-col gap-[8px] text-[14px] max-[769px]:text-[0.75rem] max-[769px]:font-extralight max-[426px]:text-[0.5rem]">
                   <Link href="/" className="hover:underline">
                     Branding
                   </Link>
@@ -154,7 +159,7 @@ const Footer = () => {
         </div>
       </div>
       <div className=" bg-[#282828]">
-        <div className="flex justify-between text-white/[0.5] w-[85%] mx-auto text-[14px] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] max-[426px]:w-[95%] pt-[28px] pb-[12px]">
+        <div className="flex justify-between text-white/[0.5] w-[95%] mx-auto text-[14px] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] max-[426px]:w-[95%] pt-[28px] pb-[12px]">
           <div>
             <p className="font-light">
               @ 2025 xVS Creations All Rights Reserved

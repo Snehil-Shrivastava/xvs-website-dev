@@ -42,7 +42,7 @@ const Reviews = () => {
         <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px] max-[426px]:text-[0.5rem] max-[426px]:mt-2">
           Hear from visionaries and experts
         </h3>
-        <div className="relative p-[2px] flex">
+        <div className="relative p-[2px] flex w-19/20 mx-auto">
           {/* <div
             ref={cardLayerRef}
             className="absolute inset-0 bg-[#282828] z-[5]"
