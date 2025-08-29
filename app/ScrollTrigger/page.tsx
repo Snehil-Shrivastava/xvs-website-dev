@@ -536,7 +536,7 @@ const ScrollTriggerComponent = () => {
             className="mx-auto max-[769px]:w-[150px]"
           />
 
-          <p className="text-[20px]/[40px] max-[769px]:text-[16px]/[32px] max-[769px]:mt-[50px] font-light text-center w-[39%] mx-auto mt-[70px] text-[#F3EDDE] max-[769px]:w-[80%]">
+          <p className="text-[20px]/[40px] max-[769px]:text-[16px]/[32px] max-[769px]:mt-[50px] font-light text-center w-[60%] mx-auto mt-[70px] text-[#F3EDDE] max-[769px]:w-[80%]">
             With the inspiration of designing we started back in 2014 and
             bringing them to reality since then. From cosmetic startups to big
             automotive companies we had fun working at different scales and
