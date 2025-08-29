@@ -22,14 +22,14 @@ export default function SvgScrollTransition() {
       //@ts-ignore
       const svgRect = svgRef.current.getBoundingClientRect();
 
-      console.log('targetRect', targetRect, 'svgRect', svgRect)
+      console.log("targetRect", targetRect, "svgRect", svgRect);
 
       // Calculate deltas for position/scale
       const yDelta = targetRect.top - svgRect.top;
       const xDelta = targetRect.left - svgRect.left;
       const scale = targetRect.width / svgRect.width;
 
-      console.log('yDelta', yDelta, 'xDelta', xDelta, 'scale', scale)
+      console.log("yDelta", yDelta, "xDelta", xDelta, "scale", scale);
 
       gsap
         .timeline({
@@ -44,7 +44,7 @@ export default function SvgScrollTransition() {
         })
         .to(svgRef.current, {
           // x: xDelta,
-          // y: yDelta,
+          y: yDelta,
           scale: scale,
           ease: "power1.inOut",
         });
@@ -56,7 +56,7 @@ export default function SvgScrollTransition() {
     <div
       ref={container}
       style={{
-        minHeight: "200vh",
+        minHeight: "150vh",
         position: "relative",
         border: "1px solid white",
         padding: "8px",
@@ -327,7 +327,7 @@ export default function SvgScrollTransition() {
             top: "40px",
             //   transform: "translateX(-50%)",
             pointerEvents: "none",
-            border: '1px solid red'
+            border: "1px solid red",
           }}
         />
         <div className="relative pt-[72px] max-[426px]:pt-0">

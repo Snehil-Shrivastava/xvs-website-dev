@@ -57,6 +57,9 @@ const AboutPage = () => {
   const morphTarget6Ref = useRef(null);
   const morphTarget7Ref = useRef(null);
 
+  const svgRef = useRef(null);
+  const containerRef = useRef(null);
+
   useGSAP(() => {
     const richTxt = richTxtRef.current;
 
@@ -476,14 +479,217 @@ const AboutPage = () => {
         </h1>
         <div
           // id="smooth-wrapper"
+          ref={containerRef}
           className={`absolute left-1/2 -translate-x-1/2 max-sm:top-40 pointer-events-none max-sm:h-24 max-sm:w-21 sm:max-lg:top-56.5 sm:max-lg:w-29 sm:max-lg:h-33.75 lg:max-xl:top-80 lg:max-2xl:w-51 lg:max-2xl:h-59.25 xl:max-2xl:top-95 min-[1536px]:max-[1906px]:w-80 min-[1536px]:max-[1906px]:h-100 min-[1536px]:max-[1906px]:top-100 min-[1906px]:w-110 min-[1906px]:h-130 min-[1906px]:top-120`}
-        >        
+        >
           <div className="relative h-full">
             <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2">
               <SmallLambda />
             </div>
             <div className="absolute">
-              <BIgLambda />
+              <svg
+                ref={svgRef}
+                xmlns="http://www.w3.org/2000/svg"
+                width="268"
+                height="287"
+                viewBox="-38 0 268 287"
+                fill="none"
+                className="max-sm:w-21 max-sm:h-24 sm:max-lg:w-29 sm:max-lg:h-33.75 lg:max-2xl:w-51 lg:max-2xl:h-59.25 min-[1536px]:max-[1906px]:w-80 min-[1536px]:max-[1906px]:h-100 min-[1906px]:w-110 min-[1906px]:h-130"
+              >
+                <foreignObject
+                  x="-29.3574"
+                  y="-9.99979"
+                  width="296.6"
+                  height="297"
+                >
+                  <div
+                    style={{
+                      backdropFilter: "blur(15px)",
+                      clipPath: "url(#bgblur_0_3703_1661_clip_path)",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  ></div>
+                </foreignObject>
+                <g
+                  filter="url(#filter0_d_3703_1661)"
+                  data-figma-bg-blur-radius="30"
+                >
+                  <path
+                    d="M0.642578 20.0002L68.4793 138.598L0.642578 257H68.2817L102.647 197.625L137.012 257H204.643L68.2817 20.0002H0.642578Z"
+                    fill="#F79839"
+                    fillOpacity="0.3"
+                    shapeRendering="crispEdges"
+                  />
+                  <path
+                    d="M68.1377 20.2502L204.21 256.75H137.156L102.863 197.499L102.646 197.126L102.431 197.499L68.1377 256.75H1.07324L68.6963 138.722L68.7676 138.598L68.6963 138.474L1.07324 20.2502H68.1377Z"
+                    stroke="url(#paint0_linear_3703_1661)"
+                    strokeWidth="0.5"
+                    shapeRendering="crispEdges"
+                  />
+                </g>
+                <foreignObject
+                  x="-29.3574"
+                  y="-9.99979"
+                  width="296.6"
+                  height="297"
+                >
+                  <div
+                    style={{
+                      backdropFilter: "blur(15px)",
+                      clipPath: "url(#bgblur_1_3703_1661_clip_path)",
+                      height: "100%",
+                      width: "100%",
+                    }}
+                  ></div>
+                </foreignObject>
+                <g
+                  filter="url(#filter1_d_3703_1661)"
+                  data-figma-bg-blur-radius="30"
+                >
+                  <path
+                    d="M0.642578 20.0002L68.4793 138.598L0.642578 257H68.2817L102.647 197.625L137.012 257H204.643L68.2817 20.0002H0.642578Z"
+                    fill="url(#paint1_linear_3703_1661)"
+                    fillOpacity="0.4"
+                    style={{ mixBlendMode: "color-dodge" }}
+                    shapeRendering="crispEdges"
+                  />
+                  <path
+                    d="M0.642578 20.0002L68.4793 138.598L0.642578 257H68.2817L102.647 197.625L137.012 257H204.643L68.2817 20.0002H0.642578Z"
+                    fill="white"
+                    fillOpacity="0.1"
+                    shapeRendering="crispEdges"
+                  />
+                  <path
+                    d="M68.1377 20.2502L204.21 256.75H137.156L102.863 197.499L102.646 197.126L102.431 197.499L68.1377 256.75H1.07324L68.6963 138.722L68.7676 138.598L68.6963 138.474L1.07324 20.2502H68.1377Z"
+                    stroke="url(#paint2_linear_3703_1661)"
+                    strokeWidth="0.5"
+                    shapeRendering="crispEdges"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_3703_1661"
+                    x="-29.3574"
+                    y="-9.99979"
+                    width="296.6"
+                    height="297"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                  >
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dx="38" dy="5" />
+                    <feGaussianBlur stdDeviation="12.3" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_3703_1661"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_3703_1661"
+                      result="shape"
+                    />
+                  </filter>
+                  <clipPath
+                    id="bgblur_0_3703_1661_clip_path"
+                    transform="translate(29.3574 9.99979)"
+                  >
+                    <path d="M0.642578 20.0002L68.4793 138.598L0.642578 257H68.2817L102.647 197.625L137.012 257H204.643L68.2817 20.0002H0.642578Z" />
+                  </clipPath>
+                  <filter
+                    id="filter1_d_3703_1661"
+                    x="-29.3574"
+                    y="-9.99979"
+                    width="296.6"
+                    height="297"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                  >
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dx="38" dy="5" />
+                    <feGaussianBlur stdDeviation="12.3" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.02 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_3703_1661"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_3703_1661"
+                      result="shape"
+                    />
+                  </filter>
+                  <clipPath
+                    id="bgblur_1_3703_1661_clip_path"
+                    transform="translate(29.3574 9.99979)"
+                  >
+                    <path d="M0.642578 20.0002L68.4793 138.598L0.642578 257H68.2817L102.647 197.625L137.012 257H204.643L68.2817 20.0002H0.642578Z" />
+                  </clipPath>
+                  <linearGradient
+                    id="paint0_linear_3703_1661"
+                    x1="221.435"
+                    y1="138.5"
+                    x2="-16.1501"
+                    y2="138.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_3703_1661"
+                    x1="22.4728"
+                    y1="41.8663"
+                    x2="255.424"
+                    y2="145.691"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="#F79839" stopOpacity="0.9" />
+                    <stop
+                      offset="0.447036"
+                      stopColor="#F79839"
+                      stopOpacity="0.96"
+                    />
+                    <stop offset="1" stopColor="#F79839" stopOpacity="0.9" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_3703_1661"
+                    x1="221.435"
+                    y1="138.5"
+                    x2="-16.1501"
+                    y2="138.5"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="white" stopOpacity="0" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </div>
           </div>
         </div>
@@ -493,7 +699,6 @@ const AboutPage = () => {
         className="relative pt-[72px] max-[426px]:pt-0"
         style={{ opacity: 0 }}
       >
-
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="217"
@@ -542,7 +747,7 @@ const AboutPage = () => {
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="text-[20px] font-light mt-[66px] max-2xl:w-4/5 max-xl:w-[90%] max-lg:w-[80%] mx-auto max-[1025px]:text-[1rem] max-[769px]:w-[90%] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] max-[426px]:mt-[40px] max-[1906px]:w-7/10 min-[1906px]:text-[1.5rem] min-[1906px]:w-1/2"
+          className="text-[20px] font-light mt-[66px] max-2xl:w-9/10 max-xl:w-[90%] max-lg:w-[80%] mx-auto max-[1025px]:text-[1rem] max-[769px]:w-[90%] max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] max-[426px]:mt-[40px] max-[1906px]:w-7/10 min-[1906px]:text-[1.5rem] min-[1906px]:w-1/2 text-[#F3EDDE]"
         >
           At xVS we design using tools but it's more than that, it's the
           aspiration of all who come together to make inspiration a reality.
