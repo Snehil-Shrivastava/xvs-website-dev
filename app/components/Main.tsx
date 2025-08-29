@@ -41,7 +41,7 @@ import CardGlow from "./ReactBits/CardGlow/CardGlow";
 import Model2 from "./Model/Model2";
 import localFont from "next/font/local";
 
-// import spinningLambda from "../../public/assests/videos&gifs/X.gif";
+import spinningLambda from "../../public/assests/videos&gifs/X.gif";
 
 const calSans = localFont({
   src: "../../public/fonts/CalSans-Regular.ttf",
@@ -66,7 +66,7 @@ const Main = () => {
               {/* <AnimatedJSON /> */}
               <Image
                 className="absolute top-[15%] scale-[1]"
-                src={Gif3d}
+                src={spinningLambda}
                 alt=""
               />
             </div>
