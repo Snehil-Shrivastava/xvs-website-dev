@@ -1,5 +1,7 @@
 "use client";
 
+import * as THREE from 'three'
+
 import ReelSection from "./Sections/ReelsSection/ReelSection";
 import StatsSection from "./Sections/StatsSection/StatsSection";
 
@@ -65,11 +67,25 @@ const Main = () => {
             {/* <div className="w-[45px] overflow-hidden sm:max-lg:w-20 lg:max-xl:w-34 xl:max-2xl:w-45 min-[1536px]:max-[1905px]:w-45 min-[1905px]:w-56 relative"> */}
             <div className="w-[45px] sm:max-lg:w-20 lg:max-xl:w-34 xl:max-2xl:w-[150px] min-[1536px]:max-[1905px]:w-45 min-[1905px]:w-56 relative overflow-visible">
               {/* <AnimatedJSON /> */}
-              <Image
+              {/* <Image
                 className="absolute top-[15%] scale-[1] max-[769px]:top-[22%]"
                 src={spinningLambda}
                 alt=""
-              />
+              /> */}
+              <Canvas style={{backgroundColor: '#282828'}} camera={{position: [1, 0, 0]}} gl={{ toneMapping: THREE.ACESFilmicToneMapping }}>
+            {/*<ambientLight intensity={1000} color='#f79839' />*/}
+            {/*<directionalLight intensity={10} position={[6, 0, 0]} color='#f79839' />*/}
+            {/*<CustomSpotLight />*/}
+            {/*<directionalLight intensity={10} position={[0, 0, 6]} color='#f79839' />*/}
+            {/*<directionalLight intensity={10} position={[0, 0, -6]} color='#f79839' />*/}
+            <OrbitControls />
+            <Model2 />
+            <ambientLight intensity={100} color='#f79839' />
+            <directionalLight intensity={80} position={[6, 0, 0]} color='#f79839' />
+            <GizmoHelper>
+                <GizmoViewport />
+            </GizmoHelper>
+        </Canvas>
             </div>
           </div>
           <h1
