@@ -259,11 +259,22 @@
   /* --- END ANIMATION SETUP --- */
 
   /* Your original clip-path remains the same */
+  /* clip-path: polygon(
+    35% 100%,
+    calc(100% - 12px) 100%,
+    100% calc(100% - 12px),
+    100% 0,
+    calc(100% - 2px) calc(100% - 12px),
+    calc(100% - 12px) calc(100% - 2px),
+    35% calc(100% - 1px)
+  ); */
+
   clip-path: polygon(
     35% 100%,
     calc(100% - 12px) 100%,
     100% calc(100% - 12px),
     100% 0,
+    calc(100% - 2px) 0,
     calc(100% - 2px) calc(100% - 12px),
     calc(100% - 12px) calc(100% - 2px),
     35% calc(100% - 1px)

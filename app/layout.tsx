@@ -42,12 +42,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
-        {/* <ModalProvider> */}
+        <ModalProvider>
           <Navbar />
           {/* <MouseGlow /> */}
           {children}
           <Footer />
-        {/* </ModalProvider> */}
+        </ModalProvider>
       </body>
     </html>
   );

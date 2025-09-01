@@ -1,23 +1,21 @@
-'use client'
+"use client";
 
-import { createContext, useContext, useState } from "react"
+import { createContext, useContext, useState } from "react";
 
-const ModalContext = createContext({})
+const ModalContext = createContext({});
 
-export const ModalProvider = ({children}: {children: React.ReactNode}) => {
-    const [isOpen, setisOpen] = useState(false)
+export const ModalProvider = ({ children }: { children: React.ReactNode }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
-    const toggleModal = () => {
-        setisOpen((prevState) => !prevState)
-        console.log(isOpen);
-        
-    }
+  const toggleModal = () => {
+    setIsModalOpen(!isModalOpen)
+  }
 
-    return (
-        <ModalContext.Provider value={{isOpen, toggleModal}}>
-            {children}
-        </ModalContext.Provider>
-    )
-}
+  return (
+    <ModalContext.Provider value={{ isModalOpen, toggleModal }}>
+      {children}
+    </ModalContext.Provider>
+  );
+};
 
-export const useModal = () => useContext(ModalContext)
+export const useModal = () => useContext(ModalContext);

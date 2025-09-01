@@ -10,19 +10,23 @@ import XVSlogo from "../../SVGs/XVSlogo";
 import { useState } from "react";
 import HamburgerMenu from "../../HamburgerMenu/HamburgerMenu";
 import NavigationModal from "../../NavigationModal/NavigationModal";
+import { useModal } from "@/app/context/ModalContext";
 
 const Navbar = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  // const [isModalOpen, setIsModalOpen] = useState(false)
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen)
-  }
+  // const toggleModal = () => {
+  //   setIsModalOpen(!isModalOpen)
+  // }
+
+  // @ts-ignore
+  const { isModalOpen, toggleModal } = useModal()
 
   return (
     <>
       <nav className="w-auto mx-auto relative">
         <div className="flex justify-between mt-4.5 h-7 sm:max-lg:mt-6.5 sm:max-lg:h-11.25 lg:max-xl:mt-7 lg:max-xl:h-14.5 xl:max-2xl:mt-8 xl:max-2xl:h-14.5 min-[1536px]:max-[1905px]:mt-8 min-[1536px]:max-[1905px]:h-14.5 min-[1905px]:mt-12 min-[1905px]:h-20 fixed z-[99] left-[4%]">
-          <Link href="./" className="h-full z-[99]" onClick={isModalOpen ? () => setIsModalOpen(false): () => null}>
+          <Link href="./" className="h-full z-[99]" onClick={isModalOpen ? toggleModal: () => null}>
             <XVSlogo />
           </Link>
           {/* <MobileMenu /> */}
