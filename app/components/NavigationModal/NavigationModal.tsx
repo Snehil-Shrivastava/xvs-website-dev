@@ -43,7 +43,7 @@ const NavigationModal = ({
           <div className="max-xl:flex max-xl:flex-col gap-9 grid grid-cols-2 xl:max-2xl:gap-15 min-[1536px]:max-[1906px]:gap-18 min-[1906px]:gap-25">
             <div>
               <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Idenitiy and Design</h3>
-              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}>Branding</Link>
+              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`} onClick={toggle}>Branding</Link>
             </div>
             <div>
               <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Print and Digital</h3>

@@ -38,7 +38,8 @@ const BrandingPage = () => {
         </svg>
       </div> */}
 
-      <div className="pulse-div"></div>
+      {/* <div className="pulse-div"></div> */}
+      <div className="pulse-glow-div"></div>
     </div>
   );
 };
