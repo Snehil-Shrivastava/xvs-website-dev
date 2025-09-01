@@ -7,11 +7,14 @@ import Image from "next/image";
 import bgImg from "../../public/assests/contact-bg.png";
 
 import sendIcon from "../../public/assests/send-icon.png";
+import localFont from "next/font/local";
+
+  const calSans = localFont({
+    src: "../../public/fonts/CalSans-Regular.ttf",
+    variable: "--font-calSans",
+  });
 
 const Contact = () => {
-  const handleFormSubmit = (e: any) => {
-    console.log("form submitted!", e);
-  };
 
   return (
     <div className="pt-[15%] xl:pt-[10%] 2xl:pt-[7%] relative h-[100vh]">
@@ -141,11 +144,11 @@ const Contact = () => {
                 buttonTitle="TOUCH"
                 tracking="32px"
               />
-              <div className="w-3/4 mx-auto mt-16">
+              <div className="w-3/4 mx-auto mt-16 max-[769px]:w-4/5">
                 <div>
                   <Form action="">
-                    <div className="text-sm flex flex-col gap-12 text-[#ffffffad]">
-                      <div className="flex flex-col gap-6">
+                    <div className="text-sm flex flex-col gap-12 text-[#ffffffad] max-[769px]:text-[0.6875rem]">
+                      <div className="flex flex-col gap-2">
                         <label htmlFor="name" className="text-neutral-50">
                           Name*
                         </label>
@@ -159,7 +162,7 @@ const Contact = () => {
                         />
                       </div>
                       <div className="flex gap-12">
-                        <div className="flex flex-col gap-6 flex-1">
+                        <div className="flex flex-col gap-2 flex-1">
                           <label htmlFor="email" className="text-neutral-50">
                             Email*
                           </label>
@@ -172,7 +175,7 @@ const Contact = () => {
                             required
                           />
                         </div>
-                        <div className="flex flex-col gap-6 flex-1">
+                        <div className="flex flex-col gap-2 flex-1">
                           <label htmlFor="phone" className="text-neutral-50">
                             Contact*
                           </label>
@@ -186,7 +189,7 @@ const Contact = () => {
                           />
                         </div>
                       </div>
-                      <div className="flex flex-col gap-6 flex-1">
+                      <div className="flex flex-col gap-2 flex-1">
                         <label htmlFor="message" className="text-neutral-50">
                           Message*
                         </label>
@@ -201,7 +204,7 @@ const Contact = () => {
 
                     <div className="text-3xl text-[#F39638] my-16 relative send-btn-cnt">
                       <button
-                        className="relative z-5 w-full p-3 flex justify-end align-center cursor-pointer send-btn"
+                        className={`relative z-5 w-full p-3 flex justify-end align-center cursor-pointer send-btn ${calSans.className}`}
                         type="submit"
                       >
                         <span className="">Send</span>

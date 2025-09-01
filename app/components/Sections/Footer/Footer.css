@@ -8,7 +8,7 @@
 .footer-content-container {
   background-color: #282828;
   inset: 1px;
-  clip-path: polygon(2px 38px, 0 100%, 100% 100%, 100% 0, 38px 2px);
+  clip-path: polygon(2px 38px, 0 100%, calc(100% - 2px) 100%, 100% 0, 38px 2px);
   z-index: 100;
   /* background-image: linear-gradient(
     -8deg,

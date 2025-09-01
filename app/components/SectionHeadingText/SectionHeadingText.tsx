@@ -18,9 +18,14 @@ import ReviewsBtnSVG from "../SVGs/ReviewsBtnSVG";
 import Gears from "../SVGs/Gears";
 import Heart from "../SVGs/Heart";
 
-const calSans = localFont({
-  src: "../../../public/fonts/CalSans-Regular.ttf",
-  variable: "--font-calSans",
+const apercuRegular = localFont({
+  src: "../../../public/fonts/apercu-pro (1)/apercu_regular_pro.otf",
+  variable: "--font-apercu",
+});
+
+const apercuBlack = localFont({
+  src: "../../../public/fonts/Apercu-Pro-Black.ttf",
+  variable: "--font-apercu",
 });
 
 gsap.registerPlugin(ScrollTrigger);
@@ -82,7 +87,7 @@ const SectionHeadingText = ({
   });
 
   return (
-    <div className="relative">
+    <div className={`relative`}>
       {/* <h1
         ref={headingRef}
         className="tracking-[36px] 2xl:text-[11rem]/[11rem] xl:text-[9rem]/[9rem] lg:text-[8rem]/[8rem] max-[1024px]:text-[5rem] font-bold text-white/[0.4]"
@@ -94,7 +99,7 @@ const SectionHeadingText = ({
       {/* <div className="absolute inset-0 bg-[#282828]" style={myStyles}></div> */}
 
       <h1
-        className={`min-[2560px]:text-[12rem]/[12vh] min-[2560px]:tracking-[4rem] min-[1905px]:text-[9.5rem]/[13vh] min-[1905px]:tracking-[4rem] min-[1440px]:text-[7.5rem]/[12vh] min-[1440px]:tracking-[3.2rem] min-[1024px]:text-[6.5rem]/[12vh] min-[1024px]:tracking-[2.8rem] max-[1024px]:text-[5.6rem]/[12vh] max-[1024px]:tracking-[1.8rem] max-[426px]:text-[3.375rem] max-[426px]:leading-none max-[426px]:tracking-[0.8rem] font-bold text-center ${calSans.className}`}
+        className={`min-[2560px]:text-[12rem]/[12vh] min-[2560px]:tracking-[4rem] min-[1905px]:text-[9.5rem]/[13vh] min-[1905px]:tracking-[4rem] min-[1440px]:text-[7.5rem]/[12vh] min-[1440px]:tracking-[3.2rem] min-[1024px]:text-[6.5rem]/[12vh] min-[1024px]:tracking-[2.8rem] max-[1024px]:text-[5.6rem]/[12vh] max-[1024px]:tracking-[1.8rem] max-[769px]:text-[4.8rem]/[5.8rem] max-[769px]:tracking-[1.4rem] max-[426px]:text-[3.375rem] max-[426px]:leading-none max-[426px]:tracking-[0.8rem] font-bold text-center ${apercuBlack.className}`}
         style={{
           maskImage:
             "linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.001) 90%)",

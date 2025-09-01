@@ -40,24 +40,6 @@ const AboutPage = () => {
 
   const imgRef = useRef(null);
 
-  const bigLambda1Ref = useRef(null);
-  const bigLambda2Ref = useRef(null);
-  const bigLambda3Ref = useRef(null);
-  const bigLambda4Ref = useRef(null);
-  const bigLambda5Ref = useRef(null);
-  const bigLambda6Ref = useRef(null);
-  const bigLambda7Ref = useRef(null);
-
-  const smallLambdaRef = useRef(null);
-
-  const morphTarget1Ref = useRef(null);
-  const morphTarget2Ref = useRef(null);
-  const morphTarget3Ref = useRef(null);
-  const morphTarget4Ref = useRef(null);
-  const morphTarget5Ref = useRef(null);
-  const morphTarget6Ref = useRef(null);
-  const morphTarget7Ref = useRef(null);
-
   const svgRef = useRef(null);
   const containerRef = useRef(null);
   const smallSvgRef = useRef(null);
@@ -71,14 +53,6 @@ const AboutPage = () => {
     gsap.set(lambdaMirrorRef, { visibility: "hidden" });
 
     gsap.set(imgRef, { opacity: 0, yPercent: 100 });
-
-    gsap.set(bigLambda1Ref, { scale: 1, x: 0, y: 0 });
-    gsap.set(bigLambda2Ref, { scale: 1, x: 0, y: 0 });
-    gsap.set(bigLambda3Ref, { scale: 1, x: 0, y: 0 });
-    gsap.set(bigLambda4Ref, { scale: 1, x: 0, y: 0 });
-    gsap.set(bigLambda5Ref, { scale: 1, x: 0, y: 0 });
-    gsap.set(bigLambda6Ref, { scale: 1, x: 0, y: 0 });
-    gsap.set(bigLambda7Ref, { scale: 1, x: 0, y: 0 });
 
     const tl = gsap.timeline();
     const mm = gsap.matchMedia();
@@ -99,71 +73,6 @@ const AboutPage = () => {
         start: "top bottom",
         end: "top top",
       },
-    });
-
-    // gsap.to(richTxt, {
-    //   ScrollTrigger: {
-    //     trigger: richTxt,
-    //     // markers: true,
-    //     start: "center top",
-    //     end: "bottom top",
-    //     scrub: 1,
-    //   },
-    //   opacity: 1,
-    // });
-
-    // tl.to(lambdaRef.current, {
-    //   scrollTrigger: {
-    //     //@ts-ignore
-    //     trigger: lambdaRef.current,
-    //     // markers: true,
-    //     start: "top 38%",
-    //     end: "top 10%",
-    //     scrub: 1,
-    //     toggleActions: "play none none none",
-    //   },
-    //   duration: 1.5,
-    //   delay: 0.5,
-    //   // @ts-ignore
-    //   morphSVG: lambdaMirrorRef.current,
-    //   ease: "power2.inOut",
-    //   // onComplete: () => {
-    //   //   gsap.set(lambdaRef.current, { visibility: "hidden" });
-    //   // },
-    // });
-
-    // tl.to(
-    //   lambdaRef.current,
-    //   {
-    //     scrollTrigger: {
-    //       //@ts-ignore
-    //       trigger: lambdaRef.current,
-    //       // markers: true,
-    //       start: "top 38%",
-    //       end: "top 10%",
-    //       scrub: 1,
-    //       toggleActions: "play none none none",
-    //     },
-    //     x: 50,
-    //     y: 575,
-    //     duration: 1.5,
-    //     delay: 0.5,
-    //     // @ts-ignore
-    //   },
-    //   "<"
-    // );
-
-    tl.to(smallLambdaRef.current, {
-      scrollTrigger: {
-        trigger: smallLambdaRef.current,
-        // markers: true,
-        start: "top 23%",
-        end: "top top",
-        scrub: 1,
-      },
-      scale: 0,
-      duration: 1,
-      transformOrigin: "center center",
     });
 
     tl.to(richTxt, {
@@ -190,302 +99,35 @@ const AboutPage = () => {
       scale: 0,
     });
 
-    tl.to(svgRef.current, {
-      scrollTrigger: {
-        trigger: svgRef.current,
-        // markers: true,
-        start: "top 20%",
-        end: "bottom 20%",
-        scrub: 1,
-      },
-      scale: 0.6,
-      y: 555,
-      x: -70,
+    mm.add("(max-width: 1349px)", () => {
+      tl.to(svgRef.current, {
+        scrollTrigger: {
+          trigger: svgRef.current,
+          // markers: true,
+          start: "top 20%",
+          end: "bottom 20%",
+          scrub: 1,
+        },
+        scale: 0.6,
+        y: 555,
+        x: -70,
+      });
     });
 
-    // mm.add("(min-width: 426px)", () => {
-    //   tl.to(
-    //     bigLambda1Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none none",
-    //       },
-    //       x: -50,
-    //       y: 530,
-    //       scale: 0.5,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda2Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none none",
-    //       },
-    //       x: -50,
-    //       y: 530,
-    //       scale: 0.5,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda3Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none none",
-    //       },
-    //       x: -50,
-    //       y: 530,
-    //       scale: 0.5,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda4Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none none",
-    //       },
-    //       x: -50,
-    //       y: 530,
-    //       scale: 0.5,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda5Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none none",
-    //       },
-    //       x: -50,
-    //       y: 530,
-    //       scale: 0.5,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda6Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none none",
-    //       },
-    //       x: -50,
-    //       y: 530,
-    //       scale: 0.5,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda7Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none none",
-    //       },
-    //       x: -50,
-    //       y: 530,
-    //       scale: 0.5,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-    // });
-
-    // mm.add("(max-width: 426px)", () => {
-    //   tl.to(
-    //     bigLambda1Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none play",
-    //       },
-    //       x: -20,
-    //       y: 620,
-    //       scale: 0.2,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda2Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none play",
-    //       },
-    //       x: -20,
-    //       y: 620,
-    //       scale: 0.2,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda3Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none play",
-    //       },
-    //       x: -20,
-    //       y: 620,
-    //       scale: 0.2,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda4Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none play",
-    //       },
-    //       x: -20,
-    //       y: 620,
-    //       scale: 0.2,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda5Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none play",
-    //       },
-    //       x: -20,
-    //       y: 620,
-    //       scale: 0.2,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda6Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none play",
-    //       },
-    //       x: -20,
-    //       y: 620,
-    //       scale: 0.2,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-
-    //   tl.to(
-    //     bigLambda7Ref.current,
-    //     {
-    //       scrollTrigger: {
-    //         // @ts-ignore
-    //         trigger: bigLambda1Ref.current,
-    //         // markers: true,
-    //         start: "top 25%",
-    //         end: "top 10%",
-    //         scrub: 1,
-    //         toggleActions: "play none none play",
-    //       },
-    //       x: -20,
-    //       y: 620,
-    //       scale: 0.2,
-    //       transformOrigin: "center center",
-    //     },
-    //     "<"
-    //   );
-    // });
+    mm.add("(max-width: 769px)", () => {
+      tl.to(svgRef.current, {
+        scrollTrigger: {
+          trigger: svgRef.current,
+          // markers: true,
+          start: "top 20%",
+          end: "bottom 20%",
+          scrub: 1,
+        },
+        scale: 0.6,
+        y: 350,
+        x: -70,
+      });
+    });
   }, {});
 
   return (

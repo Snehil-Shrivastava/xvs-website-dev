@@ -28,7 +28,7 @@ const NavigationModal = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full h-full bg-[#F79839] bg-opacity-95 text-white z-[999] transition-opacity duration-300 ease-in-out modal-container-outer no-scroll ${
+      className={`fixed top-0 left-0 w-full h-full bg-[#F79839] bg-opacity-95 text-white z-[999] transition-opacity duration-300 ease-in-out modal-container-outer ${
         isOpen ? "opacity-100 visible" : "opacity-0 invisible"
       }`}
     >
