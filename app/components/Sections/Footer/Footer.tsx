@@ -31,8 +31,8 @@ const Footer = () => {
           <div className="mx-auto">
             <div className=" border-b border-b-[rgba(247,152,57,0.1)]">
               <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] min-[1536px]:w-[90%] min-[1536px]:mx-auto max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:pb-[70px] max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:pb-[70px] max-[769px]:pt-[80px] max-[769px]:pb-[80px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[426px]:gap-[0.875rem] max-[426px]:flex-col max-[426px]:py-[2.5rem]">
-                <div className="flex-1">
-                  <h1 className="2xl:text-[3.7rem]/[4rem] xl:text-[3rem]/[4rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[280px] max-[426px]:text-[1rem] font-bold tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-full max-[426px]:w-full">
+                <div className="flex-1 max-[769px]:flex-none">
+                  <h1 className={`2xl:text-[3.7rem]/[4rem] xl:text-[3rem]/[4rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[250px] max-[426px]:text-[1rem] tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-full max-[426px]:w-full ${calSans.className}`}>
                     Let's start creating together
                   </h1>
                 </div>
@@ -59,67 +59,67 @@ const Footer = () => {
               <div className="footer-link-block first justify-between flex-[0.15] max-[1026px]:justify-start max-[1026px]:gap-[64px] max-[769px]:justify-start max-[769px]:gap-[46px] max-[426px]:justify-start max-[426px]:gap-[46px] gap-[36px]">
                 <div>
                   <Image
-                    className="max-[769px]:w-[4.7rem] max-[426px]:w-[3rem]"
+                    className="max-[769px]:w-[4rem] max-[426px]:w-[3rem]"
                     src={logo}
                     alt=""
                   />
                 </div>
-                <div className="flex flex-wrap w-[98px] gap-[16px] items-center justify-center max-[769px]:grid max-[769px]:grid-cols-3 max-[426px]:grid max-[426px]:grid-cols-3 max-[426px]:gap-[0.4rem] max-[426px]:w-auto">
+                <div className="flex flex-wrap gap-x-[8px] gap-y-[6px] items-center justify-center max-[769px]:grid max-[769px]:grid-cols-3 max-[426px]:grid max-[426px]:grid-cols-3 max-[426px]:gap-[0.4rem] max-[426px]:w-auto">
                   <Image
-                    className="max-[426px]:w-[0.65rem]"
+                    className="max-[426px]:w-[0.65rem] max-[769px]:w-[0.75rem]"
                     src={icon1}
                     alt=""
                   />
                   <Image
-                    className="max-[426px]:w-[0.65rem]"
+                    className="max-[426px]:w-[0.65rem] max-[769px]:w-[0.75rem]"
                     src={icon2}
                     alt=""
                   />
                   <Image
-                    className="max-[426px]:w-[0.65rem]"
+                    className="max-[426px]:w-[0.65rem] max-[769px]:w-[0.75rem]"
                     src={icon3}
                     alt=""
                   />
                   <Image
-                    className="max-[426px]:w-[0.65rem]"
+                    className="max-[426px]:w-[0.65rem] max-[769px]:w-[0.75rem]"
                     src={icon4}
                     alt=""
                   />
                   <Image
-                    className="max-[426px]:w-[0.65rem]"
+                    className="max-[426px]:w-[0.65rem] max-[769px]:w-[0.75rem]"
                     src={icon5}
                     alt=""
                   />
                   <Image
-                    className="max-[426px]:w-[0.65rem]"
+                    className="max-[426px]:w-[0.65rem] max-[769px]:w-[0.75rem]"
                     src={icon6}
                     alt=""
                   />
                 </div>
               </div>
               <div className="footer-link-block second flex-[0.65] max-[1906px]:flex max-[1906px]:justify-center max-[1441px]:flex max-[1441px]:justify-center">
-                <div className="max-[1025px]:mx-auto max-[1441px]:flex max-[1441px]:flex-col max-[1441px]:h-full max-[426px]:w-[70%] max-[769px]:w-[80%] max-[1026px]:w-[80%]">
-                  <h1 className="font-semibold text-[18px] pb-[26px] max-[426px]:text-[0.65rem]">
+                <div className="max-[1025px]:mx-auto max-[1441px]:flex max-[1441px]:flex-col max-[1441px]:h-full max-[426px]:w-[70%] max-[769px]:w-auto max-[1026px]:w-[80%] max-[769px]:mx-0">
+                  <h1 className="font-semibold text-[18px] pb-[26px] max-[769px]:text-[0.625rem] max-[426px]:text-[0.65rem]">
                     Contacts
                   </h1>
-                  <p className="text-[14px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
+                  <p className="text-[14px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[769px]:text-[0.5rem]/[1rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
                     2nd Floor, 1/23 Rajni Khand, Sharda Nagar,
                   </p>
-                  <p className="text-[14px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
+                  <p className="text-[14px] max-[1024px]:text-[0.75rem]/[1.5rem] max-[769px]:text-[0.5rem]/[1rem] max-[426px]:text-[0.5rem]/[1rem] max-[1441px]:font-extralight">
                     Lucknow, UP (226002), India.
                   </p>
                   <div className="flex gap-[32px] mt-[72px] max-[1441px]:mt-auto max-[1026px]:mt-[52px] max-[769px]:gap-[44px] max-[769px]:mt-[22px] max-[426px]:flex-col max-[426px]:mt-[22px] max-[426px]:gap-0">
-                    <h1 className={`text-[53px] max-[769px]:text-[2.2rem] max-[426px]:text-[1.2rem] ${calSans.className}`}>
+                    <h1 className={`text-[53px] max-[769px]:text-[1.875rem] max-[426px]:text-[1.2rem] ${calSans.className}`}>
                       Say Hi!
                     </h1>
                     <div className="flex flex-col justify-center">
                       <a
                         href=""
-                        className="hover:underline text-[14px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem]"
+                        className="hover:underline text-[14px] max-[1024px]:text-[0.75rem] max-[769px]:text-[0.5rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem]"
                       >
                         info@xvscreations.com
                       </a>
-                      <p className=" text-[14px] max-[1024px]:text-[0.75rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem] max-[426px]:leading-[6px]">
+                      <p className=" text-[14px] max-[1024px]:text-[0.75rem] max-[769px]:text-[0.5rem] max-[1441px]:font-extralight max-[426px]:text-[0.5rem] max-[426px]:leading-[6px]">
                         +91-8726899713
                       </p>
                     </div>
@@ -127,10 +127,10 @@ const Footer = () => {
                 </div>
               </div>
               <div className="footer-link-block third flex-[0.2]">
-                <h1 className="font-semibold text-[18px] pb-[26px] max-[426px]:text-[0.65rem]">
+                <h1 className="font-semibold text-[18px] pb-[26px] max-[769px]:text-[0.625rem] max-[426px]:text-[0.65rem]">
                   Services
                 </h1>
-                <div className="flex flex-col gap-[8px] text-[14px] max-[769px]:text-[0.75rem] max-[769px]:font-extralight max-[426px]:text-[0.5rem]">
+                <div className="flex flex-col gap-[8px] text-[14px] max-[769px]:text-[0.5rem] max-[769px]:font-extralight max-[426px]:text-[0.5rem]">
                   <Link href="/" className="hover:underline">
                     Branding
                   </Link>

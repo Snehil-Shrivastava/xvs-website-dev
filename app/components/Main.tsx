@@ -66,7 +66,7 @@ const Main = () => {
             <div className="w-[45px] sm:max-lg:w-20 lg:max-xl:w-34 xl:max-2xl:w-[150px] min-[1536px]:max-[1905px]:w-45 min-[1905px]:w-56 relative overflow-visible">
               {/* <AnimatedJSON /> */}
               <Image
-                className="absolute top-[15%] scale-[1]"
+                className="absolute top-[15%] scale-[1] max-[769px]:top-[22%]"
                 src={spinningLambda}
                 alt=""
               />
