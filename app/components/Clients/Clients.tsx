@@ -63,7 +63,7 @@ const Clients = () => {
                 <h3 className="font-bold tracking-wider max-[1025px]:text-[0.75rem] max-[769px]:text-[0.5rem] max-[426px]:text-[6px] text-[0.875rem]">
                   {client.name}
                 </h3>
-                <p className="max-[1441px]:text-[0.75rem] max-[1025px]:text-[0.65rem] max-[769px]:text-[0.4rem] max-[425px]:text-[4px]">
+                <p className="max-[1441px]:text-[0.75rem] max-[1025px]:text-[0.65rem] max-[769px]:text-[0.4rem] max-[426px]:text-[4px]">
                   {client.designation}
                 </p>
                 <div className="my-[0.5rem]">

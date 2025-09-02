@@ -150,6 +150,7 @@ const AboutPage = () => {
           gsap.to(svgRef.current, {
             scrollTrigger: {
               trigger: svgRef.current,
+              // markers: true,
               start: isMobilesm ? "top 15%" : "top 20%",
               end: isMobilesm ? "top top" : "bottom 20%",
               scrub: 1,
