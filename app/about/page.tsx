@@ -45,91 +45,123 @@ const AboutPage = () => {
   const containerRef = useRef(null);
   const smallSvgRef = useRef(null);
 
-  useGSAP(() => {
-    const richTxt = richTxtRef.current;
+  useGSAP(
+    () => {
+      const richTxt = richTxtRef.current;
 
-    gsap.set(richTxt, { opacity: 0, yPercent: 50 });
+      gsap.set(richTxt, { opacity: 0, yPercent: 50 });
 
-    gsap.set(lambdaRef, { visibility: "visible" });
-    gsap.set(lambdaMirrorRef, { visibility: "hidden" });
+      gsap.set(lambdaRef, { visibility: "visible" });
+      gsap.set(lambdaMirrorRef, { visibility: "hidden" });
 
-    gsap.set(imgRef, { opacity: 0, yPercent: 100 });
+      gsap.set(imgRef, { opacity: 0, yPercent: 100 });
 
-    const tl = gsap.timeline();
-    const mm = gsap.matchMedia();
+      const tl = gsap.timeline();
+      const mm = gsap.matchMedia();
 
-    // @ts-ignore
-    const split = SplitText.create(AboutMainText.current, {
-      type: "words",
-    });
+      // @ts-ignore
+      const split = SplitText.create(AboutMainText.current, {
+        type: "words",
+      });
 
-    gsap.from(split.words, {
-      duration: 0.7,
-      y: -100,
-      autoAlpha: 0,
-      stagger: 0.05,
-      scrollTrigger: {
-        // @ts-ignore
-        trigger: AboutMainText.current,
-        start: "top bottom",
-        end: "top top",
-      },
-    });
-
-    tl.to(richTxt, {
-      scrollTrigger: {
-        trigger: richTxt,
-        // markers: true,
-        start: "top bottom",
-        end: "top 80%",
-        scrub: 1,
-        toggleActions: "play none play reset",
-      },
-      opacity: 1,
-      yPercent: 0,
-    });
-
-    tl.to(smallSvgRef.current, {
-      scrollTrigger: {
-        trigger: smallSvgRef.current,
-        // markers: true,
-        start: "top 20%",
-        end: "bottom 20%",
-        scrub: 1,
-      },
-      scale: 0,
-    });
-
-    mm.add("(max-width: 1349px)", () => {
-      tl.to(svgRef.current, {
+      gsap.from(split.words, {
+        duration: 0.7,
+        y: -100,
+        autoAlpha: 0,
+        stagger: 0.05,
         scrollTrigger: {
-          trigger: svgRef.current,
+          // @ts-ignore
+          trigger: AboutMainText.current,
+          start: "top bottom",
+          end: "top top",
+        },
+      });
+
+      tl.to(richTxt, {
+        scrollTrigger: {
+          trigger: richTxt,
+          // markers: true,
+          start: "top bottom",
+          end: "top 80%",
+          scrub: 1,
+          toggleActions: "play none play reset",
+        },
+        opacity: 1,
+        yPercent: 0,
+      });
+
+      tl.to(smallSvgRef.current, {
+        scrollTrigger: {
+          trigger: smallSvgRef.current,
           // markers: true,
           start: "top 20%",
           end: "bottom 20%",
           scrub: 1,
         },
-        scale: 0.6,
-        y: 555,
-        x: -70,
+        scale: 0,
       });
-    });
 
-    mm.add("(max-width: 769px)", () => {
-      tl.to(svgRef.current, {
-        scrollTrigger: {
-          trigger: svgRef.current,
-          // markers: true,
-          start: "top 20%",
-          end: "bottom 20%",
-          scrub: 1,
+      // mm.add("(max-width: 1349px)", () => {
+      //   tl.to(svgRef.current, {
+      //     scrollTrigger: {
+      //       trigger: svgRef.current,
+      //       // markers: true,
+      //       start: "top 20%",
+      //       end: "bottom 20%",
+      //       scrub: 1,
+      //     },
+      //     scale: 0.6,
+      //     y: 555,
+      //     x: -70,
+      //   });
+      // });
+
+      // mm.add("(max-width: 769px)", () => {
+      //   tl.to(svgRef.current, {
+      //     scrollTrigger: {
+      //       trigger: svgRef.current,
+      //       // markers: true,
+      //       start: "top 20%",
+      //       end: "bottom 20%",
+      //       scrub: 1,
+      //     },
+      //     scale: 0.6,
+      //     y: 350,
+      //     x: -70,
+      //   });
+      // });
+
+      mm.add(
+        {
+          // Setup for mobile devices
+          isMobile: "(max-width: 769px)",
+
+          // Setup for tablet devices
+          isTablet: "(min-width: 769px) and (max-width: 1349px)",
         },
-        scale: 0.6,
-        y: 350,
-        x: -70,
-      });
-    });
-  }, {});
+        (context) => {
+          // context.conditions allows us to check which media query is active
+          // @ts-ignore
+          const { isMobile, isTablet } = context.conditions;
+
+          // Apply animations based on the active breakpoint
+          gsap.to(svgRef.current, {
+            scrollTrigger: {
+              trigger: svgRef.current,
+              start: "top 20%",
+              end: "bottom 20%",
+              scrub: 1,
+            },
+            scale: isMobile ? 0.9 : 0.6,
+            x: isMobile ? -60 : -70,
+            // Use a conditional (ternary) operator for cleaner code
+            y: isMobile ? 378 : 555,
+          });
+        }
+      );
+    },
+    { scope: containerRef }
+  );
 
   // @ts-ignore
   const { isModalOpen } = useModal();
@@ -151,7 +183,6 @@ const AboutPage = () => {
           Inspiration to interpreting reality
         </h1>
         <div
-          // id="smooth-wrapper"
           ref={containerRef}
           className={`absolute left-1/2 -translate-x-1/2 max-sm:top-40 pointer-events-none max-sm:h-24 max-sm:w-21 sm:max-lg:top-56.5 sm:max-lg:w-29 sm:max-lg:h-33.75 lg:max-xl:top-80 lg:max-2xl:w-51 lg:max-2xl:h-59.25 xl:max-2xl:top-95 min-[1536px]:max-[1906px]:w-80 min-[1536px]:max-[1906px]:h-100 min-[1536px]:max-[1906px]:top-100 min-[1906px]:w-110 min-[1906px]:h-130 min-[1906px]:top-120`}
         >
