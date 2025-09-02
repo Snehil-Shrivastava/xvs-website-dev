@@ -121,7 +121,9 @@
   box-shadow: 0 0 150px 70px rgba(255, 152, 48, 0.534);
 
   /* filter: blur(3px); */
-  animation: pulsingDiv 4s ease-in-out infinite;
+  /* animation: pulsingDiv 4s ease-in-out infinite; */
+
+  animation: glow 2s ease-in-out infinite alternate;
 
   /* background: #f39638; */
   /* background: radial-gradient(
@@ -131,4 +133,14 @@
   ); */
   /* overflow: hidden; */
   border: none;
+}
+
+@keyframes glow {
+  from {
+      box-shadow: 0 0 150px 150px rgba(255, 152, 48, 0.534);
+  }
+
+  to {
+    box-shadow: 0 0 150px 250px rgba(255, 152, 48, 0.534);
+  }
 }

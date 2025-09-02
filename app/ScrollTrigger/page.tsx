@@ -412,6 +412,12 @@ const ScrollTriggerComponent = () => {
           ref={maskRef}
           className="absolute inset-0 select-none shadow-mask z-[1000] bg-[#282828]"
         ></div>
+
+        {/* <div
+          ref={maskRef}
+          className="absolute inset-0 select-none z-[1000] shadow-mask-2"
+        ></div> */}
+
         <div
           ref={starsRef}
           className="overflow-hidden h-[845px] shadow-mask-stars relative z-[-1]"
@@ -435,7 +441,7 @@ const ScrollTriggerComponent = () => {
             <div ref={animationWrapperRef} className="h-full relative">
               <div
                 ref={headingRef}
-                className="text-center sticky top-[22%] font-semibold text-8xl tracking-[52px] z-[9999] max-[769px]:w-[80%] max-[769px]:mx-auto max-[769px]:w-[80%] max-[769px]:text-[3rem] max-[769px]:tracking-[2rem] max-[769px]:font-bold"
+                className="text-center sticky top-[22%] font-semibold text-8xl tracking-[52px] z-[9999] max-[769px]:w-[80%] max-[769px]:mx-auto max-[769px]:text-[3rem] max-[769px]:tracking-[2rem] max-[769px]:font-bold"
               >
                 <h1>SHOWCASE</h1>
               </div>
