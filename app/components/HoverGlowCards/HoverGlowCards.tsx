@@ -49,17 +49,17 @@ const cardData = [
 ];
 
 const apercuRegular = localFont({
-  src: "/public/fonts/apercu-pro (1)/apercu_regular_pro.otf",
+  src: "../../../public/fonts/apercu-pro (1)/apercu_regular_pro.otf",
   variable: "--font-apercu-reg",
 });
 
 const apercuBlack = localFont({
-  src: "/public/fonts/Apercu-Pro-Black.ttf",
+  src: "../../../public/fonts/Apercu-Pro-Black.ttf",
   variable: "--font-apercu-blk",
 });
 
 const apercuBold = localFont({
-  src: "/public/fonts/apercu-pro (1)/apercu_bold_pro.otf",
+  src: "../../../public/fonts/apercu-pro (1)/apercu_bold_pro.otf",
   variable: "--font-apercu-bld",
 });
 
