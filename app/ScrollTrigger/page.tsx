@@ -19,6 +19,7 @@ import bgImg from "../../public/assests/contact-bg.png";
 import MorphingIcon from "../components/MorphingIcon/MorphingIcon";
 import AboutPage from "../about/page";
 import RichText from "../components/RichText/RichText";
+import { useModal } from "../context/ModalContext";
 
 gsap.registerPlugin(MorphSVGPlugin, ScrollTrigger);
 
@@ -401,8 +402,11 @@ const ScrollTriggerComponent = () => {
     });
   });
 
+  // @ts-ignore
+  const { isModalOpen } = useModal();
+
   return (
-    <div className="w-full h-[2500px]">
+    <div className={`w-full h-[2500px] ${isModalOpen ? "invisible" : ""}`}>
       <div ref={loadingRef} className="w-full h-[945px] fixed z-[5]">
         <div
           ref={maskRef}

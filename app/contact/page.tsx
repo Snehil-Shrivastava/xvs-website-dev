@@ -1,3 +1,5 @@
+"use client";
+
 import SectionHeadingText from "../components/SectionHeadingText/SectionHeadingText";
 import Form from "next/form";
 
@@ -8,16 +10,23 @@ import bgImg from "../../public/assests/contact-bg.png";
 
 import sendIcon from "../../public/assests/send-icon.png";
 import localFont from "next/font/local";
+import { useModal } from "../context/ModalContext";
 
-  const calSans = localFont({
-    src: "../../public/fonts/CalSans-Regular.ttf",
-    variable: "--font-calSans",
-  });
+const calSans = localFont({
+  src: "../../public/fonts/CalSans-Regular.ttf",
+  variable: "--font-calSans",
+});
 
 const Contact = () => {
+  // @ts-ignore
+  const { isModalOpen } = useModal();
 
   return (
-    <div className="pt-[15%] xl:pt-[10%] 2xl:pt-[7%] relative h-[100vh]">
+    <div
+      className={`pt-[15%] xl:pt-[10%] 2xl:pt-[7%] relative h-[100vh] ${
+        isModalOpen ? "invisible" : ""
+      }`}
+    >
       <div
         className="absolute w-[320px] h-[320px] bg-white/[0.1] rounded-full left-1/2 -translate-1/2 top-0 z-10"
         style={{

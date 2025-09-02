@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import styles from "./RepeatingSVG.module.css";
 import MotifSVG from "../MotifSVG";
+import { useModal } from "@/app/context/ModalContext";
 
 const RepeatingSVG = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,11 +21,14 @@ const RepeatingSVG = () => {
     containerRef.current.style.setProperty("--mouse-y", `${y}px`);
   };
 
+  // @ts-ignore
+  const { isModalOpen } = useModal();
+
   return (
     <div
       ref={containerRef}
       onMouseMove={handleMouseMove}
-      className={`absolute -top-[10px] left-0 right-0 h-[828px] max-[769px]:h-[528px] z-[55] ${styles.repeatingBgContainer}`}
+      className={`absolute -top-[10px] left-0 right-0 h-[828px] max-[769px]:h-[528px] z-[55] ${styles.repeatingBgContainer} ${ isModalOpen ? 'hidden' : ''}`}
     >
       {/* Layer 1: The base, dimmer SVG */}
       <div className={styles.baseLayer}>

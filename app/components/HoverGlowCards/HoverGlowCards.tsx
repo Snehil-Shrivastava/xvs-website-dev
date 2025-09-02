@@ -154,14 +154,14 @@ tl.to(cardLayer0, {
 
   return (
     <div
-      className={`${styles.bodyContainer} min-[1906px]:w-4/5 min-[1906px]:mx-auto min-[1536px]:max-[1906px]:w-9/10 min-[1536px]:max-[1906px]:mx-auto lg:mb-[220px] max-[1024px]:mb-[143px] max-[426px]:mb-[5rem] relative z-[70] w-9/10 mx-auto`}
+      className={`${styles.bodyContainer} min-[1906px]:w-4/5 min-[1906px]:mx-auto min-[1536px]:max-[1906px]:w-9/10 min-[1536px]:max-[1906px]:mx-auto lg:mb-[220px] max-[1024px]:mb-[143px] max-[426px]:mb-[5rem] relative z-[70] w-9/10 mx-auto max-[769px]:w-19/20`}
     >
       <div id="cards" className={styles.cards} ref={cardsContainerRef}>
         {cardData.map((card, index) => {
           return (
           <div
             key={index}
-            className={`${styles.cardShadowContainer} relative lg:h-[360px] max-[1024px]:h-[280px]`}
+            className={`${styles.cardShadowContainer} relative lg:h-[360px] max-[1024px]:h-[280px] max-[769px]:h-[250px]`}
           >
             <div
               ref={

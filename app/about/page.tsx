@@ -26,6 +26,7 @@ import { ScrollSmoother } from "gsap/ScrollSmoother";
 import BIgLambda from "../components/SVGs/BIgLambda";
 import SmallLambda from "../components/SVGs/SmallLambda";
 import GridSVGBg from "../components/SVGs/GridSVGBg";
+import { useModal } from "../context/ModalContext";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, MorphSVGPlugin, ScrollSmoother);
 
@@ -130,8 +131,11 @@ const AboutPage = () => {
     });
   }, {});
 
+  // @ts-ignore
+  const { isModalOpen } = useModal();
+
   return (
-    <>
+    <section className={`${isModalOpen ? "invisible" : ""}`}>
       <div className="relative">
         <div
           className={`min-[2200px]:h-[100vh] max-sm:h-100 sm:max-lg:h-125 lg:max-xl:h-162.5 xl:max-2xl:h-215  min-[1536px]:max-[1906px]:h-280 w-full pointer-events-none`}
@@ -486,7 +490,7 @@ const AboutPage = () => {
         </p>
         <Clients />
       </div>
-    </>
+    </section>
   );
 };
 

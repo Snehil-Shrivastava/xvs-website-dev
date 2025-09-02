@@ -9,10 +9,11 @@ import Ball from "../SVGs/Ball";
 import Facebook from "../SVGs/Facebook";
 import LinkedIn from "../SVGs/LinkedIn";
 import Twitter from "../SVGs/Twitter";
+import XVSlogo from "../SVGs/XVSlogo";
 
 const calSans = localFont({
-  src: '../../../public/fonts/CalSans-Regular.ttf'
-})
+  src: "../../../public/fonts/CalSans-Regular.ttf",
+});
 
 const NavigationModal = ({
   isOpen,
@@ -21,69 +22,130 @@ const NavigationModal = ({
   isOpen: boolean;
   toggle: () => void;
 }) => {
-
-  if(!isOpen) {
-    return null
-  }
+  // if (!isOpen) {
+  //   return null;
+  // }
 
   return (
     <div
-      className={`fixed top-0 left-0 bottom-0 right-0 w-full h-full bg-[#F79839] bg-opacity-95 text-white z-[999] transition-opacity duration-300 ease-in-out modal-container-outer ${
-        isOpen ? "opacity-100 visible" : "opacity-0 invisible"
+      className={`fixed top-0 left-0 bottom-0 right-0 w-full h-full bg-[#F79839] bg-opacity-95 text-white z-[999] transition-transform duration-200 ease-in-out modal-container-outer translate-x-0 ${
+        isOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
+      {/* <div className="absolute top-0 left-0 bg-[#282828] navigation-menu-clip">
+        <div className="flex justify-between mt-4.5 h-7 sm:max-lg:mt-6.5 sm:max-lg:h-11.25 lg:max-xl:mt-7 lg:max-xl:h-14.5 xl:max-2xl:mt-8 xl:max-2xl:h-14.5 min-[1536px]:max-[1905px]:mt-8 min-[1536px]:max-[1905px]:h-14.5 min-[1905px]:mt-12 min-[1905px]:h-20 fixed z-[99] left-[4%]">
+          <Link
+            href="./"
+            className="h-full z-[99]"
+            onClick={isOpen ? toggle : () => null}
+          >
+            <XVSlogo />
+          </Link>
+        </div>
+      </div> */}
       <div className="h-full max-sm:w-9/10 mx-auto relative sm:max-lg:w-7/10 lg:max-xl:w-4/5">
         <div className="absolute top-10 left-1/2 -translate-x-1/2 flex flex-col gap-10 w-3/5 xl:max-2xl:gap-20 min-[1536px]:max-[1906px]:gap-30 min-[1906px]:gap-40 sm:max-lg:top-[38.5px] lg:max-xl:top-12 xl:max-2xl:top-13 min-[1536px]:max-[1905px]:top-19 min-[1905px]:top-19">
-          <div className="flex justify-start items-center max-sm:gap-4 max-sm:text-[0.75rem] sm:max-lg:text-[1.2rem] sm:max-lg:gap-8 lg:max-xl:gap-10 lg:max-xl:text-[1.4rem] xl:max-2xl:text-[1.6rem] xl:max-2xl:gap-12 min-[1536px]:max-[1906px]:text-[1.8rem] min-[1536px]:max-[1906px]:gap-16 min-[1906px]:text-[2rem] min-[1906px]:gap-20 font-extralight">
-            <Link href="/about" onClick={toggle}>About</Link>
-            <Link href="/about" onClick={toggle}>Work</Link>
-            <Link href="/about" onClick={toggle}>Blog</Link>
-            <Link href="/contact" onClick={toggle}>Contact</Link>
+          <div className="flex justify-start items-center max-sm:gap-4 max-sm:text-[0.75rem] sm:max-lg:text-[1.2rem] sm:max-lg:gap-8 lg:max-xl:gap-10 lg:max-xl:text-[1.4rem] xl:max-2xl:text-[1.375rem] xl:max-2xl:gap-12 min-[1536px]:max-[1906px]:text-[1.8rem] min-[1536px]:max-[1906px]:gap-16 min-[1906px]:text-[2rem] min-[1906px]:gap-20 font-extralight">
+            <Link href="/about" onClick={toggle}>
+              About
+            </Link>
+            <Link href="/about" onClick={toggle}>
+              Work
+            </Link>
+            <Link href="/about" onClick={toggle}>
+              Blog
+            </Link>
+            <Link href="/contact" onClick={toggle}>
+              Contact
+            </Link>
           </div>
           <div className="max-xl:flex max-xl:flex-col gap-9 grid grid-cols-2 xl:max-2xl:gap-15 min-[1536px]:max-[1906px]:gap-18 min-[1906px]:gap-25">
             <div>
-              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Idenitiy and Design</h3>
-              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`} onClick={toggle}>Branding</Link>
+              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">
+                Idenitiy and Design
+              </h3>
+              <Link
+                href="/branding"
+                className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}
+                onClick={toggle}
+              >
+                Branding
+              </Link>
             </div>
             <div>
-              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Print and Digital</h3>
-              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}>Graphic Design</Link>
+              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">
+                Print and Digital
+              </h3>
+              <Link
+                href="/branding"
+                className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}
+              >
+                Graphic Design
+              </Link>
             </div>
             <div>
-              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Motion Craft</h3>
-              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}>Editing and Motion Graphics</Link>
+              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">
+                Motion Craft
+              </h3>
+              <Link
+                href="/branding"
+                className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}
+              >
+                Editing and Motion Graphics
+              </Link>
             </div>
             <div>
-              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Interface and Experience</h3>
-              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}>UI/UX</Link>
+              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">
+                Interface and Experience
+              </h3>
+              <Link
+                href="/branding"
+                className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}
+              >
+                UI/UX
+              </Link>
             </div>
             <div>
-              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Design and Development</h3>
-              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}>Web and App</Link>
+              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">
+                Design and Development
+              </h3>
+              <Link
+                href="/branding"
+                className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}
+              >
+                Web and App
+              </Link>
             </div>
             <div>
-              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">Design and Modelling</h3>
-              <Link href="/branding" className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}>3D Product and Animations</Link>
+              <h3 className="max-sm:text-[0.625rem] sm:max-lg:text-[0.875rem] lg:max-xl:text-[1rem] min-[1536px]:max-[1906px]:text-[1.2rem] min-[1906px]:text-[1.4rem]">
+                Design and Modelling
+              </h3>
+              <Link
+                href="/branding"
+                className={`${calSans.className} max-sm:text-[1.8rem]/[2.5rem] sm:max-lg:text-[2rem]/[2.5rem] lg:max-xl:text-[2.2rem]/[2.8rem] xl:max-2xl:text-[3rem]/[3.75rem] min-[1536px]:max-[1906px]:text-[3.2rem]/[4rem] min-[1906px]:text-[3.8rem]/[4.5rem]`}
+              >
+                3D Product and Animations
+              </Link>
             </div>
           </div>
         </div>
         <div className="absolute bottom-[5%] right-0 xl:right-[4%] flex gap-2 sm:max-lg:gap-4  lg:max-2xl:gap-4 2xl:gap-4.5">
-          <Link href='/'>
+          <Link href="/">
             <Behance />
           </Link>
-          <Link href='/'>
+          <Link href="/">
             <Instagram />
           </Link>
-          <Link href='/'>
+          <Link href="/">
             <Ball />
           </Link>
-          <Link href='/'>
+          <Link href="/">
             <Facebook />
           </Link>
-          <Link href='/'>
+          <Link href="/">
             <LinkedIn />
           </Link>
-          <Link href='/'>
+          <Link href="/">
             <Twitter />
           </Link>
         </div>

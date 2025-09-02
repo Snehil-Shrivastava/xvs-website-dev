@@ -1,3 +1,5 @@
+'use client'
+
 import Link from "next/link";
 
 import * as motion from "motion/react-client";
@@ -17,14 +19,18 @@ import icon6 from "../../../../public/assests/Vector (7).png";
 import meetingSchedIcon from "../../../../public/assests/schedule-meeting-logo.png";
 import PulsingDiv from "../../PulsingDiv/PulsingDiv";
 import localFont from "next/font/local";
+import { useModal } from "@/app/context/ModalContext";
 
 const calSans = localFont({
   src: '../../../../public/fonts/CalSans-Regular.ttf'
 })
 
 const Footer = () => {
+// @ts-ignore
+const { isModalOpen } = useModal();
+
   return (
-    <div className="mt-[170px] footer-container max-[426px]:mt-[5rem] w-9/10 mx-auto">
+    <div className={`mt-[170px] footer-container max-[426px]:mt-[5rem] w-9/10 mx-auto ${ isModalOpen ? 'invisible' : ''}`}>
       <div className="footer-content-container">
         <div className="pulse-glow-footer"></div>
         <div className="mx-auto pb-[72px] max-[769px]:pb-[32px]">
@@ -56,7 +62,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-links-block max-[426px]:mx-auto mt-[22px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:mt-[44px] max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:mt-[58.58px] min-[1536px]:w-[90%] min-[1536px]:mx-auto">
-              <div className="footer-link-block first justify-between flex-[0.15] max-[1026px]:justify-start max-[1026px]:gap-[64px] max-[769px]:justify-start max-[769px]:gap-[46px] max-[426px]:justify-start max-[426px]:gap-[46px] gap-[36px]">
+              <div className="footer-link-block first justify-between max-[1026px]:justify-start max-[1026px]:gap-[64px] max-[769px]:justify-start max-[769px]:gap-[46px] max-[426px]:justify-start max-[426px]:gap-[46px] gap-[36px]">
                 <div>
                   <Image
                     className="max-[769px]:w-[4rem] max-[426px]:w-[3rem]"
@@ -64,7 +70,7 @@ const Footer = () => {
                     alt=""
                   />
                 </div>
-                <div className="flex flex-wrap gap-x-[8px] gap-y-[6px] items-center justify-center max-[769px]:grid max-[769px]:grid-cols-3 max-[426px]:grid max-[426px]:grid-cols-3 max-[426px]:gap-[0.4rem] max-[426px]:w-auto">
+                <div className="gap-x-[8px] gap-y-[6px] grid grid-cols-3 max-[426px]:gap-[0.4rem] max-[426px]:w-auto">
                   <Image
                     className="max-[426px]:w-[0.65rem] max-[769px]:w-[0.75rem]"
                     src={icon1}
