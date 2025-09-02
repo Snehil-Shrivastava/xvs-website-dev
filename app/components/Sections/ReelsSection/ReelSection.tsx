@@ -32,7 +32,7 @@ const ReelSection = () => {
 
   return (
       <div ref={containerRef} className="min-[2560px]:h-[820px] min-[2560px]:w-4/5 min-[1536px]:w-9/10 min-[1536px]:mx-auto min-[1536px]:h-[680px] min-[1280px]:h-[520px] mb-[143px] mt-[143px] max-[1024px]:mt-[50px] relative max-[426px]:mb-[5rem] z-[70]">
-        <div className={`h-full ${styles.gifBox} bg-black ${styles.reelImg} w-9/10 mx-auto max-[769px]:h-[347px] max-[769px]:w-19/20`}>
+        <div className={`h-full ${styles.gifBox} bg-black ${styles.reelImg} w-9/10 mx-auto max-[769px]:h-[347px] max-[769px]:w-19/20 max-[426px]:h-[180px]`}>
           {/* <Image
             src={placeholder}
             alt="placeholder gif"

@@ -152,7 +152,7 @@ const NavigationModal = ({
       </div> */}
 
       <div className="absolute top-10 right-0 max-[769px]:w-3/4 min-[769px]:max-[1025px]:w-3/4 min-[1025px]:max-[1349px]:w-4/5 flex flex-col sm:max-lg:top-15 lg:max-xl:top-12 xl:max-2xl:top-13 min-[1536px]:max-[1905px]:top-19 min-[1905px]:top-19 gap-10 xl:max-2xl:gap-20 min-[1536px]:max-[1906px]:gap-30 min-[1906px]:gap-40">
-        <div className="flex gap-10 xl:max-2xl:gap-20 min-[1536px]:max-[1906px]:gap-30 min-[1906px]:gap-40 max-sm:text-[0.75rem] sm:max-lg:text-[1.2rem] lg:max-xl:text-[1.4rem] xl:max-2xl:text-[1.375rem] min-[1536px]:max-[1906px]:text-[1.8rem] min-[1906px]:text-[2rem] font-extralight">
+        <div className="flex gap-10 max-[426px]:gap-[22px] xl:max-2xl:gap-20 min-[1536px]:max-[1906px]:gap-30 min-[1906px]:gap-40 max-sm:text-[0.75rem] sm:max-lg:text-[1.2rem] lg:max-xl:text-[1.4rem] xl:max-2xl:text-[1.375rem] min-[1536px]:max-[1906px]:text-[1.8rem] min-[1906px]:text-[2rem] font-extralight">
           <Link href="/about" onClick={toggle}>
             About
           </Link>

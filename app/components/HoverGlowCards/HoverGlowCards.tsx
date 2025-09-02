@@ -13,6 +13,7 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectsSVG from "../SVGs/ProjectsSVG";
+import localFont from "next/font/local";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +47,21 @@ const cardData = [
     img: StarImg,
   },
 ];
+
+const apercuRegular = localFont({
+  src: ".../../../../../public/fonts/apercu-pro (1)/apercu_regular_pro.otf",
+  variable: "--font-apercu-reg",
+});
+
+const apercuBlack = localFont({
+  src: ".../../../../../public/fonts/Apercu-Pro-Black.ttf",
+  variable: "--font-apercu-blk",
+});
+
+const apercuBold = localFont({
+  src: ".../../../../../public/fonts/apercu-pro (1)/apercu_bold_pro.otf",
+  variable: "--font-apercu-bld",
+});
 
 const HoverGlowCards = () => {
   const cardsContainerRef = useRef(null);
@@ -94,62 +110,70 @@ const HoverGlowCards = () => {
     const cardLayer3 = cardLayerRef3.current;
 
     const tl = gsap.timeline();
-    const mm = gsap.matchMedia()
+    const mm = gsap.matchMedia();
 
-    mm.add('(min-width: 768px)', () => {
-tl.to(cardLayer0, {
-      scrollTrigger: {
-        trigger: cardLayer0,
-        // markers: true,
-        start: "top 70%",
-        end: "top 60%",
-        scrub: 1,
-        once: true,
-      },
-      width: 0,
-      // duration: 0.5,
+    mm.add("(min-width: 768px)", () => {
+      tl.to(cardLayer0, {
+        scrollTrigger: {
+          trigger: cardLayer0,
+          // markers: true,
+          start: "top 70%",
+          end: "top 60%",
+          scrub: 1,
+          once: true,
+        },
+        width: 0,
+        // duration: 0.5,
+      });
+
+      tl.to(
+        cardLayer1,
+        {
+          scrollTrigger: {
+            trigger: cardLayer1,
+            // markers: true,
+            start: "top 70%",
+            end: "top 60%",
+            scrub: 1,
+            once: true,
+          },
+          width: 0,
+          // duration: 0.5,
+          // delay: 0.2,
+        },
+        "<"
+      );
+
+      tl.to(cardLayer2, {
+        scrollTrigger: {
+          trigger: cardLayer2,
+          // markers: true,
+          start: "top 70%",
+          end: "top 60%",
+          scrub: 1,
+          once: true,
+        },
+        width: 0,
+        // duration: 0.5,
+      });
+
+      tl.to(
+        cardLayer3,
+        {
+          scrollTrigger: {
+            trigger: cardLayer3,
+            // markers: true,
+            start: "top 70%",
+            end: "top 60%",
+            scrub: 1,
+            once: true,
+          },
+          width: 0,
+          // duration: 0.5,
+        },
+        "<"
+      );
     });
-
-    tl.to(cardLayer1, {
-      scrollTrigger: {
-        trigger: cardLayer1,
-        // markers: true,
-        start: "top 70%",
-        end: "top 60%",
-        scrub: 1,
-        once: true,
-      },
-      width: 0,
-      // duration: 0.5,
-      // delay: 0.2,
-    }, "<");
-
-    tl.to(cardLayer2, {
-      scrollTrigger: {
-        trigger: cardLayer2,
-        // markers: true,
-        start: "top 70%",
-        end: "top 60%",
-        scrub: 1,
-        once: true,
-      },
-      width: 0,
-      // duration: 0.5,
-    });
-
-    tl.to(cardLayer3, {
-      scrollTrigger: {
-        trigger: cardLayer3,
-        // markers: true,
-        start: "top 70%",
-        end: "top 60%",
-        scrub: 1,
-        once: true,
-      },
-      width: 0,
-      // duration: 0.5,
-    }, "<");
-    })
   });
 
   return (
@@ -159,73 +183,75 @@ tl.to(cardLayer0, {
       <div id="cards" className={styles.cards} ref={cardsContainerRef}>
         {cardData.map((card, index) => {
           return (
-          <div
-            key={index}
-            className={`${styles.cardShadowContainer} relative lg:h-[360px] max-[1024px]:h-[280px] max-[769px]:h-[250px]`}
-          >
             <div
-              ref={
-                index === 0
-                  ? cardLayerRef0
-                  : index === 1
-                  ? cardLayerRef1
-                  : index === 2
-                  ? cardLayerRef2
-                  : cardLayerRef3
-              }
-              className="absolute inset-0 bg-[#282828] z-[5] min-[768px]:block hidden"
-            ></div>
-            <div
-              className={`${styles.card} ${
-                index === 0
-                  ? styles.clipCardFirst
-                  : index === 3
-                  ? styles.clipCardLast
-                  : ""
-              }`}
+              key={index}
+              className={`${styles.cardShadowContainer} relative lg:h-[360px] max-[1024px]:h-[280px] max-[769px]:h-[250px]`}
             >
-              <div className={styles["card-content"]}>
-                <div className="text-left 2xl:pl-[75px] 2xl:pb-[56px] xl:pl-[55px] xl:pb-[55px] lg:pl-[35px] lg:pb-[35px] max-[1024px]:pl-[12px] max-[1024px]:pb-[12px] mt-auto max-[426px]:mt-[5.75rem] max-[426px]:pl-[2rem] max-[426px]:pb-[2rem]">
-                  <h3 className="font-medium text-2xl max-[1024px]:text-[1rem]">{card.title}</h3>
-                  <h1 className="text-[#F79839] font-bold 2xl:text-[5.75rem] xl:text-[5rem] lg:text-[4rem] max-[1024px]:text-[3.6rem]">
-                    {card.subtitle}
-                  </h1>
-                  <p className="font-light text-lg max-[1024px]:text-[0.75rem]">
-                    {card.text1}
-                  </p>
-                  <p className="font-light text-lg max-[1024px]:text-[0.75rem]">
-                    {card.text2}
-                  </p>
-                </div>
-                <div>
-                  {index === 2 ? (
-                    <Image
-                      src={card.img}
-                      alt="image"
-                      width={180}
-                      height={103}
-                      className="absolute top-[15%] right-[10%] max-[1024px]:w-[120px]"
-                    />
+              <div
+                ref={
+                  index === 0
+                    ? cardLayerRef0
+                    : index === 1
+                    ? cardLayerRef1
+                    : index === 2
+                    ? cardLayerRef2
+                    : cardLayerRef3
+                }
+                className="absolute inset-0 bg-[#282828] z-[5] min-[768px]:block hidden"
+              ></div>
+              <div
+                className={`${styles.card} ${
+                  index === 0
+                    ? styles.clipCardFirst
+                    : index === 3
+                    ? styles.clipCardLast
+                    : ""
+                }`}
+              >
+                <div className={styles["card-content"]}>
+                  <div className="text-left 2xl:pl-[75px] 2xl:pb-[56px] xl:pl-[55px] xl:pb-[55px] lg:pl-[35px] lg:pb-[35px] max-[1024px]:pl-[12px] max-[1024px]:pb-[12px] mt-auto max-[426px]:mt-[5rem] max-[426px]:pl-[2rem] max-[426px]:pb-[2rem]">
+                    <h3 className={`font-medium text-2xl max-[1024px]:text-[1rem] max-[426px]:text-[0.75rem] ${apercuBold.className}`}>
+                      {card.title}
+                    </h3>
+                    <h1 className={`text-[#F79839] font-bold 2xl:text-[5.75rem] xl:text-[5rem] lg:text-[4rem] max-[1024px]:text-[3.6rem] ${apercuBlack.className}`}>
+                      {card.subtitle}
+                    </h1>
+                    <p className={`text-[#F3EDDE] font-extralight text-lg max-[1024px]:text-[0.75rem] max-[426px]:text-[0.5625rem] ${apercuRegular.className}`}>
+                      {card.text1}
+                    </p>
+                    <p className={`text-[#F3EDDE] font-extralight text-lg max-[1024px]:text-[0.75rem] max-[426px]:text-[0.5625rem] ${apercuRegular.className}`}>
+                      {card.text2}
+                    </p>
+                  </div>
+                  <div>
+                    {index === 2 ? (
+                      <Image
+                        src={card.img}
+                        alt="image"
+                        width={180}
+                        height={103}
+                        className="absolute top-[15%] right-[10%] max-[1024px]:w-[120px]"
+                      />
+                    ) : (
+                      <Image
+                        src={card.img}
+                        alt="image"
+                        width={114}
+                        height={103}
+                        className="absolute top-[15%] right-[10%] max-[1024px]:w-[78px]"
+                      />
+                      // <div className="absolute top-[15%] right-[10%] max-[1024px]:w-[78px]">
 
-                  ) : (
-                    <Image
-                      src={card.img}
-                      alt="image"
-                      width={114}
-                      height={103}
-                      className="absolute top-[15%] right-[10%] max-[1024px]:w-[78px]"
-                    />
-                    // <div className="absolute top-[15%] right-[10%] max-[1024px]:w-[78px]">
-
-                    // {/* @ts-ignore */}
-                    // {Icon.blurDataURL}
-                    // </div>
-                  )}
+                      // {/* @ts-ignore */}
+                      // {Icon.blurDataURL}
+                      // </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        )})}
+          );
+        })}
       </div>
     </div>
   );
