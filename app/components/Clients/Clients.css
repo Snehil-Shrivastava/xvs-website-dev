@@ -33,12 +33,12 @@
 @media screen and (max-width: 426px) {
   .review-box {
     clip-path: polygon(
-      0% 22px,
+      0% 12px,
       0% 100%,
-      calc(100% - 22px) 100%,
-      100% calc(100% - 22px),
+      calc(100% - 12px) 100%,
+      100% calc(100% - 12px),
       100% 0%,
-      22px 0%
+      12px 0%
     );
   }
 

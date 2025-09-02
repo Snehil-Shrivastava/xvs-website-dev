@@ -133,8 +133,10 @@ const AboutPage = () => {
 
       mm.add(
         {
+
+          isMobilesm: "(max-width: 426px)",
           // Setup for mobile devices
-          isMobile: "(max-width: 769px)",
+          isMobile: "(min-width: 426px) and (max-width: 769px)",
 
           // Setup for tablet devices
           isTablet: "(min-width: 769px) and (max-width: 1349px)",
@@ -142,20 +144,20 @@ const AboutPage = () => {
         (context) => {
           // context.conditions allows us to check which media query is active
           // @ts-ignore
-          const { isMobile, isTablet } = context.conditions;
+          const { isMobile, isTablet, isMobilesm } = context.conditions;
 
           // Apply animations based on the active breakpoint
           gsap.to(svgRef.current, {
             scrollTrigger: {
               trigger: svgRef.current,
-              start: "top 20%",
-              end: "bottom 20%",
+              start: isMobilesm ? "top 15%" : "top 20%",
+              end: isMobilesm ? "top top" : "bottom 20%",
               scrub: 1,
             },
             scale: isMobile ? 0.9 : 0.6,
-            x: isMobile ? -60 : -70,
+            x: isMobilesm ? -30 : isMobile ? -60 : -70,
             // Use a conditional (ternary) operator for cleaner code
-            y: isMobile ? 378 : 555,
+            y: isMobilesm ? 250 : isMobile ? 378 : 555,
           });
         }
       );
