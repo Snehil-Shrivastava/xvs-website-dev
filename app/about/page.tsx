@@ -114,7 +114,7 @@ const AboutPage = () => {
           gsap.to(svgRef.current, {
             scrollTrigger: {
               trigger: svgRef.current,
-              markers: true,
+              // markers: true,
               // @ts-ignore
               start: () => {
                 const triggerElement = containerRef.current;

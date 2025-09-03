@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 
@@ -20,17 +20,22 @@ import meetingSchedIcon from "../../../../public/assests/schedule-meeting-logo.p
 import PulsingDiv from "../../PulsingDiv/PulsingDiv";
 import localFont from "next/font/local";
 import { useModal } from "@/app/context/ModalContext";
+import FooterBtnSVG from "../../SVGs/FooterBtnSVG";
 
 const calSans = localFont({
-  src: '../../../../public/fonts/CalSans-Regular.ttf'
-})
+  src: "../../../../public/fonts/CalSans-Regular.ttf",
+});
 
 const Footer = () => {
-// @ts-ignore
-const { isModalOpen } = useModal();
+  // @ts-ignore
+  const { isModalOpen } = useModal();
 
   return (
-    <div className={`mt-[170px] footer-container max-[426px]:mt-[5rem] w-9/10 max-[426px]:w-19/20 mx-auto ${ isModalOpen ? 'invisible' : ''}`}>
+    <div
+      className={`mt-[170px] footer-container max-[426px]:mt-[5rem] w-9/10 max-[426px]:w-19/20 mx-auto ${
+        isModalOpen ? "invisible" : ""
+      }`}
+    >
       <div className="footer-content-container">
         <div className="pulse-glow-footer"></div>
         <div className="mx-auto pb-[72px] max-[769px]:pb-[32px]">
@@ -38,12 +43,14 @@ const { isModalOpen } = useModal();
             <div className=" border-b border-b-[rgba(247,152,57,0.1)]">
               <div className="flex gap-[48px] items-center justify-between pt-[111px] pb-[150px] min-[1536px]:w-[90%] min-[1536px]:mx-auto max-[1441px]:w-[85%] max-[1441px]:mx-auto max-[1441px]:pb-[70px] max-[1026px]:w-[85%] max-[1026px]:mx-auto max-[1026px]:pb-[70px] max-[769px]:pt-[80px] max-[769px]:pb-[80px] max-[769px]:w-[85%] max-[769px]:mx-auto max-[426px]:gap-[0.875rem] max-[426px]:flex-col max-[426px]:py-[2.5rem]">
                 <div className="flex-1 max-[769px]:flex-none">
-                  <h1 className={`2xl:text-[3.7rem]/[4rem] xl:text-[3rem]/[4rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[250px] max-[426px]:text-[1rem] tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-full max-[426px]:w-full ${calSans.className}`}>
+                  <h1
+                    className={`2xl:text-[3.7rem]/[4rem] xl:text-[3rem]/[4rem] lg:text-[2rem]/[3rem] max-[1024px]:text-[1.5rem] max-[769px]:text-[1.75rem] max-[769px]:w-[250px] max-[426px]:text-[1rem] tracking-wider 2xl:w-[780px] max-[1025px]:w-4/5 max-[1441px]:w-full max-[426px]:w-full ${calSans.className}`}
+                  >
                     Let's start creating together
                   </h1>
                 </div>
                 <div className="flex-1 text-center flex justify-center">
-                  <div className=" box-shadow-glow">
+                  {/* <div className="box-shadow-glow">
                     <div className="footer-btn-container">
                       <Link
                         href="/"
@@ -57,7 +64,15 @@ const { isModalOpen } = useModal();
                         <span>Schedule A Meeting</span>
                       </Link>
                     </div>
-                  </div>
+                  </div> */}
+                  <Link href='/' className="flex gap-2 items-center text-nowrap bg-[#F79839] rounded-4xl px-3.5 py-2.5 min-[1348px]:max-2xl:px-5 min-[1348px]:max-2xl:py-4 min-[1348px]:max-2xl:rounded-[48px] text-[0.625rem] md:max-lg:text-base min-[1348px]:max-2xl:text-2xl min-[1348px]:max-2xl:gap-4 font-semibold">
+                    <div>
+                      <FooterBtnSVG />
+                    </div>
+                    <div>
+                      <span>Schedule A Meeting</span>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -115,7 +130,9 @@ const { isModalOpen } = useModal();
                     Lucknow, UP (226002), India.
                   </p>
                   <div className="flex gap-[32px] mt-[72px] max-[1441px]:mt-auto max-[1026px]:mt-[52px] max-[769px]:gap-[44px] max-[769px]:mt-[22px] max-[426px]:flex-col max-[426px]:mt-[22px] max-[426px]:gap-0">
-                    <h1 className={`text-[53px] max-[769px]:text-[1.875rem] max-[426px]:text-[1.2rem] ${calSans.className}`}>
+                    <h1
+                      className={`text-[53px] max-[769px]:text-[1.875rem] max-[426px]:text-[1.2rem] ${calSans.className}`}
+                    >
                       Say Hi!
                     </h1>
                     <div className="flex flex-col justify-center">
