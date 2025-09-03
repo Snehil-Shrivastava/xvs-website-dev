@@ -47,6 +47,8 @@ const AboutPage = () => {
   const containerRef = useRef(null);
   const smallSvgRef = useRef(null);
 
+  const topSectionRef = useRef(null);
+
   useGSAP(
     () => {
       const richTxt = richTxtRef.current;
@@ -103,64 +105,58 @@ const AboutPage = () => {
         scale: 0,
       });
 
-      // mm.add("(max-width: 1349px)", () => {
-      //   tl.to(svgRef.current, {
-      //     scrollTrigger: {
-      //       trigger: svgRef.current,
-      //       // markers: true,
-      //       start: "top 20%",
-      //       end: "bottom 20%",
-      //       scrub: 1,
-      //     },
-      //     scale: 0.6,
-      //     y: 555,
-      //     x: -70,
-      //   });
-      // });
-
-      // mm.add("(max-width: 769px)", () => {
-      //   tl.to(svgRef.current, {
-      //     scrollTrigger: {
-      //       trigger: svgRef.current,
-      //       // markers: true,
-      //       start: "top 20%",
-      //       end: "bottom 20%",
-      //       scrub: 1,
-      //     },
-      //     scale: 0.6,
-      //     y: 350,
-      //     x: -70,
-      //   });
-      // });
-
       mm.add(
         {
-
           isMobilesm: "(max-width: 426px)",
-          // Setup for mobile devices
           isMobile: "(min-width: 426px) and (max-width: 769px)",
-
-          // Setup for tablet devices
           isTablet: "(min-width: 769px) and (max-width: 1349px)",
         },
         (context) => {
-          // context.conditions allows us to check which media query is active
           // @ts-ignore
           const { isMobile, isTablet, isMobilesm } = context.conditions;
 
-          // Apply animations based on the active breakpoint
           gsap.to(svgRef.current, {
             scrollTrigger: {
               trigger: svgRef.current,
               // markers: true,
-              start: isMobilesm ? "top 15%" : "top 20%",
-              end: isMobilesm ? "top top" : "bottom 20%",
+              // @ts-ignore
+              start: () => {
+                const triggerElement = containerRef.current;
+                // @ts-ignore
+                return "top top+=" + (triggerElement.offsetHeight + 50);
+              },
+              end: () => {
+                const triggerElement = containerRef.current;
+                // @ts-ignore
+                // console.log(triggerElement.offsetHeight);
+                // @ts-ignore
+                return "bottom top+=" + (triggerElement.offsetHeight + 50);
+              },
               scrub: 1,
             },
             scale: isMobile ? 0.9 : 0.6,
             x: isMobilesm ? -30 : isMobile ? -60 : -70,
-            // Use a conditional (ternary) operator for cleaner code
-            y: isMobilesm ? 250 : isMobile ? 378 : 555,
+            // y: isMobilesm ? 250 : isMobile ? 378 : 555,
+            y: () => {
+              // @ts-ignore
+              const topSection = topSectionRef.current.offsetHeight;
+              // @ts-ignore
+              const container = containerRef.current.offsetTop;
+              // @ts-ignore
+              const richTxt = richTxtRef.current.offsetHeight;
+              // @ts-ignore
+              const richTxtSVG = richTxtRef.current.firstChild.clientHeight;
+              // @ts-ignore
+              const richTxtPara = richTxtRef.current.lastChild.offsetHeight;
+
+              console.log(richTxtSVG);
+
+              const translate = topSection - container;
+
+              console.log('translate', translate + richTxtSVG/6)
+
+              return isMobile ? translate + richTxtSVG/5 : translate + richTxtSVG/6 + 72;
+            },
           });
         }
       );
@@ -175,6 +171,7 @@ const AboutPage = () => {
     <section className={`${isModalOpen ? "invisible" : ""}`}>
       <div className="relative">
         <div
+          ref={topSectionRef}
           className={`min-[2200px]:h-[100vh] max-sm:h-100 sm:max-lg:h-125 lg:max-xl:h-162.5 xl:max-2xl:h-215  min-[1536px]:max-[1906px]:h-280 w-full pointer-events-none`}
         >
           {/* <GridSVG /> */}
@@ -457,7 +454,7 @@ const AboutPage = () => {
       </div>
       <div
         ref={richTxtRef}
-        className="relative pt-[72px] max-[426px]:pt-0"
+        className="relative pt-[72px] max-[768px]:pt-0"
         style={{ opacity: 0 }}
       >
         <svg
