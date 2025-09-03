@@ -34,10 +34,10 @@ const RichTxtBtn = ({ label, svg }: RichTxtBtnProps) => {
     // </div>
 
     <div
-      className={`absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-[#ffffff56] max-[1349px]:text-sm max-[769px]:text-[0.625rem] font-light text-[#F79839] btn-container`}
+      className={`absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 bg-[#ffffff56] max-[1349px]:text-sm max-[769px]:text-[0.625rem] max-[426px]:text-[0.4rem] font-light text-[#F79839] btn-container`}
     >
       <div
-        className="flex max-[1349px]:gap-3.5 max-[769px]:gap-2 items-center bg-[#0009] px-4 py-2 mx-[1%] my-[0.5%] backdrop-blur-xs btn"
+        className="flex max-[1349px]:gap-3.5 max-[769px]:gap-2 max-[426px]:gap-1.5 items-center bg-[#0009] px-4 py-2 max-[426px]:px-2 max-[426px]:py-1.5 mx-[1%] my-[0.5%] backdrop-blur-xs btn"
       >
         <span className="text-nowrap">{label}</span>
         <div>{svg}</div>
