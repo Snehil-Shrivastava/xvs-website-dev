@@ -27,6 +27,8 @@ import BIgLambda from "../components/SVGs/BIgLambda";
 import SmallLambda from "../components/SVGs/SmallLambda";
 import GridSVGBg from "../components/SVGs/GridSVGBg";
 import { useModal } from "../context/ModalContext";
+import Gears from "../components/SVGs/Gears";
+import ReviewsBtnSVG from "../components/SVGs/ReviewsBtnSVG";
 
 gsap.registerPlugin(SplitText, ScrollTrigger, MorphSVGPlugin, ScrollSmoother);
 
@@ -496,6 +498,7 @@ const AboutPage = () => {
           buttonTitle="PROCESS"
           size="8rem"
           tracking="52px"
+          svg={<Gears />}
         />
         <p className="text-[#F3EDDE] font-light tracking-wider max-[426px]:text-[0.5rem] max-[769px]:text-[0.75rem] min-[1906px]:text-[22px]">
           We keep it simple and listen...
@@ -518,6 +521,7 @@ const AboutPage = () => {
           buttonTitle="REVIEWS"
           size="8rem"
           tracking="52px"
+          svg={<ReviewsBtnSVG />}
         />
         <p className="text-[#F3EDDE] font-light tracking-wider max-[769px]:text-[0.75rem] max-[426px]:text-[0.5rem] min-[1906px]:text-[22px]">
           Hear from visionaries and experts

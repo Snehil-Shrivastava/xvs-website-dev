@@ -244,8 +244,8 @@
   background: linear-gradient(
     90deg,
     transparent 50%,
-    #ffffffa6 50%,
-    #ffffffa6 100%
+    #ffffff 50%,
+    #ffffff 100%
   );
 
   /* 2. Make the background twice as wide as the button. */
@@ -258,27 +258,18 @@
   transition: background-position 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   /* --- END ANIMATION SETUP --- */
 
-  /* Your original clip-path remains the same */
-  /* clip-path: polygon(
-    35% 100%,
-    calc(100% - 12px) 100%,
-    100% calc(100% - 12px),
-    100% 0,
-    calc(100% - 2px) calc(100% - 12px),
-    calc(100% - 12px) calc(100% - 2px),
-    35% calc(100% - 1px)
-  ); */
-
   clip-path: polygon(
     35% 100%,
-    calc(100% - 12px) 100%,
-    100% calc(100% - 12px),
+    calc(100% - 22px) 100%,
+    100% calc(100% - 16px),
     100% 0,
-    calc(100% - 2px) 0,
-    calc(100% - 2px) calc(100% - 12px),
-    calc(100% - 12px) calc(100% - 2px),
-    35% calc(100% - 1px)
+    calc(100% - 1px) 0,
+    calc(100% - 3px) calc(100% - 16px),
+    calc(100% - 22px) calc(100% - 2px),
+    40% calc(100% - 1px)
   );
+
+  filter: blur(5px);
 }
 
 /* --- HOVER STATE --- */
@@ -468,3 +459,7 @@ textarea:focus {
     opacity: 0;
   }
 }
+
+/* .form-mask {
+  background-image: linear-gradient(black, transparent);
+} */

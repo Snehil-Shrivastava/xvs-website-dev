@@ -1,0 +1,25 @@
+.btn-container,
+.btn {
+  clip-path: polygon(
+    0 12px,
+    0 100%,
+    calc(100% - 12px) 100%,
+    100% calc(100% - 12px),
+    100% 0%,
+    12px 0
+  );
+}
+
+@media screen and (max-width: 769px) {
+  .btn-container,
+  .btn {
+    clip-path: polygon(
+      0 8px,
+      0 100%,
+      calc(100% - 8px) 100%,
+      100% calc(100% - 8px),
+      100% 0%,
+      8px 0
+    );
+  }
+}

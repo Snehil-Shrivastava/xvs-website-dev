@@ -9,6 +9,7 @@ import ReviewsThumbSlider from "../../ReviewsThumbSlider/ReviewsThumbSlider";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ReviewsBtnSVG from "../../SVGs/ReviewsBtnSVG";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -37,7 +38,7 @@ const Reviews = () => {
   });
   return (
     <div className="max-[1441px]:mt-[100px] max-[1024px]:mt-[140px] max-[769px]:mt-[60px] max-[426px]:mt-[60px]">
-      <SectionHeadingText SectionTitle="WORDS" buttonTitle="REVIEWS" tracking="2.8vw" size="8vw" />
+      <SectionHeadingText SectionTitle="WORDS" buttonTitle="REVIEWS" tracking="2.8vw" size="8vw" svg={<ReviewsBtnSVG />} />
       <div className="mt-[28px] max-[426px]:mt-0">
         <h3 className="font-light tracking-wide text-[#F3EDDE] my-[32px] max-[426px]:text-[0.5rem] max-[426px]:mt-2">
           Hear from visionaries and experts

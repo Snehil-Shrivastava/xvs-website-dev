@@ -24,6 +24,7 @@ import "./swiper-custom.css";
 import { useRef } from "react";
 import HoverGlowCardsCarousel from "../../HoverGlowCardsCarousel/HoverGlowCardsCarousel";
 import SectionHeadingText from "../../SectionHeadingText/SectionHeadingText";
+import ServicesBtnSVG from "../../SVGs/ServicesBtnSVG";
 
 export default () => {
   const prevRef = useRef(null);
@@ -113,6 +114,7 @@ export default () => {
           buttonTitle="VIEW SERVICES"
           size="8vw"
           tracking="2.8vw"
+          svg={<ServicesBtnSVG />}
         />
       </div>
       <Swiper {...swiperParams}>

@@ -11,6 +11,7 @@ import bgImg from "../../public/assests/contact-bg.png";
 import sendIcon from "../../public/assests/send-icon.png";
 import localFont from "next/font/local";
 import { useModal } from "../context/ModalContext";
+import ReviewsBtnSVG from "../components/SVGs/ReviewsBtnSVG";
 
 const calSans = localFont({
   src: "../../public/fonts/CalSans-Regular.ttf",
@@ -56,80 +57,13 @@ const Contact = () => {
           className="object-cover w-full h-full"
         />
       </div>
-      {/* <div className="relative w-2/3 mx-auto border border-[#333] contact-form-box bg-[#333]">
-        <div className="w-full h-full py-[48px] bg-[#282828] contact-form-content">
-          <div className=" text-center w-[80%] mx-auto">
-            <SectionHeadingText
-              SectionTitle="CONNECT"
-              buttonTitle="TOUCH"
-              size="8rem"
-            />
-            <div className="p-[32px]">
-              <Form action="#">
-                <label className="block text-left mb-[12px]">Name*</label>
-                <input
-                  type="text"
-                  className="border-b border-[#525151] w-full py-[8px] px-[6px] outline-none"
-                  placeholder="John Doe"
-                  required
-                />
-                <div className="flex gap-[52px] mt-[48px]">
-                  <div className="flex-1">
-                    <label className="block text-left mb-[12px]">Email*</label>
-                    <input
-                      type="text"
-                      className="border-b border-[#525151] w-full py-[8px] px-[6px] outline-none"
-                      placeholder="johndoe@xyz.com"
-                      required
-                    />
-                  </div>
-                  <div className="flex-1">
-                    <label className="block text-left mb-[12px]">
-                      Contact*
-                    </label>
-                    <input
-                      type="text"
-                      className="border-b border-[#525151] w-full py-[8px] px-[6px] outline-none"
-                      placeholder="+91-88788-78878"
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="mt-[56px]">
-                  <label className="block text-left mb-[12px]">Message*</label>
-                  <textarea
-                    className="border-b border-[#525151] w-full py-[8px] px-[6px] outline-none field-sizing-content resize-none"
-                    placeholder="Drop your message..."
-                    required
-                  />
-                </div>
-                <div className=" mt-[56px] clip-path-style">
-                  <button className="text-[#F39638] bg-[#282828] font-bold text-3xl w-full text-right px-[48px] py-[10px] clip-path-style2 cursor-pointer relative">
-                    Send
-                  </button>
-                </div>
-              </Form>
-            </div>
-          </div>
-        </div>
-      </div> */}
 
       {/* contact form */}
       <div className="w-[80%] 2xl:w-1/2 mx-auto relative">
-        {/* <div
-          className="absolute left-[20px] right-[20px] top-[30px] bottom-[30px] z-[1] bg-neutral-900/10 backdrop-blur-sm"
-        ></div> */}
-        {/* <div className="absolute inset-0 radial-light-container"></div> */}
-        {/* <div className="absolute -left-1/2 -bottom-1/10 w-[100vw] h-[290px]" style={{
-          background: 'linear-gradient(to bottom, transparent, #282828)',
-          backgroundColor: 'rgba(40, 40, 40, 0.4)',
-          filter: 'blur(2px)'
-        }}></div> */}
+        {/* <div className="absolute inset-0 z-50 form-mask"></div> */}
         <div
           className="w-full h-full relative bg-neutral-50/20 backdrop-blur-xs"
           style={{
-            // clipPath:
-            //   "polygon(0% 15%, 0% 100%, 100% 100%, 100% 15%, 95% 0%, 5% 0%)",
             clipPath:
               "polygon(0 38px, 1px 100%, calc(100% - 1px) 100%, 100% 38px, calc(100% - 38px) 0%, 38px 0%)",
           }}
@@ -142,16 +76,11 @@ const Contact = () => {
             }}
           >
             <div className="py-12 relative">
-              {/* <div
-              className="absolute bottom-0 left-0 right-0 h-[320px] pointer-events-none"
-                style={{
-                  background: "linear-gradient(to top, #282828 40%, transparent)",
-                }}
-              ></div> */}
               <SectionHeadingText
                 SectionTitle="CONNECT"
                 buttonTitle="TOUCH"
                 tracking="32px"
+                svg={<ReviewsBtnSVG />}
               />
               <div className="w-3/4 mx-auto mt-16 max-[769px]:w-4/5">
                 <div>
